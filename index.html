@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script src="index.js"></script>
     <title>Document</title>
 </head>
 <style>
@@ -19,7 +19,8 @@
     }
 
     img {
-        width: 7%;
+        width: 75px;
+        margin-right: 20px;
 
     }
 
@@ -27,49 +28,58 @@
         background-color: #4b3621 !important;
     }
 
-    .footer-title {
-        padding: 40px;
+    @font-face {
+        font-family: "Be-Vietnam";
+        src: url(fonts/Be_Vietnam/BeVietnam-Regular.ttf) format("truetype");
     }
 
+    nav {
+        font-family: "Be-Vietnam", sans-serif !important;
+        font-size: 20px !important;
+    }
 </style>
 
 <body>
     <div class='h-100'>
+
         <div class="row">
             <div class="col">
-                <nav class="navbar navbar-expand-lg  bg-primary ">
-                    <img class="mr-50" src="415.png"></img>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse ml-100" id="navbarSupportedContent">
-                        <ul class="navbar-nav ">
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Item 1 </a>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <a class="navbar-brand" href="#"><img src="415.png"></a>
+                    
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#">Café</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Item 2</a>
+                                <a class="nav-link" href="#">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Localízanos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Empleo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Quiénes somos</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-white" href="#" id="navbardrop"
-                                    data-toggle="dropdown">
-                                    Item 3
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Dropdown link
                                 </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Item 3.1</a>
-                                    <a class="dropdown-item" href="#">Item 3.2</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
-                            </li>
-                        </ul>
-                        <ul class=" navbar-nav ml-auto list-unstyled text-white nav-flex-icons ">
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle"> Sign Up</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle"> Login</a>
                             </li>
 
                         </ul>
@@ -184,11 +194,11 @@
                 </div>
             </div>
             <div class="footer-copyright">
-                    <div class="row">
-                        <div class="col text-center bg-dark">
-                            Copyright TresCafés © 2019. All rights reserved.
-                        </div>
+                <div class="row">
+                    <div class="col text-center bg-dark">
+                        Copyright TresCafés © 2019. All rights reserved.
                     </div>
+                </div>
             </div>
         </footer>
 
