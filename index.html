@@ -18,7 +18,7 @@
         text-align: center;
     }
 
-    img {
+    .imgLogo {
         width: 75px;
         margin-right: 20px;
 
@@ -31,21 +31,36 @@
     @font-face {
         font-family: "Be-Vietnam";
         src: url(fonts/Be_Vietnam/BeVietnam-Regular.ttf) format("truetype");
-    }
+       }
 
     nav {
         font-family: "Be-Vietnam", sans-serif !important;
         font-size: 20px !important;
     }
+
+    .carousel-item img {
+        width: 100%;
+        height: 500px;
+        max-height: 460px;
+    }
+
+    .carousel-inner{
+        height: 500px;
+    }
+
+    .imgRedes{
+        height: 150px;
+        width: 100%;
+    }
 </style>
 
 <body>
     <div class='h-100'>
-
+        <!--NavBar Menu-->
         <div class="row">
             <div class="col">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                    <a class="navbar-brand" href="#"><img src="415.png"></a>
+                    <a class="navbar-brand" href="#"><img class="imgLogo " src="415.png"></a>
                     
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
@@ -87,46 +102,49 @@
                 </nav>
             </div>
         </div>
+        
         <!--SLIDESHOW-->
         <div class="row bg-dark">
             <div class="col">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
                             <img class="d-block w-100" src="415.png" alt="First slide">
-                        </div>
-                        <div class="carousel-item">
+                            </div>
+                            <div class="carousel-item">
                             <img class="d-block w-100" src="415.png" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
+                            </div>
+                            <div class="carousel-item">
                             <img class="d-block w-100" src="415.png" alt="Third slide">
+                            </div>
                         </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
 
             </div>
         </div>
+        
         <div class="row">
-            <div class="col-8">
-                TEXTO
+            <div class="col-8 text-center pt-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </div>
             <div class="col-4">
-                RRSS
+                <img class="imgRedes " src="415.png"></img>
             </div>
         </div>
+
         <div class="row">
 
             <div class="col-4">
