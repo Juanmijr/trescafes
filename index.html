@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
@@ -19,105 +18,95 @@
 <body>
     <div class='h-100'>
         <!--NavBar Menu-->
-        <div class="row">
-            <div class="col">
-                <nav class="navbar navbar-expand-lg bg-primary">
-                    <a class="navbar-brand" href="#"><img class="imgLogo " src="img/415.png"></a>
-
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-letra">
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  CAFÉ
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                  <li><a class="dropdown-item" href="#">Calidad</a></li>
-                                  <li><a class="dropdown-item" href="#">Encuentra tu café perfecto</a></li>
-                                  <li><a class="dropdown-item" href="#">Utensilios</a></li>
-                                  <li><a class="dropdown-item" href="#">Elaboración</a></li>
-                                </ul>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Productos
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
-                                            href="">Productos</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-item"><a class="dropdown-item" href="#">Loloccino</a>
-                                            <li class="dropdown-item"><a class="dropdown-item" href="#">Juanmocha</a>
-                                            <li class="dropdown-item"><a class="dropdown-item" href="#">Yorspresso</a>
+                <!--NavBar Menu-->
+                <div class="row">
+                    <div class="col">
+                        <nav class="navbar navbar-expand-lg bg-primary">
+                            <a class="navbar-brand" href="#"><img class="imgLogo " src="img/415.png"></a>
+        
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                                <i><img class="imgUsu" src="img/Menu_icon_2_icon-icons.com_71856.png"></img></i>
+                            </button>
+        
+                            <div class="collapse navbar-collapse" id="collapsingNavbar">
+                                <ul class="nav navbar-nav navbar-letra">
+        
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="" id="collapsingNavbar"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            CAFÉ
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">Calidad</a></li>
+                                            <li><a class="dropdown-item" href="#">Encuentra tu café perfecto</a></li>
+                                            <li><a class="dropdown-item" href="#">Utensilios</a></li>
+                                            <li><a class="dropdown-item" href="#">Elaboración</a></li>
                                         </ul>
-                                    </li>
-
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
-                                            href="">Repostería</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-item"><a class="dropdown-item" href="#">Tarta</a>
-                                            <li class="dropdown-item"><a class="dropdown-item" href="#">Magdalenas</a>
-                                            <li class="dropdown-item"><a class="dropdown-item" href="#">Galletas</a>
-                                            <li class="dropdown-item"><a class="dropdown-item" href="#">Bizcochos</a>
-                                        </ul>
-
-                                    </li>
-
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
-                                            href="">Otros</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-item"><a class="dropdown-item" href="#">Chocolate</a>
-                                            <li class="dropdown-item"><a class="dropdown-item" href="#">Infusiones</a>
-                                            </ul>
-
+        
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            PRODUCTOS
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                                    href="">Nuestros cafés</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Loloccino</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Juanmocha</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Yorspresso</a>
+                                                </ul>
                                             </li>
-
+        
+                                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                                    href="">Repostería</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Tarta</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Magdalenas</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Galletas</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Bizcochos</a>
+                                                </ul>
+        
+                                            </li>
+        
+                                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                                    href="">Otros</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Chocolate</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Infusiones</a>
+                                                </ul>
+        
+                                            </li>
+        
                                             <li class="dropdown-item"><a class="dropdown-item" href="#">Novedades</a>
-
+        
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">LOCALÍZANOS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">EMPLEO</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">QUIENES SOMOS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">¡AL GRANO!</a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Localízanos</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">Empleo</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">Quienes somos</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">¡Al grano!</a>
-                              </li>
-                        </ul>
+                                <div class="ml-auto">
+        
+                                    <a><img class="imgUsu" src="img/usuario.png"></img></a>
+                                
+                                </div>
+                            </div>
+                            
+                           
+                        </nav>
                     </div>
-                    <div class="navbar-right">
-                        
-                        <ul class="nav navbar-nav navbar-letra">
-
-                            <li class="nav-item dropdown">
-                               
-                                <a><img class="nav-link dropdown-toggle imgIniciar"  href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  src="img/usuario.png"></img></a>
-
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                  <li><a class="dropdown-item" href="#">Calidad</a></li>
-                                  <li><a class="dropdown-item" href="#">Encuentra tu café perfecto</a></li>
-                                  <li><a class="dropdown-item" href="#">Utensilios</a></li>
-                                  <li><a class="dropdown-item" href="#">Elaboración</a></li>
-                                </ul>
-                                </li>
-                    </div>
-                </nav>
-            </div>
-        </div>
-
+                </div>
         <!--SLIDESHOW-->
         <div class="row bg-dark">
             <div class="col">
@@ -231,22 +220,22 @@
                         <ul class="list-unstyled text-footer-cuerpo ">
                             <li>
                                 <p>
-                                    <a class="footer-letra" href="#!">PROJECTS</a>
+                                    <a class="footer-letra" href="www.hola.es">PROJECTS</a>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <a class="footer-letra" href="#!">ABOUT US</a>
+                                    <a class="footer-letra" href="www.hola.es">ABOUT US</a>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <a class="footer-letra" href="#!">BLOG</a>
+                                    <a class="footer-letra" href="www.hola.es">BLOG</a>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <a class="footer-letra" href="#!">AWARDS</a>
+                                    <a class="footer-letra" href="www.hola.es">AWARDS</a>
                                 </p>
                             </li>
                         </ul>
@@ -288,6 +277,19 @@
 
                         <!-- Social buttons -->
                         <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+                        <div class="row">
+
+                            <div class="col">
+                                <a href="www.facebook.com"><img src="img/icons8-facebook-rodeado-de-círculo-50.png"><img></a>
+                            </div>
+                            <div class="col">
+                                <a href="www.instagram.com"><img src="img/icons8-instagram-50.png"><img></a>
+                            </div>
+                            <div class="col">
+                                <a href="www.twitter.es"><img src="img/icons8-twitter-50.png"><img></a>
+                            </div>
+                        </div>
 
                     </div>
                     <!-- Grid column -->

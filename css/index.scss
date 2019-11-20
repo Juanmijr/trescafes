@@ -77,6 +77,9 @@ nav {
     height: 150px;
     width: 100%;
 }
+.imgUsu{
+    width: 40px;
+}
 
 a:link {
     font-family: "Be-Vietnam", sans-serif;
@@ -86,12 +89,12 @@ a:link {
 .nav-link{
 
     color: $bg-grey;
-    font-size: 20px;
+    font-size: 15px;
 
 }
 
 .nav-item{
-    font-size: 20px;
+    font-size: 15px;
     color: $color-footer-title;
 }
 .footer-letra:link{
