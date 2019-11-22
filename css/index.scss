@@ -45,7 +45,11 @@ nav {
 
 }
 
-
+.text-title {
+    font-family: "Be-Vietnam", sans-serif ;
+    font-size: 30px ;
+    color: black ;
+}
 .text-footer {
     font-family: "Be-Vietnam", sans-serif ;
     font-size: 20px ;
@@ -81,8 +85,8 @@ nav {
     width: 40px;
 }
 .imgProductos {
-    height: 463px;
-    width: 463px;
+    width: 600px;
+    height: 400px;
 }
 
 a:link {

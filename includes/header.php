@@ -38,19 +38,19 @@
                                             <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
                                                     >Nuestros cafés</a>
                                                 <ul class="dropdown-menu">
-                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Loloccino</a>
-                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Juanmocha</a>
-                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Yorspresso</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="./loloccino.php">Loloccino</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="./juanmocha.php">Juanmocha</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="./yorspresso.php">Yorspresso</a>
                                                 </ul>
                                             </li>
         
                                             <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
                                                    >Repostería</a>
                                                 <ul class="dropdown-menu">
-                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Tarta</a>
-                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Magdalenas</a>
-                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Galletas</a>
-                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Bizcochos</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="./tartas.php">Tarta</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="./magdalenas.php">Magdalenas</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="./galletas.php">Galletas</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="./bizcochos.php">Bizcochos</a>
                                                 </ul>
         
                                             </li>
