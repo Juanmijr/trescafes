@@ -120,4 +120,11 @@ a:link {
   transform: rotate(-90deg);
 }
 
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 500px;
+  margin-top: 50px;
+  height: 0;
+}
+
 /*# sourceMappingURL=index.css.map */

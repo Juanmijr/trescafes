@@ -70,7 +70,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">LOCALÍZANOS</a>
+                                        <a class="nav-link" href="./localizanos.php">LOCALÍZANOS</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">EMPLEO</a>
