@@ -58,8 +58,8 @@
                                             <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
                                                     >Otros</a>
                                                 <ul class="dropdown-menu">
-                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Chocolate</a>
-                                                    <li class="dropdown-item"><a class="dropdown-item" href="#">Infusiones</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="./chocolates.php">Chocolate</a>
+                                                    <li class="dropdown-item"><a class="dropdown-item" href="./infusiones.php">Infusiones</a>
                                                 </ul>
         
                                             </li>
