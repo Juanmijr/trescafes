@@ -24,9 +24,9 @@
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <li><a class="dropdown-item" href="calidad.php">Calidad</a></li>
-                                            <li><a class="dropdown-item" href="#">Encuentra tu café perfecto</a></li>
-                                            <li><a class="dropdown-item" href="#">Utensilios</a></li>
-                                            <li><a class="dropdown-item" href="#">Elaboración</a></li>
+                                            <li><a class="dropdown-item" href="encuentraCafePerfecto.php">Encuentra tu café perfecto</a></li>
+                                            <li><a class="dropdown-item" href="utensilios.php">Utensilios</a></li>
+                                            <li><a class="dropdown-item" href="elaboracion.php">Elaboración</a></li>
                                         </ul>
         
                                     <li class="nav-item dropdown">
