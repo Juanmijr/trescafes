@@ -16,7 +16,7 @@ and open the template in the editor.
                 <div class="col-sm-4 mt-5">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="index.php"> <img src="img/volver.png"></a>
+                            <a href="productos.php"> <img src="img/volver.png"></a>
                         </div>
                     </div>
                     <div class="row mt-5  mx-auto">
