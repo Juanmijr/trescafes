@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col">
                         <nav class="navbar navbar-expand-lg bg-primary">
-                            <a class="navbar-brand" href="#"><img class="imgLogo " src="img/415.png"></a>
+                            <a class="navbar-brand" href="index.php"><img class="imgLogo " src="img/415.png"></a>
         
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                                 <i><img class="imgUsu" src="img/Menu_icon_2_icon-icons.com_71856.png"></img></i>
@@ -23,14 +23,14 @@
                                             CAFÉ
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <li><a class="dropdown-item" href="#">Calidad</a></li>
+                                            <li><a class="dropdown-item" href="calidad.php">Calidad</a></li>
                                             <li><a class="dropdown-item" href="#">Encuentra tu café perfecto</a></li>
                                             <li><a class="dropdown-item" href="#">Utensilios</a></li>
                                             <li><a class="dropdown-item" href="#">Elaboración</a></li>
                                         </ul>
         
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink"
+                                        <a class="nav-link dropdown-toggle" href="productos.php" id="navbarDropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             PRODUCTOS
                                         </a>
