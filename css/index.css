@@ -132,4 +132,9 @@ a:link {
   height: 0;
 }
 
+.btn-primary {
+  background-color: #e3a364 !important;
+  border-color: #4b3621 !important;
+}
+
 /*# sourceMappingURL=index.css.map */
