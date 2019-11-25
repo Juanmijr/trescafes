@@ -35,7 +35,7 @@ nav {
 .text-title {
   font-family: "Be-Vietnam", sans-serif;
   font-size: 30px;
-  color: black;
+  color: #e3a364 !important;
 }
 
 .text-footer {
