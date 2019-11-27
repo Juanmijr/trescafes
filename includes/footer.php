@@ -36,22 +36,22 @@
                         <ul class="list-unstyled text-footer-cuerpo ">
                             <li>
                                 <p>
-                                    <a class="footer-letra" href="www.hola.es">CALIDAD</a>
+                                    <a class="footer-letra" href="calidad.php">CALIDAD</a>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <a class="footer-letra" href="www.hola.es">PRODUCTOS</a>
+                                    <a class="footer-letra" href="productos.php">PRODUCTOS</a>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <a class="footer-letra" href="www.hola.es">EMPLEO</a>
+                                    <a class="footer-letra" href="empleo.php">EMPLEO</a>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <a class="footer-letra" href="www.hola.es">¡AL GRANO!</a>
+                                    <a class="footer-letra" href="">¡AL GRANO!</a>
                                 </p>
                             </li>
                         </ul>
