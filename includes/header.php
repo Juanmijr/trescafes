@@ -3,11 +3,11 @@
         <?php include ('includes/enlaces.php') ?>
     </head>
     <body>
-        <div class="container-fluid p-0 text-center">
+        <div class="container-fluid text-center">
             <!--NavBar Menu-->
             <!--NavBar Menu-->
             <div class="row">
-                <div class="col">
+                <div class="col p-0">
                     <nav class="navbar navbar-expand-lg bg-primary">
                         <a class="navbar-brand" href="index.php"><img class="imgLogo " src="img/415.png"></a>
 
