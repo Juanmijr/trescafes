@@ -5,6 +5,11 @@ $bg-white : #FFFFFF !important;
 $color-footer-cuerpo : #9b9b9b !important;
 $color-footer-title : #d6d6d6 !important;
 
+a.btn-primary:focus, a.btn-primary:hover, button.btn-primary:focus, button.btn-primary:hover{
+    background-color: $bg-primary;
+}
+
+
 
 .imgIniciar{
     width: 35px;
@@ -19,6 +24,8 @@ $color-footer-title : #d6d6d6 !important;
 .bg-primary {
     background-color: $bg-primary;
 }
+
+
 
 @font-face {
     font-family: "Be-Vietnam";
@@ -131,6 +138,11 @@ nav {
     height:0;
 }
 .btn-primary {
-    background-color: $bg-secundary;
+    background-color: $bg-primary;
     border-color: $bg-primary;
+}
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #FFFFFF;
 }

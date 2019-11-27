@@ -1,3 +1,7 @@
+a.btn-primary:focus, a.btn-primary:hover, button.btn-primary:focus, button.btn-primary:hover {
+  background-color: #4b3621 !important;
+}
+
 .imgIniciar {
   width: 35px;
 }
@@ -130,8 +134,14 @@ nav {
 }
 
 .btn-primary {
-  background-color: #e3a364 !important;
+  background-color: #4b3621 !important;
   border-color: #4b3621 !important;
+}
+
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #FFFFFF;
 }
 
 /*# sourceMappingURL=index.css.map */
