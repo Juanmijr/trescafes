@@ -36,22 +36,22 @@
                            <ul class="list-unstyled text-footer-cuerpo ">
                                <li>
                                    <p>
-                                       <a class="footer-letra" href="calidad.php">CALIDAD</a>
+                                       <a class="footer-letra enlacesFooter" href="calidad.php">CALIDAD</a>
                                    </p>
                                </li>
                                <li>
                                    <p>
-                                       <a class="footer-letra" href="productos.php">PRODUCTOS</a>
+                                       <a class="footer-letra enlacesFooter" href="productos.php">PRODUCTOS</a>
                                    </p>
                                </li>
                                <li>
                                    <p>
-                                       <a class="footer-letra" href="empleo.php">EMPLEO</a>
+                                       <a class="footer-letra enlacesFooter" href="empleo.php">EMPLEO</a>
                                    </p>
                                </li>
                                <li>
                                    <p>
-                                       <a class="footer-letra" href="">¡AL GRANO!</a>
+                                       <a class="footer-letra enlacesFooter" href="">¡AL GRANO!</a>
                                    </p>
                                </li>
                            </ul>

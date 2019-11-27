@@ -3,7 +3,7 @@
         <?php include ('includes/enlaces.php') ?>
     </head>
     <body>
-        <div class="container-fluid p-0">
+        <div class="container-fluid p-0 text-center">
             <!--NavBar Menu-->
             <!--NavBar Menu-->
             <div class="row">

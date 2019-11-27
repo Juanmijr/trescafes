@@ -86,9 +86,10 @@ nav {
     width: 100px;
     height: 100px;
 }
-a:link {
+.enlacesFooter {
     font-family: "Be-Vietnam", sans-serif;
     text-decoration: none;
+    color: $color-footer-cuerpo;
 }
 
 .nav-link{
