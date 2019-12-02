@@ -7,13 +7,13 @@ and open the template in the editor.
 <html>
     <head>
         <?php 
-        include('includes/enlaces.php');
+        include('includes/head.php');
         ?>
         <title></title>
     </head>
     <body>
         <?php
-         include('includes/header.php');
+         include('includes/navbar.php');
         ?>
         
         <h1 class="text-center text-title mt-5">¿Cuál es tu café perfecto?</h1>

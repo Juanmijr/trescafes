@@ -6,11 +6,11 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <?php include ('includes/enlaces.php'); ?>
+        <?php include ('includes/head.php'); ?>
         <title></title>
     </head>
     <body>
-        <?php include ('includes/header.php'); ?>
+        <?php include ('includes/navbar.php'); ?>
         <div class="container">
             <div class="row">
                 <div class="col">
