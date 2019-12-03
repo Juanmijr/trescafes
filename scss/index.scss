@@ -27,37 +27,26 @@ a.btn-primary:focus, a.btn-primary:hover, button.btn-primary:focus, button.btn-p
 
 
 
-@font-face {
-    font-family: "Be-Vietnam";
-    src: url(fonts/Be_Vietnam/BeVietnam-Regular.ttf) format("truetype");
-}
-@font-face{
-    font-family: "Lato";
-    src: url(fonts/Lato-Ligth.ttf) format("truetype");
-   
-}
-@font-face{
-    font-family: "OpenSans";
-    src: url(fonts/OpenSans-Regular.ttf) format("truetype");
-}
+
+
 nav {
-    font-family: "Be-Vietnam", sans-serif ;
-    font-size: 20px ;
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 40px !important;
 
 }
 
 .text-title {
-    font-family: "Be-Vietnam", sans-serif ;
-    font-size: 30px ;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 40px !important;
     color: $bg-secundary ;
 }
 .text-footer {
-    font-family: "Be-Vietnam", sans-serif ;
-    font-size: 20px ;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 40px ;
     color: $color-footer-title ;
 }
 .text-footer-cuerpo {
-    font-family: "Be-Vietnam", sans-serif ;
+    font-family: 'Lato', sans-serif ;
     font-size: 14px ;
     color: $color-footer-cuerpo ;
 }
