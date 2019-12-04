@@ -13,7 +13,7 @@ and open the template in the editor.
         <?php include ('includes/navbar.php'); ?>
         <div class="container">
             <div class="row">
-                <div class="col">
+                <article class="col">
                     <div class="my-5">
                         <img class="imgTusDatos border" src="img/415.png">
                     </div>
@@ -29,7 +29,7 @@ and open the template in the editor.
                         <span class='text-title'>HISTORIAL DE COMPRAS</span>
                         <p class="text-secondary text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but als</p>
                     </section>
-                </div>
+                </article>
             </div>
         </div>
         <?php
