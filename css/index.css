@@ -20,6 +20,10 @@ nav {
   font-size: 40px !important;
 }
 
+nav a:hover {
+  color: #e3a364 !important;
+}
+
 .text-title {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 40px !important;
@@ -73,10 +77,14 @@ nav {
   height: 100px;
 }
 
-.enlacesFooter {
-  font-family: "Be-Vietnam", sans-serif;
+footer a {
   text-decoration: none;
   color: #9b9b9b !important;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #e3a364 !important;
 }
 
 .nav-link {
@@ -87,11 +95,6 @@ nav {
 .nav-item {
   font-size: 15px;
   color: #d6d6d6 !important;
-}
-
-.footer-letra:link {
-  font-size: 14px;
-  color: #9b9b9b !important;
 }
 
 .navbar-nav li:hover > ul.dropdown-menu {

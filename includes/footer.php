@@ -8,7 +8,7 @@
         <div class="col-sm-3">
 
             <!-- Content -->
-            <h5 class="font-weight-bold text-uppercase mb-4">TrésCaf€s</h5>
+            <h5 class="font-weight-bold text-uppercase mb-4">Tr3sCaf€s</h5>
             <p class="text-footer-cuerpo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
                 amet numquam iure provident
                 voluptate

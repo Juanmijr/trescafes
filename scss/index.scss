@@ -32,7 +32,10 @@ a.btn-primary:focus, a.btn-primary:hover, button.btn-primary:focus, button.btn-p
 nav {
     font-family: 'Be Vietnam', sans-serif;
     font-size: 40px !important;
+}
 
+nav a:hover {
+    color:$bg-secundary;
 }
 
 .text-title {
@@ -82,10 +85,14 @@ nav {
     width: 100px;
     height: 100px;
 }
-.enlacesFooter {
-    font-family: "Be-Vietnam", sans-serif;
+footer a {
     text-decoration: none;
     color: $color-footer-cuerpo;
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: $bg-secundary;
 }
 
 .nav-link{
@@ -99,10 +106,7 @@ nav {
     font-size: 15px;
     color: $color-footer-title;
 }
-.footer-letra:link{
-    font-size: 14px;
-    color: $color-footer-cuerpo;
-}
+
 .navbar-nav li:hover > ul.dropdown-menu {
     display: block;
 }
