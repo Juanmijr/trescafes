@@ -28,22 +28,22 @@
             <ul class="list-unstyled text-footer-cuerpo ">
                 <li>
                     <p>
-                        <a class="footer-letra enlacesFooter" href="calidad.php">CALIDAD</a>
+                        <a href="calidad.php">CALIDAD</a>
                     </p>
                 </li>
                 <li>
                     <p>
-                        <a class="footer-letra enlacesFooter" href="productos.php">PRODUCTOS</a>
+                        <a href="productos.php">PRODUCTOS</a>
                     </p>
                 </li>
                 <li>
                     <p>
-                        <a class="footer-letra enlacesFooter" href="empleo.php">EMPLEO</a>
+                        <a href="empleo.php">EMPLEO</a>
                     </p>
                 </li>
                 <li>
                     <p>
-                        <a class="footer-letra enlacesFooter" href="">¡AL GRANO!</a>
+                        <a href="">¡AL GRANO!</a>
                     </p>
                 </li>
             </ul>
@@ -101,14 +101,14 @@
 
         </div>
         <!-- Grid column -->
-
     </div>
+        <div class="row">
+            <div class="col-sm-12 py-3 bg-primary text-footer-cuerpo"><a href="terminosLegales">Tr3sCaf€s © Términos Legales</a></div>
+        </div>  
     <!-- Grid row -->
 
-</div>
 <!-- Footer Links -->
 <!-- Copyright -->
-<div class=" text-center py-3 bg-primary text-footer-cuerpo">Tr3sCaf€s © 2019 Copyright</div>
 <!-- Copyright -->
 </footer>
 <!-- Footer -->

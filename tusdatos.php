@@ -15,7 +15,7 @@ and open the template in the editor.
             <div class="row">
                 <article class="col">
                     <div class="my-5">
-                        <img class="imgTusDatos border" src="img/415.png">
+                        <img class="imgTusDatos" src="img/usuario.png">
                     </div>
                     <section>
                         <span class='text-title'>TU NOMBRE</span>
