@@ -17,7 +17,7 @@ a.btn-primary:focus, a.btn-primary:hover, button.btn-primary:focus, button.btn-p
 
 nav {
   font-family: "Be Vietnam", sans-serif;
-  font-size: 40px !important;
+  font-size: px;
 }
 
 nav a:hover {
@@ -133,6 +133,10 @@ footer a:hover {
   color: #fff;
   text-decoration: none;
   background-color: #FFFFFF;
+}
+
+.navbar-letra {
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=index.css.map */

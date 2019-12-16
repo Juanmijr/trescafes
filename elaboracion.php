@@ -9,8 +9,8 @@
         ?>
         
         <div class="container-fluid">
-            <div class="row mt-5">
-                <div class=" col-md-9">
+            <main class="row mt-5">
+                <article class=" col-md-9">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
@@ -30,12 +30,12 @@
                         Vivamus commodo, augue et laoreet euismod, sem sapien tempor dolor, ac egestas sem ligula quis lacus. Donec vestibulum tortor ac lacus. Sed posuere vestibulum nisl. Curabitur eleifend fermentum justo. Nullam imperdiet. Integer sit amet mauris imperdiet risus sollicitudin rutrum. Ut vitae turpis. Nulla facilisi. Quisque tortor velit, scelerisque et, facilisis vel, tempor sed, urna. Vivamus nulla elit, vestibulum eget, semper et, scelerisque eget, lacus. Pellentesque viverra purus. Quisque elit. Donec ut dolor.
                     </p>
 
-                </div>
-                <div class=" col-md-3">
+                </article>
+                <aside class=" col-md-3">
                     <img class="img-fluid" src="img/415.png">
                     </img>
-                </div>
-            </div>
+                </aside>
+            </main>
         </div>
         
         

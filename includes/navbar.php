@@ -26,9 +26,9 @@
                                 <li><a class="dropdown-item" href="elaboracion.php">Elaboración</a></li>
                             </ul>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="productos.php" id="navbarDropdownMenuLink"
-                               aria-haspopup="true" aria-expanded="false">
+                       <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="" id="collapsingNavbar"
+                               data-toggle="dropdown" aria-haspopup="true"  aria-labelledby="dropdownMenuButton" aria-expanded="false">
                                 PRODUCTOS
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -62,7 +62,9 @@
                                 </li>
 
                                 <li class="dropdown-item"><a class="dropdown-item" href="./novedades.php">Novedades</a>
-
+                                 
+                                </li>
+                                <li class="dropdown-item"><a class="dropdown-item" href="productos.php">Todos los productos</a>
                                 </li>
                             </ul>
                         </li>

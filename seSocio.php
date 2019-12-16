@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="text-center"> Registro de socio: </h1>
+                    <h1 class=""> Registro de socio: </h1>
 
                     <form>
                         <div class="form-row">
