@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <?php include ('includes/head.php'); ?>
-        <title></title>
+        <title>Tres Cafés</title>
     </head>
     <body>
         <?php

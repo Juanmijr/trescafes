@@ -8,12 +8,8 @@
         <div class="col-sm-3">
 
             <!-- Content -->
-            <h5 class="font-weight-bold text-uppercase mb-4">Tr3sCaf€s</h5>
-            <p class="text-footer-cuerpo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-                amet numquam iure provident
-                voluptate
-                esse
-                quasi, veritatis totam voluptas nostrum.</p>
+            <h5 class="font-weight-bold text-uppercase mb-4">Tres Cafés</h5>
+            <p class="text-footer-cuerpo">Comprometidos en capturar tú momento perfecto y concentrarlo en una taza de café.</p>
 
         </div>
         <!-- Grid column -->
@@ -55,24 +51,20 @@
         <div class="col-sm-3">
 
             <!-- Contact details -->
-            <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+            <h5 class="font-weight-bold text-uppercase mb-4">DIRECCIÓN</h5>
 
             <ul class="list-unstyled text-footer-cuerpo">
                 <li>
                     <p>
-                        <i class="mr-3"></i> New York, NY 10012, US</p>
+                        <i class="mr-3"></i> C/ San Francisco Nº24, Lucena, Córdoba, ES</p>
                 </li>
                 <li>
                     <p>
-                        <i class="mr-3"></i> info@example.com</p>
+                        <i class="mr-3"></i> trescafes@gmail.com</p>
                 </li>
                 <li>
                     <p>
-                        <i class="mr-3"></i> + 01 234 567 88</p>
-                </li>
-                <li>
-                    <p>
-                        <i class="mr-3"></i> + 01 234 567 89</p>
+                        <i class="mr-3"></i> 722 543 625</p>
                 </li>
             </ul>
 
@@ -84,7 +76,7 @@
         <div class="col-sm-3">
 
             <!-- Social buttons -->
-            <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+            <h5 class="font-weight-bold text-uppercase mb-4">SÍGUENOS</h5>
 
             <div class="row">
 

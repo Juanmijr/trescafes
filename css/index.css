@@ -15,6 +15,10 @@ a.btn-primary:focus, a.btn-primary:hover, button.btn-primary:focus, button.btn-p
   background-color: #4b3621 !important;
 }
 
+.table-primary {
+  background-color: #4b3621 !important;
+}
+
 nav {
   font-family: "Be Vietnam", sans-serif;
   font-size: px;

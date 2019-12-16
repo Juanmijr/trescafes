@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <?php include ('includes/head.php'); ?>
-        <title></title>
+        <title>Chocolates | Tres Cafés</title>
     </head>
     <body>
         <?php include ('includes/navbar.php'); ?>
@@ -22,7 +22,7 @@ and open the template in the editor.
                     <article class="row mt-5  mx-auto">
                         <div class="col-sm-12">
                             <p class="text-title">CHOCOLATES</p>
-                            <p class="text-secondary text-justify">Lorem Ipsum is simply dummy text ofry. Lorem Ipsum has been the industry's  centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p class="text-secondary text-justify">Saborea la dulzura y la pureza de nuestros chocolates mezclados delicadamente con leche caliente.</p>
                         </div>
                     </article>
                 </div>
