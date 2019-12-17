@@ -22,7 +22,7 @@ and open the template in the editor.
                     <article class="row mt-5  mx-auto">
                         <div class="col-sm-12">
                             <p class="text-title">LOLOCCINO</p>
-                            <p class="text-secondary text-justify">Disfruta del Capuccino especial de la casa, en el que encontrarás una espumosa capa de leche, junto que nuestro acaramelado Espresso y el toque perfecto de cacao espolverizado.</p>
+                            <p class="text-secondary text-justify">Disfruta del Capuccino especial de la casa, en el que encontrarás una espumosa capa de leche, junto a nuestro acaramelado Espresso y el toque perfecto de cacao espolverizado.</p>
                         </div>
                     </article>
                 </div>

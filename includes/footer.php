@@ -19,7 +19,7 @@
         <div class="col-sm-3">
 
             <!-- Links -->
-            <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+            <h5 class="font-weight-bold text-uppercase mb-4">descubre más</h5>
 
             <ul class="list-unstyled text-footer-cuerpo ">
                 <li>
