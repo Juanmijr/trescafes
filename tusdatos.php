@@ -29,20 +29,25 @@ and open the template in the editor.
                     </section>
                     <section>
                         <span class='text-title'>HISTORIAL DE COMPRAS</span>
-                        <table class="table table-hover table-primary mt-5">
+                        <table class="table table-hover mt-5">
                         <thead>
-                          <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Precio</th>
+                            <tr>
+                            <th></th>
+                            <th>Fecha</th>
+                            <th>Precio</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">Yorspresso</th>
-                            <td>12-12-2019</td>
-                            <td>3</td>
-                          </tr>
+                            <tr>
+                                <th>Yorspresso</th>
+                                <td>12-12-2019</td>
+                                <td>3</td>
+                              </tr>
+                            <tr>
+                             <th>Loloccino</th>
+                             <td>17-12-2019</td>
+                             <td>2,5</td>
+                           </tr>
                         </tbody>
                       </table>
                     </section>
