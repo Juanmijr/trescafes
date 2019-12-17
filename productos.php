@@ -63,24 +63,24 @@ and open the template in the editor.
 
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="tartas.php"><img class="imgRedes " src="img/415.png"/>
+                    <a href="tartas.php"><img class="imgRedes " src="img/tartas.jpg"/>
                     <span class="text-secondary">Tartas</span>
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="magdalenas.php"> <img class="imgRedes " src="img/415.png"/>
+                    <a href="magdalenas.php"> <img class="imgRedes " src="img/magdalenas.jpg"/>
                     <span class="text-secondary">Magdalenas</span>
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="galletas.php"> <img class="imgRedes " src="img/415.png"/>
+                    <a href="galletas.php"> <img class="imgRedes " src="img/galletas.jpg"/>
                     <span class="text-secondary">Galletas</span>
                     <img src="img/siguiente.png"></a>
                 </div>
             </section>
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="bizcochos.php"> <img class="imgRedes " src="img/415.png"/>
+                    <a href="bizcochos.php"> <img class="imgRedes " src="img/bizcochos.jpg"/>
                     <span class="text-secondary">Bizcochos</span>
                     <img src="img/siguiente.png"></a>
                 </div>
@@ -108,12 +108,12 @@ and open the template in the editor.
 
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="chocolates.php"> <img class="imgRedes " src="img/415.png"/>                
+                    <a href="chocolates.php"> <img class="imgRedes " src="img/chocolate.jpg"/>                
                     <span class="text-secondary">Chocolate</span>
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="infusiones.php"><img class="imgRedes " src="img/415.png"/>
+                    <a href="infusiones.php"><img class="imgRedes " src="img/mate.jpg"/>
                     <span class="text-secondary">Infusiones</span>
                     <img src="img/siguiente.png"></a>
                 </div>
