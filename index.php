@@ -14,7 +14,7 @@ and open the template in the editor.
          include ('includes/navbar.php');
         ?>
          <!--SLIDESHOW-->
-        <div class="row bg-dark">
+        <section class="row bg-dark">
             <div class="col">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -44,9 +44,9 @@ and open the template in the editor.
                 </div>
 
             </div>
-        </div>
+        </section>
 
-        <div class="row">
+        <section class="row">
             <div class="col-sm-8 text-justify pt-5 text-secondary">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -55,25 +55,25 @@ and open the template in the editor.
             <div class="col-sm-4">
                 <img class="imgRedes " src="img/415.png"></img>
             </div>
-        </div>
+        </section>
 
-        <div class="row">
-
+         <section class="row" style="background-color: #006127">
+             <img src="img/banner.png"/>
             <div class="col-sm-4 text-justify pt-5 text-secondary">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
+                scrambled it to make a type specimen book.-->
             </div>
             <div class="col-sm-4">
-                <img class="imgRedes " src="img/415.png"></img>
+                <!--<img class="imgRedes " src="img/415.png"></img>-->
             </div>
             <div class="col-sm-4 text-justify pt-5 text-secondary">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
+                scrambled it to make a type specimen book.-->
             </div>
-        </div>
-        <div class="row">
+        </section>
+        <section class="row">
             <div class="col-sm-4">
                 <img class="imgRedes " src="img/415.png"></img>
             </div>
@@ -82,8 +82,8 @@ and open the template in the editor.
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                 scrambled it to make a type specimen book.
             </div>
-        </div>
-        <div class="row">
+        </section>
+        <section class="row">
             <div class="col-sm-6 text-justify pt-5 text-secondary">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -92,7 +92,7 @@ and open the template in the editor.
             <div class="col-sm-6">
                 <img class="imgRedes " src="img/415.png"></img>
             </div>
-        </div>
+        </section>
         <?php      
          include('includes/footer.php');
         ?>
