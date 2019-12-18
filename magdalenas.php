@@ -27,7 +27,7 @@ and open the template in the editor.
                     </article>
                 </div>
                 <aside class="col-sm-8">
-                    <img class="imgProductos img-fluid" src="img/magdalenas.jpg">
+                    <img class="imgProductos img-fluid" src="img/magdalena.jpg">
                 </aside>
             </div>
         </div>

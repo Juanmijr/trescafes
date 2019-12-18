@@ -63,12 +63,12 @@ and open the template in the editor.
 
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="tartas.php"><img class="imgRedes " src="img/tartas.jpg"/>
+                    <a href="tartas.php"><img class="imgRedes " src="img/tarta.jpg"/>
                     <span class="text-secondary">Tartas</span>
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="magdalenas.php"> <img class="imgRedes " src="img/magdalenas.jpg"/>
+                    <a href="magdalenas.php"> <img class="imgRedes " src="img/magdalena.jpg"/>
                     <span class="text-secondary">Magdalenas</span>
                     <img src="img/siguiente.png"></a>
                 </div>
@@ -80,7 +80,7 @@ and open the template in the editor.
             </section>
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="bizcochos.php"> <img class="imgRedes " src="img/bizcochos.jpg"/>
+                    <a href="bizcochos.php"> <img class="imgRedes " src="img/bizcocho.png"/>
                     <span class="text-secondary">Bizcochos</span>
                     <img src="img/siguiente.png"></a>
                 </div>
@@ -113,7 +113,7 @@ and open the template in the editor.
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="infusiones.php"><img class="imgRedes " src="img/mate.jpg"/>
+                    <a href="infusiones.php"><img class="imgRedes " src="img/infusion.jpg"/>
                     <span class="text-secondary">Infusiones</span>
                     <img src="img/siguiente.png"></a>
                 </div>
