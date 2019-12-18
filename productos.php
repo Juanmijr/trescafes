@@ -30,17 +30,17 @@ and open the template in the editor.
 
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="loloccino.php"><img class="imgRedes" src="img/loloccino.jpg"/>
+                    <a href="loloccino.php"><img class="imgRedes" src="img/loloccino.png"/>
                     <span class="text-secondary">Loloccino</span>
                    <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="yorspresso.php"><img class="imgRedes " src="img/yorspresso.jpg"/>
+                    <a href="yorspresso.php"><img class="imgRedes " src="img/Espresso.png"/>
                     <span class="text-secondary">Yorspresso</span>
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="juanmocha.php"><img class="imgRedes " src="img/juanmocha.jpg"/>
+                    <a href="juanmocha.php"><img class="imgRedes " src="img/juanmocha.png"/>
                     <span class="text-secondary">Juanmocha</span>
                     <img src="img/siguiente.png"></a>
                 </div>
@@ -63,17 +63,17 @@ and open the template in the editor.
 
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="tartas.php"><img class="imgRedes " src="img/tarta.jpg"/>
+                    <a href="tartas.php"><img class="imgRedes " src="img/tarta.png"/>
                     <span class="text-secondary">Tartas</span>
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="magdalenas.php"> <img class="imgRedes " src="img/magdalena.jpg"/>
+                    <a href="magdalenas.php"> <img class="imgRedes " src="img/magdalena.png"/>
                     <span class="text-secondary">Magdalenas</span>
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="galletas.php"> <img class="imgRedes " src="img/galletas.jpg"/>
+                    <a href="galletas.php"> <img class="imgRedes " src="img/galletas.png"/>
                     <span class="text-secondary">Galletas</span>
                     <img src="img/siguiente.png"></a>
                 </div>
@@ -108,12 +108,12 @@ and open the template in the editor.
 
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="chocolates.php"> <img class="imgRedes " src="img/chocolate.jpg"/>                
+                    <a href="chocolates.php"> <img class="imgRedes " src="img/chocolate.png"/>                
                     <span class="text-secondary">Chocolate</span>
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="infusiones.php"><img class="imgRedes " src="img/infusion.jpg"/>
+                    <a href="infusiones.php"><img class="imgRedes " src="img/infusion.png"/>
                     <span class="text-secondary">Infusiones</span>
                     <img src="img/siguiente.png"></a>
                 </div>
