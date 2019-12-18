@@ -13,7 +13,7 @@
                     <h1 class=""> Registro de socio: </h1>
 
                     <form>
-                        <div class="form-row">
+                        <section class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Email</label>
                                 <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
@@ -22,17 +22,17 @@
                                 <label for="inputPassword4">Contraseña</label>
                                 <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
                             </div>
-                        </div>
-                        <div class="form-group">
+                        </section>
+                        <section class="form-group">
                             <label for="inputAddress">Dirección</label>
                             <input type="text" class="form-control" id="inputAddress" placeholder="Calle, piso, ...">
-                        </div>
+                        </section>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputCity">Ciudad</label>
                                 <input type="text" class="form-control" id="inputCity">
                             </div>
-                            <div class="form-group col-md-4">
+                            <section class="form-group col-md-4">
                                 <label for="inputState">País</label>
                                 <select id="inputState" class="form-control">
                                     <option value="Elegir" id="AF">Elegir opción</option>
@@ -274,13 +274,13 @@
                                     <option value="Zambia" id="ZM">Zambia</option>
                                     <option value="Zimbabue" id="ZW">Zimbabue</option>
                                 </select>
-                            </div>
-                            <div class="form-group col-md-2">
+                            </section>
+                            <section class="form-group col-md-2">
                                 <label for="inputZip">Código Postal</label>
                                 <input type="text" class="form-control" id="inputZip">
-                            </div>
+                            </section>
                         </div>
-                        
+
                         <button type="submit" class="btn btn-primary">Hazme socio</button>
                     </form>
                 </div>

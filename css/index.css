@@ -3,12 +3,12 @@ a.btn-primary:focus, a.btn-primary:hover, button.btn-primary:focus, button.btn-p
 }
 
 .imgIniciar {
-  width: 35px;
+  width: 2.1875rem;
 }
 
 .imgLogo {
-  width: 75px;
-  margin-right: 20px;
+  width: 4.6875rem;
+  margin-right: 1.25rem;
 }
 
 .bg-primary {
@@ -21,7 +21,6 @@ a.btn-primary:focus, a.btn-primary:hover, button.btn-primary:focus, button.btn-p
 
 nav {
   font-family: "Be Vietnam", sans-serif;
-  font-size: px;
 }
 
 nav a:hover {
@@ -30,55 +29,55 @@ nav a:hover {
 
 .text-title {
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 40px !important;
+  font-size: 2.5rem !important;
   color: #e3a364 !important;
 }
 
 .text-footer {
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: #d6d6d6 !important;
 }
 
 .text-footer-cuerpo {
   font-family: "Lato", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #9b9b9b !important;
 }
 
 .text-secondary {
   font-family: "Lato", sans-serif !important;
-  font-size: 20px !important;
+  font-size: 1.25rem !important;
   color: black !important;
 }
 
 .carousel-item img {
   width: 100%;
-  height: 500px;
-  max-height: 460px;
+  height: 31.25rem;
+  max-height: 28.75rem;
 }
 
 .carousel-inner {
-  height: 500px;
+  height: 31.25rem;
 }
 
 .imgRedes {
-  height: 150px;
+  height: 9.375rem;
   width: 100%;
 }
 
 .imgUsu {
-  width: 40px;
+  width: 2.5rem;
 }
 
 .imgProductos {
-  width: 600px;
-  height: 400px;
+  width: 37.5rem;
+  height: 25rem;
 }
 
 .imgTusDatos {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
 }
 
 footer a {
@@ -93,11 +92,11 @@ footer a:hover {
 
 .nav-link {
   color: #EAE8E8 !important;
-  font-size: 15px;
+  font-size: 0.938rem;
 }
 
 .nav-item {
-  font-size: 15px;
+  font-size: 0.938rem;
   color: #d6d6d6 !important;
 }
 
@@ -112,7 +111,7 @@ footer a:hover {
 .dropdown-submenu > .dropdown-menu {
   top: 0;
   left: 100%;
-  margin-top: -6px;
+  margin-top: -0.375rem;
 }
 
 /* rotate caret on hover */
@@ -123,8 +122,8 @@ footer a:hover {
 
 .map-responsive {
   overflow: hidden;
-  padding-bottom: 500px;
-  margin-top: 50px;
+  padding-bottom: 31.25rem;
+  margin-top: 3.125rem;
   height: 0;
 }
 
@@ -140,7 +139,7 @@ footer a:hover {
 }
 
 .navbar-letra {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
