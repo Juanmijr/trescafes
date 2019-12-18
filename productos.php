@@ -30,7 +30,7 @@ and open the template in the editor.
 
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="loloccino.php"><img style="height: 200px; width: 420px;" src="img/loloccino.jpg"/>
+                    <a href="loloccino.php"><img class="imgRedes" src="img/loloccino.jpg"/>
                     <span class="text-secondary">Loloccino</span>
                    <img src="img/siguiente.png"></a>
                 </div>
