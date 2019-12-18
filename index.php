@@ -14,17 +14,17 @@ and open the template in the editor.
          include ('includes/navbar.php');
         ?>
          <!--SLIDESHOW-->
-        <section class="row bg-dark">
+        <section class="row ">
             <div class="col">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="img/415.png" alt="First slide">
+                    <div class="carousel-inner  h-100">
+                        <div class="carousel-item active  h-100">
+                            <img class="imgCarrusel " src="img/banner.png" alt="First slide">
                         </div>
                         <div class="carousel-item">
                             <img class="d-block w-100" src="img/415.png" alt="Second slide">
@@ -57,8 +57,8 @@ and open the template in the editor.
             </div>
         </section>
 
-         <section class="row" style="background-color: #006127">
-             <img src="img/banner.png"/>
+         <section class="row">
+             
             <div class="col-sm-4 text-justify pt-5 text-secondary">
                 <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -75,7 +75,7 @@ and open the template in the editor.
         </section>
         <section class="row">
             <div class="col-sm-4">
-                <img class="imgRedes " src="img/415.png"></img>
+                <img class="img-fluid " src="img/415.png"></img>
             </div>
             <div class="col-sm-8 text-justify pt-5 text-secondary">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -83,14 +83,15 @@ and open the template in the editor.
                 scrambled it to make a type specimen book.
             </div>
         </section>
-        <section class="row">
-            <div class="col-sm-6 text-justify pt-5 text-secondary">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
+        <section class="row" style="background-image: url('img/BannerEmpleo.png');">
+            <div class=" col-sm-6 text-center pt-5 text-secondary">
+                <p class="text-white"> Si buscas trabajo, aquí tenemos la solución a tus problemas, </p>
+                <form method="POST" action="empleo.php">
+                    <input class="mb-4 btn btn-primary" type="submit" name="trabaja" value="TRABAJA CON NOSOTROS">
+                </form>
             </div>
             <div class="col-sm-6">
-                <img class="imgRedes " src="img/415.png"></img>
+                <!--<img class="imgRedes " src="img/415.png"></img>-->
             </div>
         </section>
         <?php      

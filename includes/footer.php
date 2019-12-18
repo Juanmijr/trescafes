@@ -2,7 +2,7 @@
 <!-- Footer -->
 <footer>
     <!-- Grid row -->
-    <div class="row bg-primary lighten-3 pt-4  bg-primary text-footer mt-5">
+    <div class="row bg-primary lighten-3 pt-4  bg-primary text-footer mt-1">
 
         <!-- Grid column -->
         <div class="col-sm-3">
