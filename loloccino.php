@@ -35,7 +35,7 @@ and open the template in the editor.
                 <hr>
                 <a class="text-secondary" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
                 <div class="collapse" id="footwear">
-                    <div class="row collapse" id="footwear">
+                    <div class="row">
                         <div class="chartContainer col-12 my-5">
                             <canvas id="doughnutChart"></canvas>
                         </div>
