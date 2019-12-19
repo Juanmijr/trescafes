@@ -5,42 +5,64 @@
     </head>
     <body>
         <?php
-         include ('includes/navbar.php');
+        include ('includes/navbar.php');
         ?>
-        
+
         <div class="container-fluid">
+            <div class="row">
+                
+            </div>
             <main class="row mt-5">
-                <article class=" col-md-9">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                        Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.
-                    </p>
-                    <p>
-                        Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum urna sed risus. In convallis tellus a mauris. Curabitur non elit ut libero tristique sodales. Mauris a lacus. Donec mattis semper leo. In hac habitasse platea dictumst. Vivamus facilisis diam at odio. Mauris dictum, nisi eget consequat elementum, lacus ligula molestie metus, non feugiat orci magna ac sem. Donec turpis. Donec vitae metus. Morbi tristique neque eu mauris. Quisque gravida ipsum non sapien. Proin turpis lacus, scelerisque vitae, elementum at, lobortis ac, quam. Aliquam dictum eleifend risus. In hac habitasse platea dictumst. Etiam sit amet diam. Suspendisse odio. Suspendisse nunc. In semper bibendum libero.
-                    </p>
-                    <p>
-                        Proin nonummy, lacus eget pulvinar lacinia, pede felis dignissim leo, vitae tristique magna lacus sit amet eros. Nullam ornare. Praesent odio ligula, dapibus sed, tincidunt eget, dictum ac, nibh. Nam quis lacus. Nunc eleifend molestie velit. Morbi lobortis quam eu velit. Donec euismod vestibulum massa. Donec non lectus. Aliquam commodo lacus sit amet nulla. Cras dignissim elit et augue. Nullam non diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Aenean vestibulum. Sed lobortis elit quis lectus. Nunc sed lacus at augue bibendum dapibus.
-                    </p>
-                    <p>
-                        Aliquam vehicula sem ut pede. Cras purus lectus, egestas eu, vehicula at, imperdiet sed, nibh. Morbi consectetuer luctus felis. Donec vitae nisi. Aliquam tincidunt feugiat elit. Duis sed elit ut turpis ullamcorper feugiat. Praesent pretium, mauris sed fermentum hendrerit, nulla lorem iaculis magna, pulvinar scelerisque urna tellus a justo. Suspendisse pulvinar massa in metus. Duis quis quam. Proin justo. Curabitur ac sapien. Nam erat. Praesent ut quam.
-                    </p>
-                    <p>
-                        Vivamus commodo, augue et laoreet euismod, sem sapien tempor dolor, ac egestas sem ligula quis lacus. Donec vestibulum tortor ac lacus. Sed posuere vestibulum nisl. Curabitur eleifend fermentum justo. Nullam imperdiet. Integer sit amet mauris imperdiet risus sollicitudin rutrum. Ut vitae turpis. Nulla facilisi. Quisque tortor velit, scelerisque et, facilisis vel, tempor sed, urna. Vivamus nulla elit, vestibulum eget, semper et, scelerisque eget, lacus. Pellentesque viverra purus. Quisque elit. Donec ut dolor.
-                    </p>
+                <article class=" col-md-12">
+                    <h1 class="text-title">CÓMO ELABORAR CAFÉ</h1>
+                    <hr>
+                    <h3 class="text-justify text-secondary">Elaboración del café en 8 sencillos pasos</h3>
+                    <embed src="videos/procesodelcafepasoapaso.mp4" width="700" height="400">
+                    <hr>
+                    <div  class="pt-4 pb-5 text-justify text-secondary">
+                        <p>
+                            <h4 class="text-title">1.-  PLANTACIÓN</h4>
+                            Un grano de café en realidad es una semilla. Proviene del cafeto y en los cultivos se mantiene a un tamaño de alrededor de 3 metros.
+                        </p>
+                        <p>
+                            <h4 class="text-title">2.-  COSECHA</h4>
+                            En esta fase se recolectan las "cerezas", que son los frutos del cafeto. Se suele realizar a mano, seleccionando solo los granos que tengan el punto justo de madurez.
+                        </p>
+                        <p>
+                            <h4 class="text-title">3.-  PROCESAMIENTO</h4>
+                            Existen dos métodos, el seco y el húmedo.<br>
+                            En el seco, los frutos se extienden en grandes superficies para su secado al sol.<br>
+                            En el húmedo, se separa la pulpa del fruto y luego el grano se seca con la cáscara pergamino que lo rodea.
+                        </p>
+                        <p>
+                            <h4 class="text-title">4.-  CURADO</h4>
+                            Cuando se emplea el método húmedo, se retira el pergamino que rodea al grano. Sin embargo, si se ha procesado en seco, se elimina totalmente la cáscara seca del fruto.
+                        </p>
+                        <p>
+                            <h4 class="text-title">5.-  DEGUSTACIÓN</h4>
+                            En cada etapa de producción, el café se somete a pruebas de calidad y sabor. En el cupping se analizan diversos factores como el cuerpo, la aroma, la acidez y el sabor.
+                        </p>
+                        <p>
+                            <h4 class="text-title">6.-  TUESTE</h4>
+                            Aquí los granos verdes adquieren el tono oscuro que conocemos.  Además, cuando la temperatura alcanza los 200 ºC, se liberan los aceites. Cuanto más aceite hay, más sabor tiene el café.
+                        </p>
+                        <p>
+                            <h4 class="text-title">7.-  MOLIDO</h4>
+                            El café se muele con el fin de obtener más sabor. El grado de espesor de la molienda determinará el proceso de elaboración de la bebida final.
+                        </p>
+                        <p>
+                            <h4 class="text-title">8.-  PREPARACIÓN</h4>
+                            Listo para el consumo del café. Existen infinidad de métodos para ello. 
+                        </p>
+                    </div>
 
                 </article>
-                <aside class=" col-md-3">
-                    <img class="img-fluid" src="img/415.png">
-                    </img>
-                </aside>
             </main>
         </div>
-        
-        
-  <?php      
-         include('includes/footer.php');
+
+
+        <?php
+        include('includes/footer.php');
         ?>
     </body>
 </html>
