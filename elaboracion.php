@@ -17,9 +17,11 @@
                     <h1 class="text-title">CÓMO ELABORAR CAFÉ</h1>
                     <hr>
                     <h3 class="text-justify text-secondary">Elaboración del café en 8 sencillos pasos</h3>
-                    <embed src="videos/procesodelcafepasoapaso.mp4" width="700" height="400">
+                    <div class="embed-responsive embed-responsive-16by9" >
+                        <iframe class="embed-responsive-item" src="videos/procesodelcafepasoapaso.mp4" allowfullscreen=""></iframe>
+                    </div>
                     <hr>
-                    <div  class="pt-4 pb-5 text-justify text-secondary">
+                    <div  class="pt-4 pb-5 text-justify text-secondary pl-5 pr-5">
                         <p>
                             <h4 class="text-title">1.-  PLANTACIÓN</h4>
                             Un grano de café en realidad es una semilla. Proviene del cafeto y en los cultivos se mantiene a un tamaño de alrededor de 3 metros.

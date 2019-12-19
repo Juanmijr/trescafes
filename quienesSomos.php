@@ -11,21 +11,43 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-         include ('includes/navbar.php');
+        include ('includes/navbar.php');
         ?>
-        
-        <article class="row">
-            <section class="col-sm-8 text-center pt-5 text-justify text-secondary">
-                <p class="text-title">¿QUIÉNES SOMOS?</p>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies varius enim at lacinia. Maecenas non tristique libero, vel semper diam. Praesent in velit nec orci lobortis consectetur sit amet non nisi. Donec dapibus volutpat ex, id consectetur quam egestas quis. Quisque tellus eros, suscipit lobortis pellentesque quis, lacinia eu diam. Donec nibh arcu, feugiat eu rhoncus et, aliquet sed odio. Quisque dapibus auctor nulla vel congue. Ut elementum nibh non dolor tempor pellentesque eget at est. Vivamus a quam sed tellus dapibus molestie in quis nisi. Proin eget vulputate purus. Nam consequat sodales ante. Nunc blandit vestibulum ex ut posuere. Praesent orci felis, auctor eget dui vel, cursus fringilla ligula. Quisque quis tincidunt felis.  </p>
+
+        <div class="row">
+            <section class="col-sm-8 text-justify text-secondary pt-5">
+                <p class="text-title">ASÍ EMPEZÓ</p><br>
+                <p>
+                    Los orígenes de Tres Cafés se establecen en una cafetería de barrio, de ahí el ímpetu por el buen café. 
+                    Un negocio que fue creciendo y a través del cuál se fueron añadiendo nuevos productos además del café. 
+                    TR3SCAf€S, que como marca nació en 2019, se define como una empresa que no tiene límites y con la ambición de llegar lejos.
+                </p>
             </section>
-            <aside class="col-sm-4 mt-5">
-                <img class="imgRedes " src="img/415.png"/>
+            <aside class="col-sm-4 pt-5">
+                <img class="imgRedes" src="img/415.png">
             </aside>
-        </article>
-        
-        <?php      
-         include('includes/footer.php');
+        </div>
+        <div class="row">
+            <aside class="col-sm-4 pt-5">
+                <img src="img/quienesSomos.jpg">
+            </aside>
+            <section class="col-sm-8 text-justify text-secondary pt-5">
+                <p class="text-title">NUESTROS VALORES</p><br>
+                <p>
+                    TR3SCAF€S es una empresa honesta, honrada y comprometida con su trabajo y sus trabajadores.
+                    Nos caracterizamos por la calidad de nuestro servicio, así como la de nuestros productos.
+                </p><br>
+                <p class="text-title">NUESTRA FILOSOFÍA</p><br>
+                <p>
+                    Pensamos que la mejor opción para triunfar es no perder la originalidad a la hora de sacar al mercado nuestros productos.
+                    Ese sabor del café, ese toque de acidez, ese punto exacto de intensidad de nuestro yorspresso, así como la suavidad de nuestro chocolate. 
+                    Todo ello son claves de nuestro éxito.
+                </p><br>
+            </section>
+        </div>
+
+        <?php
+        include('includes/footer.php');
         ?>
     </body>
 </html>
