@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <?php include ('includes/head.php'); ?>
-        <title></title>
+        <title>¿Quiénes Somos?| Tres Cafés</title>
     </head>
     <body>
         <?php
@@ -29,7 +29,7 @@ and open the template in the editor.
         </div>
         <div class="row">
             <aside class="col-sm-4 pt-5">
-                <img src="img/quienesSomos.jpg">
+                <img src="img/quienesSomos.png">
             </aside>
             <section class="col-sm-8 text-justify text-secondary pt-5">
                 <p class="text-title">NUESTROS VALORES</p><br>

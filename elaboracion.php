@@ -9,11 +9,8 @@
         ?>
 
         <div class="container-fluid">
-            <div class="row">
-                
-            </div>
             <main class="row mt-5">
-                 <article class=" col-md-9">
+                 <article class=" col-md-12">
                     <h1 class="text-title">CÓMO ELABORAR CAFÉ</h1>
                     <hr>
                     <h3 class="text-justify text-secondary">Elaboración del café en 8 sencillos pasos</h3>

@@ -7,23 +7,42 @@ and open the template in the editor.
 <html>
     <head>
         <?php include ('includes/head.php'); ?>
-        <title></title>
+        <title>¿Buscas Empleo? | Tres Cafés</title>
     </head>
     <body>
         <?php
          include ('includes/navbar.php');
         ?>
-        
-        <article class="row">
-            <section class="col-sm-8 text-center pt-5 text-justify text-secondary">
-                <p class="text-title">EMPLEO</p>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies varius enim at lacinia. Maecenas non tristique libero, vel semper diam. Praesent in velit nec orci lobortis consectetur sit amet non nisi. Donec dapibus volutpat ex, id consectetur quam egestas quis. Quisque tellus eros, suscipit lobortis pellentesque quis, lacinia eu diam. Donec nibh arcu, feugiat eu rhoncus et, aliquet sed odio. Quisque dapibus auctor nulla vel congue. Ut elementum nibh non dolor tempor pellentesque eget at est. Vivamus a quam sed tellus dapibus molestie in quis nisi. Proin eget vulputate purus. Nam consequat sodales ante. Nunc blandit vestibulum ex ut posuere. Praesent orci felis, auctor eget dui vel, cursus fringilla ligula. Quisque quis tincidunt felis.  </p>
+        <p class="text-title text-center pt-5 pb-2">¿Cuáles son los pasos para convertirte en nuestro empleado?</p>
+        <div class="row">
+            <section class="col-sm-8 pt-5 text-justify text-secondary">
+                <p><strong>1.- Datos Personales y CV: </strong>Para conocerte mejor, en este espacio nos contarás tanto tu trayectoria académica como tu experiencia laboral. Esta información nos permitirá encontrar la oferta de trabajo que mejor encaje contigo y tus preferencias.</p>
             </section>
             <aside class="col-sm-4 mt-5">
-                <img class="imgRedes" src="img/415.png"/>
+                <img class="imgEmpleo" src="img/curriculum.png"/>
             </aside>
-        </article>
-        
+        </div>
+        <div class="row">
+            <aside class="col-sm-4 pt-5">
+                <img class="imgEmpleo" src="img/afinidad.png"/>
+            </aside>
+            <section class="col-sm-8 pt-5 text-justify text-secondary">
+                <p><strong>2.- Test de afinidad: </strong> En esta fase encontrarás un cuestionario para concer más de ti. Será importante que lo rellenes, dado que así podremos ofrecerte una vacante afín a ti y a tus preferencias.</p>
+            </section>
+        </div>
+        <div class="row">
+            <section class="col-sm-8 pt-5 text-justify text-secondary">
+                <p><strong>3.- Entrevista personal: </strong>Llegados a este punto, significa que tu perfil nos encaja y queremos conocerte en persona. Es un momento importante y queremos que seas tu mismo.</p>
+            </section>
+            <aside class="col-sm-4 pt-5 pb-5">
+                <img class="imgEmpleo" src="img/entrevista.png"/>
+            </aside>
+        </div>
+        <div class="row">
+            <section class="col-sm-12 fondoRegistro" style="background-image: url(img/granocafe.png)">
+                 <button type="submit" class="btn btn-secundary mt-5">REGISTRATE</button>
+            </section>
+        </div>
         <?php      
          include('includes/footer.php');
         ?>
