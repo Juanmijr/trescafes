@@ -11,9 +11,9 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-         include ('includes/navbar.php');
+        include ('includes/navbar.php');
         ?>
-         <!--SLIDESHOW-->
+        <!--SLIDESHOW-->
         <section class="row ">
             <div class="col">
                 <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
@@ -45,20 +45,36 @@ and open the template in the editor.
 
             </div>
         </section>
-
-        <section class="row">
-            <div class="col-sm-8 text-justify pt-5 text-secondary">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
+        <hr>
+        <section class="row text-footer-cuerpo">
+            <div class="col-sm-7 text-justify  text-secondary ">
+                <p class="font-weight-bold">SÍGUENOS EN NUESTRAS</p>
+                <p class="redesSociales">REDES SOCIALES</p>
+                <p>¿Quieres ser el primero en conocer todas las novedades, participar en nuestros concursos y disfrutar de las mejores ofertas?  ¡Pues dale a seguir y forma parte de la comunidad TRÉS CAFÉS!</p>
             </div>
-            <div class="col-sm-4">
-                <img class="imgRedes " src="img/415.png"></img>
+            <div class="col-sm-5 mt-5 botonesRS">
+                <div class="row">
+                    <div class="col-sm-4 border-right">
+                        <h2>Facebook</h2>
+                        <img src="img/icons8-facebook-rodeado-de-círculo-48.png"><br>
+                        <button href="#" class="btn btn-secundary mt-2" >SEGUIR</button>
+                    </div>
+                    <div class="col-sm-4 border-right">
+                        <h2>Instagram</h2>
+                        <img src="img/icons8-instagram-48.png"><br>
+                        <button href="#" class="btn btn-secundary mt-2" >SEGUIR</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>Twitter</h2>
+                        <img src="img/icons8-twitter-48.png"><br>
+                        <button href="#" class="btn btn-secundary mt-2" >SEGUIR</button>
+                    </div>
+                </div>
             </div>
         </section>
+        <hr>
+        <section class="row">
 
-         <section class="row">
-             
             <div class="col-sm-4 text-justify pt-5 text-secondary">
                 <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -73,29 +89,24 @@ and open the template in the editor.
                 scrambled it to make a type specimen book.-->
             </div>
         </section>
-        <section class="row">
+        <section class="row " style="background-image: url('img/BannerSocio.jpg');">
             <div class="col-sm-4">
                 <img class="img-fluid " src="img/415.png"></img>
             </div>
-            <div class="col-sm-8 text-justify pt-5 text-secondary">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
+            <div class="col-sm-8 text-center pt-5 text-white">
+                Al hacerte socio de TRES CAFÉS ¡TRÉS CAFÉS TOTALMENTE GRATIS!
             </div>
         </section>
-        <section class="row" style="background-image: url('img/BannerEmpleo.png');">
-            <div class=" col-sm-6 text-center pt-5 text-secondary">
-                <p class="text-white"> Si buscas trabajo, aquí tenemos la solución a tus problemas, </p>
-                <form method="POST" action="empleo.php">
-                    <input class="mb-4 btn btn-primary" type="submit" name="trabaja" value="TRABAJA CON NOSOTROS">
-                </form>
-            </div>
-            <div class="col-sm-6">
-                <!--<img class="imgRedes " src="img/415.png"></img>-->
-            </div>
-        </section>
-        <?php      
-         include('includes/footer.php');
+        <a href="empleo.php">
+            <section class="row" href="empleo.php" style="background-image: url('img/BannerEmpleo.png');">
+                <div class=" col-sm-12 text-center pt-5 text-secondary">
+                    <p class="text-empleo"> TRABAJA CON NOSOTROS </p>
+                </div>
+
+            </section>
+        </a>
+        <?php
+        include('includes/footer.php');
         ?>
     </body>
 </html>

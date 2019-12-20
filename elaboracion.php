@@ -13,7 +13,7 @@
                 
             </div>
             <main class="row mt-5">
-                <article class=" col-md-12">
+                 <article class=" col-md-9">
                     <h1 class="text-title">CÓMO ELABORAR CAFÉ</h1>
                     <hr>
                     <h3 class="text-justify text-secondary">Elaboración del café en 8 sencillos pasos</h3>
@@ -59,6 +59,7 @@
                     </div>
 
                 </article>
+                
             </main>
         </div>
 
