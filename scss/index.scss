@@ -114,6 +114,17 @@ nav a:hover {
     width: 6.25rem;
     height: 6.25rem;
 }
+
+.hover-1 img {
+  position: relative;
+  left: -5%;
+  transition: all 0.3s;
+}
+
+.hover-1:hover img {
+  left: 0;
+}
+
 footer a {
     text-decoration: none;
     color: $color-footer-cuerpo;

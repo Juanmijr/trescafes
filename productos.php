@@ -30,18 +30,24 @@ and open the template in the editor.
 
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="loloccino.php"><img class="imgRedes" src="img/loloccino.png"/>
+                    <div class="hover hover-1">
+                        <a href="loloccino.php"><img src="img/todosproductos/loloccino.png">
+                    </div>
                     <span class="text-secondary">Loloccino</span>
-                   <img src="img/siguiente.png"></a>
+                    <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="yorspresso.php"><img class="imgRedes " src="img/Espresso.png"/>
+                    <div class="hover hover-1">
+                        <a href="yorspresso.php"><img src="img/todosproductos/Espresso.png">
+                    </div>
                     <span class="text-secondary">Yorspresso</span>
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="juanmocha.php"><img class="imgRedes " src="img/juanmocha.png"/>
-                    <span class="text-secondary">Juanmocha</span>
+                    <div class="hover hover-1">
+                        <a href="juanmocha.php"><img src="img/todosproductos/juanmocha.png">
+                    </div>
+                    <span class="text-secondary">JuanMocha</span>
                     <img src="img/siguiente.png"></a>
                 </div>
             </section>
@@ -63,24 +69,32 @@ and open the template in the editor.
 
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="tartas.php"><img class="imgRedes " src="img/tarta.png"/>
+                    <div class="hover hover-1">
+                        <a href="tartas.php"><img src="img/todosproductos/tarta.png">
+                    </div>
                     <span class="text-secondary">Tartas</span>
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="magdalenas.php"> <img class="imgRedes " src="img/magdalena.png"/>
+                    <div class="hover hover-1">
+                        <a href="magdalenas.php"><img src="img/todosproductos/magdalena.png">
+                    </div>
                     <span class="text-secondary">Magdalenas</span>
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="galletas.php"> <img class="imgRedes " src="img/galletas.png"/>
+                    <div class="hover hover-1">
+                        <a href="galletas.php"><img src="img/todosproductos/galletas.png">
+                    </div>
                     <span class="text-secondary">Galletas</span>
                     <img src="img/siguiente.png"></a>
                 </div>
             </section>
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="bizcochos.php"> <img class="imgRedes " src="img/bizcocho.png"/>
+                    <div class="hover hover-1">
+                        <a href="bizcochos.php"><img src="img/todosproductos/bizcocho.png">
+                    </div>
                     <span class="text-secondary">Bizcochos</span>
                     <img src="img/siguiente.png"></a>
                 </div>
@@ -108,12 +122,16 @@ and open the template in the editor.
 
             <section class="row">
                 <div class="col-sm-4 text-center">
-                    <a href="chocolates.php"> <img class="imgRedes " src="img/chocolate.png"/>                
-                    <span class="text-secondary">Chocolate</span>
+                    <div class="hover hover-1">
+                        <a href="chocolates.php"><img src="img/todosproductos/chocolate.png">
+                    </div>
+                    <span class="text-secondary">Chocolates</span>
                     <img src="img/siguiente.png"></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="infusiones.php"><img class="imgRedes " src="img/infusion.png"/>
+                    <div class="hover hover-1">
+                        <a href="infusiones.php"><img src="img/todosproductos/infusion.png">
+                    </div>
                     <span class="text-secondary">Infusiones</span>
                     <img src="img/siguiente.png"></a>
                 </div>
