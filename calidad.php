@@ -59,6 +59,13 @@ El posterior proceso exclusivo de enfriado por aire permite mantener el grado ó
                         <h4 class="font-weight-bold">6.Crianza de tres  semanas dentro del envase</h4>
 Después del tueste, el café arábica Premium JOJULO es envasado en botes metálicos de 4 kilos y permanece en reposo a temperatura constante como mínimo durante tres semanas. Durante este tiempo, el café tostado terminará de afinar todos sus registros y matices organolépticos. Se trata de un exclusivo proceso de crianza después de la torrefacción.
                         </p>
+                        
+                        <p>
+                        <h4 class="font-weight-bold">7. Probarlo una y otra vez</h4>
+                        Probamos, una y otra y otra vez.
+
+Probamos más de 1000 tazas de café al día para verificar el excelente sabor que todos (incluido tú) esperamos. Un lote de café se prueba al menos tres veces antes de’ ser aprobado, es decir, que cada sorbo de café Starbucks® que tomes ’ hará’ tus delicias.
+                        </p>
 
 
                 </article>
