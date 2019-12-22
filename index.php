@@ -20,18 +20,16 @@ and open the template in the editor.
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+
                     </ol>
                     <div class="carousel-inner  h-100">
                         <div class="carousel-item active  h-100">
                             <img class="imgCarrusel " src="img/banner.png" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="img/415.png" alt="Second slide">
+                            <img class="d-block w-100" src="img/banner (2).png" alt="Second slide">
                         </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="img/415.png" alt="Third slide">
-                        </div>
+                      
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -73,28 +71,32 @@ and open the template in the editor.
             </div>
         </section>
         <hr>
-        <section class="row">
+        <section class="row bannerJuego" >
 
             <div class="col-sm-4 text-justify pt-5 text-secondary">
-                <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.-->
+                <p class="font-weight-bold">Si eres SOCIO y quieres conseguir ofertas sobre nuestros productos</p>
             </div>
-            <div class="col-sm-4">
-                <!--<img class="imgRedes " src="img/415.png"></img>-->
+            <div class="col-sm-4 mt-5">
+                
+                <form action="">
+                    <input type="submit" name="boton" class="btn btn-primary" value="¡AL GRANO!">
+                </form>
             </div>
             <div class="col-sm-4 text-justify pt-5 text-secondary">
-                <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.-->
+                <p class="font-weight-bold">JUEGA A NUESTROS JUEGOS Y CONSÍGUE DESCUENTOS!!</p>
             </div>
         </section>
-        <section class="row " style="background-image: url('img/BannerSocio.jpg');">
-            <div class="col-sm-4">
-                <img class="img-fluid " src="img/415.png"></img>
+        <section class="row" href="seSocio.php">
+            <div class="col-sm-12">
+                <hr>
+            </div> 
+            <div class="col-sm-8">
+                <img class="img-fluid " src="img/Productos/Espresso.png"></img>
+                <img class="img-fluid " src="img/Productos/loloccino.png"></img>
             </div>
-            <div class="col-sm-8 text-center pt-5 text-white">
-                Al hacerte socio de TRES CAFÉS ¡TRÉS CAFÉS TOTALMENTE GRATIS!
+            <div class="col-sm-4 text-center pt-5 text-secondary">
+                <p>Al hacerte socio de TRES CAFÉS</p> 
+                <p class="font-weight-bold">¡TRÉS CAFÉS TOTALMENTE GRATIS!</p>
             </div>
         </section>
         <a href="empleo.php">
