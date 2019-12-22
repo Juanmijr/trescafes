@@ -22,14 +22,14 @@
             <section class="row mb-4">
                 <div class="col-sm-4 text-center">
                     
-                    <img class="imgNovedades" src="img/crepes.png"><br>
+                    <img class="img-fluid" src="img/crepes.png"><br>
                     
                     <span class="text-secondary">Crepes</span>
                     
                 </div>
                 <div class="col-sm-4 text-center">
                    
-                    <img class="imgNovedades" src="img/batido.png"><br>
+                    <img class="img-fluid" src="img/batido.png"><br>
                     
                     <span class="text-secondary">Batido Oreo</span>
                   

@@ -22,11 +22,11 @@ and open the template in the editor.
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 
                     </ol>
-                    <div class="carousel-inner  h-100">
-                        <div class="carousel-item active  h-100">
+                    <div class="carousel-inner p-0 h-100">
+                        <div class="carousel-item active  p-0 h-100">
                             <img class="imgCarrusel " src="img/banner.png" alt="First slide">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item p-0">
                             <img class="d-block w-100" src="img/banner (2).png" alt="Second slide">
                         </div>
                       
