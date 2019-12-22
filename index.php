@@ -15,7 +15,7 @@ and open the template in the editor.
         ?>
         <!--SLIDESHOW-->
         <section class="row ">
-            <div class="col">
+            <div class="col p-0">
                 <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
