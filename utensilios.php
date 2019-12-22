@@ -14,7 +14,7 @@
                      <h1 class="text-title">Utensilios</h1>
                      <hr>
                 </aside>
-                <article class=" col-md-8 text-justify text-secondary pl-7 pr-7">
+                <article class=" col-md-9 text-justify text-secondary pl-7 pr-7">
                     <p>
                     
 
