@@ -1,7 +1,7 @@
 <html>
     <head>
         <?php include ('includes/head.php'); ?>
-        <title></title>
+        <title>¿Dónde estamos?| Tres Cafés</title>
     </head>
     <body>
         <?php include ('includes/navbar.php'); ?>

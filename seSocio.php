@@ -1,7 +1,7 @@
 <html>
     <head>
         <?php include ('includes/head.php'); ?>
-        <title></title>
+        <title>¿Quieres ser nuestro socio? | Tres Cafés</title>
     </head>
     <body>
         <?php

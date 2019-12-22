@@ -39,7 +39,7 @@
                 </li>
                 <li>
                     <p>
-                        <a href="">¡AL GRANO!</a>
+                        <a href="#">¡AL GRANO!</a>
                     </p>
                 </li>
             </ul>
@@ -95,7 +95,7 @@
         <!-- Grid column -->
     </div>
         <div class="row">
-            <div class="col-sm-12 py-3 bg-primary text-footer-cuerpo"><a href="terminosLegales">Tr3sCaf€s © Términos Legales</a></div>
+            <div class="col-sm-12 py-3 bg-primary text-footer-cuerpo"><a href="terminosLegales.php">Tr3sCaf€s © Términos Legales</a></div>
         </div>  
     <!-- Grid row -->
 
