@@ -20,7 +20,7 @@
                 </div>
                 <article class=" col-md-9">
 
-                    <div  class="pt-4 pb-5 text-justify text-secondary pl-5 pr-5">
+                    <div  class="pt-4 pb-5 text-justify text-secondary">
 
                         <p>
                             Para simplificar la clasificación de los orígenes y especies botánicas producidas, y clasificar los precios que se reconocen para los diversos tipos de café, la Organización Internacional del Café (OIC) distingue cuatro principales tipos de café:
@@ -72,7 +72,7 @@ Probamos más de 1000 tazas de café al día para verificar el excelente sabor q
 
                 <aside class=" col-md-3">
                     <img class="img-fluid" src="img/arabica.robusta.jpg"> 
-                    <img class="img-fluid mt-5" src="img/paqueteCafe.png">
+                    <img class="img-fluid mt-5 w-100" src="img/paqueteCafe.png">
                     </img>
                 </aside>
             </main>
