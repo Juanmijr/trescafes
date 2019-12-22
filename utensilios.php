@@ -25,8 +25,9 @@ También utilizamos jarras de leche innovadoras, que hemos también hemos diseñ
                     </p>
 
                 </article>
-                <aside class="col-md-4">
-                    <img class="img-fluid" src="img/maquinaCafe.jpg">
+                   <aside class=" col-md-3">
+                       <img class="img-fluid" src="img/maquinaCafe.jpg"> 
+
                     </img>
                 </aside>
             </main>
