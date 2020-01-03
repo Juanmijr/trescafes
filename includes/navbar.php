@@ -78,7 +78,7 @@
                             <a class="nav-link" href="./quienesSomos.php">QUIENES SOMOS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">¡AL GRANO!</a>
+                            <a class="nav-link" href="./alGrano.php">¡AL GRANO!</a>
                         </li>
                     </ul>
                     <div class="ml-auto">
