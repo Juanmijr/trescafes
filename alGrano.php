@@ -15,7 +15,7 @@
                 <a href="arkanoid.php">Arkanoid</a>
             </div>
             <div class="col">
-                <a href="">Tres en Raya</a>
+                <a href="tresCafesEnRaya.php">Tres en Raya</a>
             </div>
         </div>
         <?php

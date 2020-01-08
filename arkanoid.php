@@ -3,9 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <link href="css/stylo.css" type="text/css" rel="stylesheet">
+          <link href="css/estiloArkanoid.css" type="text/css" rel="stylesheet">
             <?php include ('includes/head.php'); ?>
-        
     </head>
 
     <body>
@@ -23,11 +22,11 @@
           <canvas id="canvas" width="500" height="400"></canvas>
           <div id="modal">
               <button id="boton">
-                <img id='play' src="imgArkanoid/play.png">  
+                <img id='play' src="img/imgArkanoid/play.png">  
               </button>
           </div>
       </div>
-        <script src="arkanoid.js"></script>
+        <script src="js/juegoJuanmi.js"></script>
         </div>
          <?php
         include('includes/footer.php');

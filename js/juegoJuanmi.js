@@ -21,7 +21,7 @@ var raqueta = {
     izquierda: false,
     velocidad: 7
 };
-raqueta.img.src = "imgArkanoid/prueba.png";
+raqueta.img.src = "./img/imgArkanoid/prueba.png";
 function dibujarRaqueta() {
     ctx.drawImage(raqueta.img, raqueta.x, raqueta.y);
 }
@@ -93,7 +93,7 @@ var infoBloque = {
     left: 30,
     img: document.createElement("img")
 };
-infoBloque.img.src = "imgArkanoid/FINAL.png";
+infoBloque.img.src = "./img/imgArkanoid/FINAL.png";
 function crearBloques() {
     for (c = 0; c < infoBloque.columnas; c++) {
         bloques[c] = [];
