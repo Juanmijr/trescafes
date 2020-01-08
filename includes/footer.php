@@ -87,7 +87,7 @@
                     <a href="https://www.instagram.com" target="_blank"><img src="img/icons8-instagram-50.png"><img></a>
                 </div>
                 <div class="col">
-                    <a href="https://www.twitter.es" target="_blank"><img src="img/icons8-twitter-50.png"><img></a>
+                    <a href="https://www.twitter.com" target="_blank"><img src="img/icons8-twitter-50.png"><img></a>
                 </div>
             </div>
 
