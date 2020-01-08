@@ -78,7 +78,7 @@ and open the template in the editor.
             </div>
             <div class="col-sm-4 mt-5">
                 
-                <form action="">
+                <form action="alGrano.php" method="post">
                     <input type="submit" name="boton" class="btn btn-primary" value="¡AL GRANO!">
                 </form>
             </div>
