@@ -23,7 +23,7 @@
 
 
 
-   
+
 
         .hovereffect h2 {
             text-transform: uppercase;
@@ -79,30 +79,30 @@
         include ('includes/navbar.php');
         ?>
         <div class="row">
-            <div class="col mt-2">
+            <div class="col mt-2 border">
                 <div class="hovereffect">
                     <img class="img-responsive prueba" src="img/crepes.png" alt="">
                     <div class="overlay">
                         <h2>Memorama</h2>
-                        <a class="info" href="memorama.php">link here</a>
+                        <a class="info" href="memorama.php">link aquí</a>
                     </div>
                 </div>
             </div>
-               <div class="col mt-2">
+            <div class="col mt-2 border">
                 <div class="hovereffect">
                     <img class="img-responsive prueba" src="img/crepes.png" alt="">
                     <div class="overlay">
                         <h2>Tres Cafés en Raya</h2>
-                        <a class="info" href="tresCafesEnRaya.php">link here</a>
+                        <a class="info" href="tresCafesEnRaya.php">link aquí</a>
                     </div>
                 </div>
             </div>
-               <div class="col mt-2">
+            <div class="col mt-2 border">
                 <div class="hovereffect">
                     <img class="img-responsive prueba" src="img/crepes.png" alt="">
                     <div class="overlay">
                         <h2>Arkanoid</h2>
-                        <a class="info" href="arkanoid.php">link here</a>
+                        <a class="info" href="arkanoid.php">link aquí</a>
                     </div>
                 </div>
             </div>
