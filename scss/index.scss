@@ -202,3 +202,13 @@ footer a:hover{
 
     color: $bg-primary;
 }
+.imgJuegos {
+    height: 12.5rem;
+    width: 12.5rem;
+}
+.efectoHover {
+    overflow: hidden;
+}
+.imgJuegos:hover {
+    transform: scale(1.5);
+}

@@ -13,6 +13,7 @@
         ?>
         <div class="row">
             <div class="col">
+                <div class="my-2"><a href="alGrano.php"> <img src="img/volver.png"></a></div>
                  <h1 class="text-title">ARKANOID BY JUANMI</h1>
                 <hr>
             </div>

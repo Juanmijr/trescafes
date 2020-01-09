@@ -13,8 +13,8 @@
         <?php
         include ('includes/navbar.php');
         ?>
-        <h1 class="text-title">Tres Cafés En Raya</h1>
-        <canvas id="miCanvas">canvas>
+        <div class="my-2"><a href="alGrano.php"> <img src="img/volver.png"></a></div><h1 class="text-title">Tres Cafés En Raya</h1>
+        <canvas id="miCanvas"></canvas>
             <?php
             include('includes/footer.php');
             ?>

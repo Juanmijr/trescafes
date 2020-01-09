@@ -197,4 +197,17 @@ footer a:hover {
   color: #4b3621 !important;
 }
 
+.imgJuegos {
+  height: 12.5rem;
+  width: 12.5rem;
+}
+
+.efectoHover {
+  overflow: hidden;
+}
+
+.imgJuegos:hover {
+  transform: scale(1.5);
+}
+
 /*# sourceMappingURL=index.css.map */

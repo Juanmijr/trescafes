@@ -5,8 +5,8 @@
         <script src="js/juegoJorge.js"></script>
 	<style>
             .canvasJorge{
-                    border:solid 2px black;
-                    background:#e3a364;
+                border:solid 2px black;
+                background:#e3a364;
             }
 	</style>
     </head>
@@ -14,7 +14,7 @@
         <?php
         include ('includes/navbar.php');
         ?>
-        <h1 class="text-title">Memorama TresCafés</h1>
+        <div class="my-2"><a href="alGrano.php"> <img src="img/volver.png"></a></div> <h1 class="text-title">Memorama TresCafés</h1>
         <canvas class="canvasJorge" id="canvasJorge"></canvas>
         <?php
         include('includes/footer.php');
