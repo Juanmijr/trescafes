@@ -30,9 +30,10 @@
             color: #fff;
             text-align: center;
             position: relative;
-            font-size: 17px;
+            font-size: 1rem;
             padding: 10px;
-            background: rgba(0, 0, 0, 0.6);
+            background: #e3a364;
+            font-family: Lato;
         }
 
         .hovereffect a.info {
