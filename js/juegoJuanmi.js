@@ -59,7 +59,7 @@ var bola = {
     r: 10,
     xdir: 2,
     ydir: 2,
-    color: "blue"
+    color: "#e3a364"
 };
 function dibujarPelota() {
     ctx.fillStyle = bola.color;
@@ -88,7 +88,7 @@ var infoBloque = {
     columnas: 5,
     filas: 3,
     alto: 20,
-    margen: 10,
+    margen: 5,
     top: 30,
     left: 30,
     img: document.createElement("img")

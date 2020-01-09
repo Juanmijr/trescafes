@@ -7,6 +7,16 @@
         <?php
         include ('includes/navbar.php');
         ?>
+        
+        <div class="row">
+            <div class="col">
+                <h1 class="text-title">
+                    AL GRANO! 
+                </h1>
+                 <hr>
+            </div>
+            
+        </div>
         <div class="row">
             <div class="col-sm-4 my-2 border">
                 <h2 class="text-title">Memorama</h2>
@@ -28,7 +38,7 @@
                 <h2 class="text-title">Arkanoid</h2>
                 <a href="arkanoid.php">
                     <div class="efectoHover">
-                        <img class="img-fluid imgJuegos" src="img/memorama.png">
+                        <img class="img-fluid imgJuegos" src="img/arkanoid.png">
                     </div>
                 </a>
             </div>
