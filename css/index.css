@@ -219,4 +219,12 @@ footer a:hover {
   text-decoration: none;
 }
 
+table a {
+  color: #e3a364 !important;
+}
+
+table a:hover {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=index.css.map */

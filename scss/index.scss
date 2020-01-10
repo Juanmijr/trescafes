@@ -220,3 +220,11 @@ footer a:hover{
 .enlacesSinEstilo:hover {
     text-decoration: none;
 }
+
+table a{
+    color: $bg-secundary;
+}
+
+table a:hover{
+    text-decoration: none;
+}
