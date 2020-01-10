@@ -27,7 +27,7 @@ and open the template in the editor.
                             <img class="imgCarrusel " src="img/banner.png" alt="First slide">
                         </div>
                         <div class="carousel-item p-0">
-                            <img class="d-block w-100" src="img/banner (2).png" alt="Second slide">
+                            <a href="productos.php"><img class="d-block w-100" src="img/banner (2).png" alt="Second slide"></a>
                         </div>
                       
                     </div>
@@ -91,15 +91,15 @@ and open the template in the editor.
                 <hr>
             </div> 
             <div class="col-sm-8">
-                <img class="img-fluid " src="img/Productos/Espresso.png"></img>
-                <img class="img-fluid " src="img/Productos/loloccino.png"></img>
+                <img class="img-fluid imgHome" src="img/todosproductos/Espresso.png"></img>
+                <img class="img-fluid imgHome" src="img/todosproductos/loloccino.png"></img>
             </div>
             <div class="col-sm-4 text-center pt-5 text-secondary">
                 <p>Al hacerte socio de TRES CAFÉS</p> 
                 <p class="font-weight-bold">¡TRÉS CAFÉS TOTALMENTE GRATIS!</p>
             </div>
         </section>
-        <a href="empleo.php">
+        <a class="enlacesSinEstilo" href="empleo.php">
             <section class="row" href="empleo.php" style="background-image: url('img/BannerEmpleo.png');">
                 <div class=" col-sm-12 text-center pt-5 text-secondary">
                     <p class="text-empleo"> TRABAJA CON NOSOTROS </p>
