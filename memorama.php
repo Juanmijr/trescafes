@@ -1,7 +1,7 @@
 <html>
     <head>
         <?php include ('includes/head.php'); ?>
-        <title></title>
+        <title>Memorama | Tres Cafés</title>
         <script src="js/juegoJorge.js"></script>
 	<style>
             .canvasJorge{

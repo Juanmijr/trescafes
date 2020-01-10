@@ -39,7 +39,7 @@
                 </li>
                 <li>
                     <p>
-                        <a href="#">¡AL GRANO!</a>
+                        <a href="alGrano.php">¡AL GRANO!</a>
                     </p>
                 </li>
             </ul>

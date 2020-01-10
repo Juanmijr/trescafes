@@ -18,7 +18,7 @@ and open the template in the editor.
             </div>
         </div>
      <section class="row">
-                <div class="col text-secondary text-justify px-5">
+                <div class="col text-secondary text-justify px-5 table-responsive">
                     <table class="table table-hover">
                         <thead>
                             <tr>

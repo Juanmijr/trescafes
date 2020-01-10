@@ -27,7 +27,7 @@ and open the template in the editor.
                         <span class='text-title'>CUPONES</span>
                         <p class="text-secondary text-center mt-5">Aún no tienes ningún cupón</p>
                     </section>
-                    <section>
+                    <section class="table-responsive">
                         <span class='text-title'>HISTORIAL DE COMPRAS</span>
                         <table class="table table-hover mt-5">
                         <thead>

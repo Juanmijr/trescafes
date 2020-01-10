@@ -160,14 +160,14 @@ function volteaCarta() {
         cartas_array[cartaSegunda].dibuja();
     } else {
         ctx.clearRect(cartas_array[cartaPrimera].x,
-                cartas_array[cartaPrimera].y,
-                cartas_array[cartaPrimera].ancho,
-                cartas_array[cartaPrimera].largo);
+        cartas_array[cartaPrimera].y,
+        cartas_array[cartaPrimera].ancho,
+        cartas_array[cartaPrimera].largo);
 
         ctx.clearRect(cartas_array[cartaSegunda].x,
-                cartas_array[cartaSegunda].y,
-                cartas_array[cartaSegunda].ancho,
-                cartas_array[cartaSegunda].largo);
+        cartas_array[cartaSegunda].y,
+        cartas_array[cartaSegunda].ancho,
+        cartas_array[cartaSegunda].largo);
 
         cartas_array[cartaPrimera].x = -1;
         cartas_array[cartaSegunda].x = -1;
