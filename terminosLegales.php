@@ -11,20 +11,15 @@ and open the template in the editor.
     </head>
     <body>
         <?php include ('includes/navbar.php'); ?>
-
-        <article>
-            <section class="row">
-
-                <div class="col-sm text-center pl-5 text-title">
-                    TÉRMINOS LEGALES
-                </div>
-
-                </div>
-            </section>
-
-            <section class="row">
-                <div class="col-sm p-5 text-secondary text-justify">
-                    <table class="table table-hover mt-5">
+        
+        <div class="row my-2">
+            <div class="col text-center text-title">
+               TERMINOS LEGALES 
+            </div>
+        </div>
+     <section class="row">
+                <div class="col text-secondary text-justify px-5">
+                    <table class="table table-hover">
                         <thead>
                             <tr>
                                 <th>Página</th>
@@ -58,8 +53,7 @@ and open the template in the editor.
                     
                 </div>
             </section>
-
-        </article>
+          
 
         <?php
         include('includes/footer.php');
