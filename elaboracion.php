@@ -1,7 +1,7 @@
 <html>
     <head>
         <?php include ('includes/head.php'); ?>
-        <script src="script.js"></script>
+        <script src="js/video.js"></script>
         <title>Elaboración | Tres Cafés</title>
     </head>
     <body>

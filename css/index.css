@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 a.btn-primary:focus, a.btn-primary:hover, button.btn-primary:focus, button.btn-primary:hover {
   background-color: #4b3621 !important;
 }
@@ -225,6 +226,28 @@ table a {
 
 table a:hover {
   text-decoration: none;
+}
+
+body {
+  background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/noisy_net.png") repeat;
+  font-family: "Open Sans", Impact;
+}
+
+.area {
+  text-align: center;
+  font-size: 6.5em;
+  color: #e3a364 !important;
+  letter-spacing: -7px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur 0.75s ease-out infinite;
+  text-shadow: 0px 0px 5px #e3a364 !important, 0px 0px 7px #e3a364 !important;
+}
+
+@keyframes blur {
+  from {
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff, 0px 0px 50px #7B96B8, 0px 0px 150px #7B96B8, 0px 10px 100px #7B96B8, 0px 10px 100px #7B96B8, 0px 10px 100px #7B96B8, 0px 10px 100px #7B96B8, 0px -10px 100px #7B96B8, 0px -10px 100px #7B96B8;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

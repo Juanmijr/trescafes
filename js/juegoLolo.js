@@ -31,6 +31,7 @@ function cargarImagenes() {
 /* INICIAR EL JUEGO */
 function iniciar() {
     canvas = document.getElementById("miCanvas");
+    document.getElementById("area").innerHTML = '';
     canvas.width = ancho;
     canvas.height = alto;
 
@@ -90,6 +91,8 @@ function crearTablero() {
     fichas_array.push(new Ficha(200, 290, largo, largo, 6, 2, 0));
     fichas_array.push(new Ficha(330, 290, largo, largo, 7, 2, 1));
     fichas_array.push(new Ficha(470, 290, largo, largo, 8, 2, 2));
+    
+    
 }
 
 /* CREA LAS FICHAS */
@@ -362,12 +365,14 @@ function verificaFin(O, X) {
     var fin = false;
     if (X == 3) {
         fin = true;
-        mensaje("HAS GANADOO");
+        document.getElementById("area").innerHTML='HAS GANADO';
+        mensaje("");
     }
 
     if (O == 3) {
         fin = true;
-        mensaje("HAS PERDIDOO");
+        document.getElementById("area").innerHTML='HAS PERDIDO';
+        mensaje("");
     }
 
     if (!fin) {
@@ -375,7 +380,8 @@ function verificaFin(O, X) {
             mensaje("Su turno");
         } else {
             fin = true;
-            mensaje("Empate");
+            document.getElementById("area").innerHTML='EMPATE';
+            mensaje("");
         }
     }
 
