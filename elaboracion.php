@@ -15,24 +15,18 @@
                     <h1 class="text-title">CÓMO ELABORAR CAFÉ</h1>
                     <hr>
                     <h3 class="text-justify text-secondary">Elaboración del café en 8 sencillos pasos</h3>
-                    <div class="embed-responsive embed-responsive-16by9">
                         <div id="video-container">
                             <video id="video" width="640" height="365">
-                                <source src="videos/procesodelcafepasoapaso.mp4" type="video/webm">
-                                <p>
-                                    Your browser doesn't support HTML5 video.
-                                    <a href="videos/mikethefrog.mp4">Download</a> the video instead.
-                                </p>
+                                <source src="videos/procesodelcafepasoapaso.mp4" type="video/mp4">
                             </video>
                             <div id="video-controls">
-                                <button type="button" id="play-pause" class="play">Play</button>
+                                <button class="boton_personalizado" type="button" id="play-pause" class="play">Play</button>
                                 <input type="range" id="seek-bar" value="0">
-                                <button type="button" id="mute">Mute</button>
+                                <button class="boton_personalizado" type="button" id="mute">Mute</button>
                                 <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
-                                <button type="button" id="full-screen">Full-Screen</button>
+                                <button class="boton_personalizado" type="button" id="full-screen">Full-Screen</button>
                             </div>
                         </div>  
-                    </div>
                     
                     <hr>
                     <div  class="pt-4 pb-5 text-justify text-secondary pl-5 pr-5">
