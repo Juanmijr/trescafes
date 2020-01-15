@@ -228,13 +228,6 @@ table a{
 table a:hover{
     text-decoration: none;
 }
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-body{
- background:url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/noisy_net.png') repeat;
-  font-family: "Open Sans",  Impact;
-}
 .area{
   text-align:center;
   font-size:6.5em;
@@ -366,3 +359,5 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: $bg-primary;
 }
+
+
