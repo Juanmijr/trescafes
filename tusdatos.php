@@ -28,25 +28,28 @@ and open the template in the editor.
                         <p class="text-secondary text-center mt-5">Aún no tienes ningún cupón</p>
                     </section>
                     <section class="table-responsive">
-                        <span class='text-title'>HISTORIAL DE COMPRAS</span>
+                        <span class='text-title'>VALORACIONES</span>
                         <table class="table table-hover mt-5">
                         <thead>
                             <tr>
-                            <th></th>
+                            <th>Producto</th>
+                            <th>Valoración</th>
+                            <th>Comentario</th>
                             <th>Fecha</th>
-                            <th>Precio</th>
                           </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th>Yorspresso</th>
-                                <td>12-12-2019</td>
-                                <td>3</td>
+                                <td>4</td>
+                                <td>El mejor café del momento</td>
+                                <td>17-1-2020</td>
                               </tr>
                             <tr>
                              <th>Loloccino</th>
-                             <td>17-12-2019</td>
-                             <td>2,5</td>
+                             <td>3.7</td>
+                             <td>Madre mía tendríais que probarlo</td>
+                             <td>20-12-2019</td>
                            </tr>
                         </tbody>
                       </table>
