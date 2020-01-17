@@ -11,7 +11,7 @@
         <div class="d-flex justify-content-center h-100">
             <div class="card">
                 <div class="card-header">
-                    <h3>Log In</h3>
+                    <h3>Inicia Sesión</h3>
                     <div class="d-flex justify-content-end social_icon">
                         <span><i class="fab fa-google-plus-square"></i></span>
                     </div>
@@ -35,7 +35,7 @@
                             <input type="checkbox">Recuérdame
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Login" class="btn float-right login_btn">
+                            <input type="submit" value="Entrar" class="btn float-right login_btn">
                         </div>
                     </form>
                 </div>
