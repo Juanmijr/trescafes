@@ -397,6 +397,14 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: #4b3621 !important;
 }
 
+.card1 {
+  height: 54rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 30rem;
+  background-color: #4b3621 !important;
+}
+
 .social_icon span {
   font-size: 5rem;
   margin-left: 0.625rem;
@@ -416,6 +424,23 @@ input[type=range]:focus::-ms-fill-upper {
   position: absolute;
   right: 1.25rem;
   top: -2.813rem;
+}
+
+.social_icon1 {
+  position: absolute;
+  right: 1.25rem;
+  top: -2.813rem;
+}
+
+.social_icon1 span {
+  font-size: 5rem;
+  margin-left: 0.625rem;
+  color: #e3a364;
+}
+
+.social_icon1 span:hover {
+  color: white;
+  cursor: pointer;
 }
 
 .input-group-prepend span {
