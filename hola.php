@@ -1,76 +1,40 @@
+<html>
+    <head>
+        <?php include ('includes/head.php'); ?>
+        <title>¿Quieres ser nuestro socio? | Tres Cafés</title>
+    </head>
+    <body>
+        <?php
+        include ('includes/navbar.php');
+        ?>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class=""> Registro de socio: </h1>
 
-<!------ Include the above in your HEAD tag ---------->
-
-<!DOCTYPE html>
-<html class="h-100">
-
-    <?php include ('includes/head.php'); ?> 
-</head>
-<body class="h-100">
-    <div class="containerLogin">
-        <div class="d-flex justify-content-center h-100">
-            <div class="card1">
-                <div class="card-header">
-                    <h3>Sé Socio</h3>
-                    <div class="d-flex justify-content-end social_icon1">
-                        <span><i class="fab fa-google-plus-square"></i></span>
-                    </div>
-                </div>
-                <div class="card-body">
                     <form>
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        <section class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                             </div>
-                            <input type="text" class="form-control" placeholder="usuario">
-
-                        </div>
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Contraseña</label>
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
                             </div>
-                            <input type="password" class="form-control" placeholder="contraseña">
-                        </div>
-                          <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </section>
+                        <section class="form-group">
+                            <label for="inputAddress">Dirección</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Calle, piso, ...">
+                        </section>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">Ciudad</label>
+                                <input type="text" class="form-control" id="inputCity">
                             </div>
-                            <input type="text" class="form-control" placeholder="usuario">
-                        </div>
-                          <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="nombre">
-                        </div>  <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="apellido 1">
-                        </div>
-                         <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="apellido 2">
-                        </div>
-                         <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-mail-bulk"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="email">
-                        </div>
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
-                            </div>
-                            <input type="date" class="form-control" placeholder="fecha de nacimiento">
-                        </div>
-                          <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-flag"></i></span>
-                            </div>
-                          <select id="inputState" class="form-control">
+                            <section class="form-group col-md-4">
+                                <label for="inputState">País</label>
+                                <select id="inputState" class="form-control">
                                     <option value="Elegir" id="AF">Elegir opción</option>
                                     <option value="Afganistán" id="AF">Afganistán</option>
                                     <option value="Albania" id="AL">Albania</option>
@@ -310,47 +274,24 @@
                                     <option value="Zambia" id="ZM">Zambia</option>
                                     <option value="Zimbabue" id="ZW">Zimbabue</option>
                                 </select>
-                            
+                            </section>
+                            <section class="form-group col-md-2">
+                                <label for="inputZip">Código Postal</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </section>
                         </div>
-                          <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-flag"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Código Postal">
-                        </div>
-                          <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-mobile"></i></span>
-                            </div>
-                            <input type="number" class="form-control" placeholder="Teléfono">
-                        </div>
-                          <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
-                            </div>
-                              <select name="rol"  class="form-control" >
-                                  <option value="administrador">Administrador</option>
-                                  <option value="editor">Editor</option>
-                                  <option value="valorador">Valorador</option>
-                              </select>
-                        </div>
-                                                 
-                        <div class="row align-items-center remember">
-                            <input type="checkbox">Recuérdame
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" value="Entrar" class="btn float-right login_btn">
-                        </div>
-                    </form>
-                </div>
-                <div class="card-footer">
-                    <div class="d-flex justify-content-center linksLogin">
-                        ¿No tienes cuenta?&nbsp;<a class="enlacesSinEstilo" href="#">Regístrate</a>
-                    </div>
 
+                        <button type="submit" class="btn btn-primary">Hazme socio</button>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+
+
+        <?php
+        include('includes/footer.php');
+        ?>
+    </body>
+
+
 </html>
