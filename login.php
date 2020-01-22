@@ -2,13 +2,14 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
-<html class="h-100">
+<html>
 
     <?php include ('includes/head.php'); ?> 
 </head>
-<body class="h-100">
-    <div class="containerLogin">
-        <div class="d-flex justify-content-center h-100">
+<body>
+        <?php include ('includes/navbar.php'); ?> 
+    <div class="">
+        <div class="d-flex justify-content-center">
             <div class="card">
                 <div class="card-header">
                     <h3>Inicia Sesión</h3>
@@ -48,5 +49,6 @@
             </div>
         </div>
     </div>
+        <?php include ('includes/footer.php'); ?> 
 </body>
 </html>

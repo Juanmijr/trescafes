@@ -26,7 +26,7 @@
                                 <li><a class="dropdown-item" href="elaboracion.php">Elaboración</a></li>
                             </ul>
 
-                       <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="collapsingNavbar"
                                data-toggle="dropdown" aria-haspopup="true"  aria-labelledby="dropdownMenuButton" aria-expanded="false">
                                 PRODUCTOS
@@ -62,7 +62,7 @@
                                 </li>
 
                                 <li class="dropdown-item"><a class="dropdown-item" href="./novedades.php">Novedades</a>
-                                 
+
                                 </li>
                                 <li class="dropdown-item"><a class="dropdown-item" href="productos.php">Todos los productos</a>
                                 </li>
@@ -100,5 +100,55 @@
 
 
             </nav>
+        </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Inicia Sesión</h3>
+                        <div class="d-flex justify-content-end social_icon">
+                            <span><i class="fab fa-google-plus-square"></i></span>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="usuario">
+
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="contraseña">
+                            </div>
+                            <div class="row align-items-center remember">
+                                <input type="checkbox">Recuérdame
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Entrar" class="btn float-right login_btn">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-center linksLogin">
+                            ¿No tienes cuenta?&nbsp;<a class="enlacesSinEstilo" href="seSocio.php">Regístrate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
