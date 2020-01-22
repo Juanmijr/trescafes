@@ -395,7 +395,7 @@ input[type=range]:focus::-ms-fill-upper {
   font-family: Lato;
 }
 
-.modal {
+.modal-content {
   height: 23.125rem;
   margin-top: auto;
   margin-bottom: auto;
@@ -422,13 +422,13 @@ input[type=range]:focus::-ms-fill-upper {
   cursor: pointer;
 }
 
-.card-header h3 {
+.modal-header h3 {
   color: white;
 }
 
 .social_icon {
   position: absolute;
-  right: 1.25rem;
+  right: 3rem;
   top: -2.813rem;
 }
 

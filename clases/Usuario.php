@@ -1,6 +1,6 @@
 <?php
 
-require_once '../clases/Conexion.php';
+require_once 'Conexion.php';
 
 class Usuario {
 
@@ -17,7 +17,7 @@ class Usuario {
     private $rol;
 
     function getUsuarios() {
-        $conex = new Conexion();
+       
     }
 
     public function __construct($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol) {
@@ -35,6 +35,25 @@ class Usuario {
         $this->rol = $rol;
     }
 
+    public static function buscarPorCorreo ($correo){
+         $conex = new Conexion();
+          if ($conex->connect_errno != 0) {
+            echo $conex->connect_error;
+        } else {
+             $consulta1= $conex->query("SELECT * from usuario WHERE email = '$correo'");
+            if ($conex->errno != 0) {
+                return $conex->error;
+                
+            } else {
+               if ($conex->affected_rows < 1){
+                   return FALSE;
+               }
+              
+                
+                return TRUE;
+            }
+        }
+    }
     public function __get($name) {
         return $this->$name;
     }

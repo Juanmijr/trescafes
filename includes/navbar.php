@@ -82,8 +82,12 @@
                         </li>
                     </ul>
                     <div class="ml-auto">
-
-                        <div class="dropdown">
+<a data-toggle="modal" data-target="#exampleModal">Login</a> 
+<?php
+if (isset($a)){
+    ?>
+<div class="dropdown">
+                            
                             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                                 <img class="imgUsu" src="./img/usuario.png"></img>
@@ -96,6 +100,10 @@
                         </div>
 
                     </div>
+<?php }
+
+?>
+
                 </div>
 
 
@@ -103,9 +111,6 @@
         </div>
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Launch demo modal
-        </button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -121,7 +126,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form action="" method="post">
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -139,12 +144,12 @@
                                 <input type="checkbox">Recuérdame
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Entrar" class="btn float-right login_btn">
+                                <input type="submit" value="Entrar" name='entrar' class="btn float-right login_btn">
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <div class="d-flex justify-content-center linksLogin">
+                        <div class="linksLogin">
                             ¿No tienes cuenta?&nbsp;<a class="enlacesSinEstilo" href="seSocio.php">Regístrate</a>
                         </div>
                     </div>

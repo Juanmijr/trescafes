@@ -1,12 +1,30 @@
+<?php
 
-<!------ Include the above in your HEAD tag ---------->
+require_once './clases/Usuario.php';
+?>
 
 <!DOCTYPE html>
 <html>
 
-    <?php include ('includes/head.php'); ?> 
+    <?php include ('includes/head.php');    ?> 
 </head>
 <body >
+    
+    <?php
+   
+    if (isset($_POST['enviar'])){
+        if (Usuario::buscarPorCorreo($_POST['email'])== FALSE){
+            
+        } else {
+            $correoExiste = 1;
+        }
+    }
+    
+    
+    
+    ?>
+
+    <!-- EMPIEZA EL REGISTRO -->
     <div class="containerRegistrar mt-5 mb-5">
         <div class="d-flex justify-content-center ">
             <div class="card1 ">
@@ -15,55 +33,62 @@
                    
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form method="POST" action="">
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="usuario">
+                            <input type="text" name="usuario" class="form-control" placeholder="usuario">
 
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="contraseña">
+                            <input type="password" name="pass" class="form-control" placeholder="contraseña">
                         </div>
                         
                           <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="nombre">
+                            <input type="text" name="nombre" class="form-control" placeholder="nombre">
                         </div>  <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="apellido 1">
+                            <input type="text" name="apellido1" class="form-control" placeholder="apellido 1">
                         </div>
                          <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="apellido 2">
+                            <input type="text" name="apellido2" class="form-control" placeholder="apellido 2">
                         </div>
                          <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-mail-bulk"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="email">
+                            <input type="text" name="email" class="form-control" placeholder="email">
+                            <?php
+                            if (isset($correoExiste)){
+                                ?>
+                            <span>HOLA </span>
+                            <?php 
+                            }
+                            ?>
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
                             </div>
-                            <input type="date" class="form-control" placeholder="fecha de nacimiento">
+                            <input type="date" name="fechaNacimiento" class="form-control" placeholder="fecha de nacimiento">
                         </div>
                           <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-flag"></i></span>
                             </div>
-                          <select id="inputState" class="form-control">
+                          <select id="inputState" name="pais" class="form-control">
                                     <option value="Elegir" id="AF">Elegir opción</option>
                                     <option value="Afganistán" id="AF">Afganistán</option>
                                     <option value="Albania" id="AL">Albania</option>
@@ -309,19 +334,19 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-flag"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Código Postal">
+                            <input type="text" name="codPostal" class="form-control" placeholder="Código Postal">
                         </div>
                           <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-mobile"></i></span>
                             </div>
-                            <input type="number" class="form-control" placeholder="Teléfono">
+                            <input type="number" name="telefono" class="form-control" placeholder="Teléfono">
                         </div>
                          
                                                  
                        
                         <div class="form-group">
-                            <input type="submit" value="Entrar" class="btn float-right login_btn">
+                            <input type="submit" name="enviar" value="Entrar" class="btn float-right login_btn">
                         </div>
                     </form>
                 </div>
