@@ -390,6 +390,10 @@ color: white;
 
 .linksLogin a{
 margin-left: 0.25rem;
+color: $bg-secundary;
+}
+.linksLogin a:hover{
+    color: white !important;
 }
 
 .containerLogin{
@@ -404,11 +408,12 @@ font-family: Lato;
 
 }
 
+.modal {
+    margin:auto;
+}
+
 .modal-content{
-height: 23.125rem;
-margin-top: auto;
-margin-bottom: auto;
-width: 25rem;
+margin: auto;
 background-color: #4b3621 !important;
 }
 

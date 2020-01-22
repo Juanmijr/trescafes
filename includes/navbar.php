@@ -82,27 +82,26 @@
                         </li>
                     </ul>
                     <div class="ml-auto">
-<a data-toggle="modal" data-target="#exampleModal">Login</a> 
-<?php
-if (isset($a)){
-    ?>
-<div class="dropdown">
-                            
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="" class="nav-link" data-toggle="modal" data-target="#exampleModal">Login</a> 
+                        <?php
+                        if (isset($a)) {
+                            ?>
+                            <div class="dropdown">
 
-                                <img class="imgUsu" src="./img/usuario.png"></img>
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="./tusdatos.php">Tus datos</a>
-                                <a class="dropdown-item" href="./seSocio.php">Sé socio</a>
+                                    <img class="imgUsu" src="./img/usuario.png"></img>
+
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="./tusdatos.php">Tus datos</a>
+                                    <a class="dropdown-item" href="./seSocio.php">Sé socio</a>
+                                </div>
                             </div>
+
                         </div>
-
-                    </div>
-<?php }
-
-?>
+                    <?php }
+                    ?>
 
                 </div>
 
@@ -148,7 +147,7 @@ if (isset($a)){
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer justify-content-center">
                         <div class="linksLogin">
                             ¿No tienes cuenta?&nbsp;<a class="enlacesSinEstilo" href="seSocio.php">Regístrate</a>
                         </div>
