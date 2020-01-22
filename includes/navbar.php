@@ -1,4 +1,6 @@
 
+<script src="https://apis.google.com/js/api:client.js"></script>  
+<script type="text/javascript" src="./js/google-signin.js"></script>
 <div class="container-fluid text-center">
     <!--NavBar Menu-->
     <!--NavBar Menu-->
@@ -82,26 +84,24 @@
                         </li>
                     </ul>
                     <div class="ml-auto">
-                        <a href="" class="nav-link" data-toggle="modal" data-target="#exampleModal">Login</a> 
-                        <?php
-                        if (isset($a)) {
-                            ?>
-                            <div class="dropdown">
+                        <a href="" id="dropdownLoginLI" class="nav-link" data-toggle="modal" data-target="#exampleModal">Login</a> 
+                        <div class="dropdown" id="dropdownLogoutLI" class="dropdown order-1" style="display:none;">
 
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <p id="dropdownLogoutMenu1"></p>
+                                <img class="imgUsu" src="./img/usuario.png"></img>
 
-                                    <img class="imgUsu" src="./img/usuario.png"></img>
+                            </button>
 
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="./tusdatos.php">Tus datos</a>
-                                    <a class="dropdown-item" href="./seSocio.php">Sé socio</a>
-                                </div>
+                            <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="./tusdatos.php">Tus datos</a>
+                                <form class="form" role="form">
+                                <button id="googleSignoutBtn" onclick="signOut()" class="btnSinEstilo">Cerrar Sesión</button>
+                                </form>
                             </div>
-
                         </div>
-                    <?php }
-                    ?>
+
+                    </div>
 
                 </div>
 
@@ -113,12 +113,12 @@
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h3>Inicia Sesión</h3>
                         <div class="d-flex justify-content-end social_icon">
-                            <span><i class="fab fa-google-plus-square"></i></span>
+                            <span><i id="googleSignInBtn" class="fab fa-google-plus-square"></i></span>
                         </div>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -156,3 +156,4 @@
             </div>
         </div>
     </div>
+    <script>startApp();</script>

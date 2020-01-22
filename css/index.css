@@ -467,4 +467,16 @@ input:focus {
   box-shadow: 0 0 0 0 !important;
 }
 
+.btnSinEstilo {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-family: "Be Vietnam", sans-serif;
+  cursor: pointer;
+}
+
+.btnSinEstilo:hover {
+  color: #e3a364 !important;
+}
+
 /*# sourceMappingURL=index.css.map */

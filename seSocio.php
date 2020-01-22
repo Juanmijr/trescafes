@@ -21,7 +21,7 @@ require_once './clases/Usuario.php';
     }
     
     
-    
+    include ('includes/navbar.php');
     ?>
 
     <!-- EMPIEZA EL REGISTRO -->
@@ -354,5 +354,8 @@ require_once './clases/Usuario.php';
             </div>
         </div>
     </div>
+    <?php
+    include('includes/footer.php');
+    ?>
 </body>
 </html>
