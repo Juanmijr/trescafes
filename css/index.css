@@ -410,10 +410,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .card1 {
-  height: 42rem;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 25rem;
+  height: 35rem;
+  width: 40rem;
   background-color: #4b3621 !important;
 }
 
