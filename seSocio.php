@@ -1,5 +1,10 @@
 <?php
 require_once './clases/Usuario.php';
+session_start();
+
+if (isset($_SESSION['usuario'])){
+    header('Location: index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,11 +16,12 @@ require_once './clases/Usuario.php';
 
     <?php
     if (isset($_POST['enviar'])) {
-        if (Usuario::buscarPorCorreo($_POST['email']) == FALSE) {
-            
-        } else {
-            $correoExiste = 1;
-        }
+       $usuario = new Usuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], 'valorador');
+             if( $usuario->insertarUsuario()){
+                 $_SESSION['usuario']= serialize($usuario);
+                 header('Location: index.php');
+             }
+               
     }
 
 
@@ -27,7 +33,7 @@ require_once './clases/Usuario.php';
         <div class="d-flex justify-content-center ">
             <div class="card1 ">
                 <div class="card-header">
-                    <h3>Sé Socio</h3>
+                    <h3 class="text-title">Sé Socio</h3>
 
                 </div>
                 <div class="card-body">
