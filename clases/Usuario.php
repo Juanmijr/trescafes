@@ -17,7 +17,7 @@ class Usuario {
     private $rol;
 
     function getUsuarios() {
-       
+        
     }
 
     public function __construct($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol) {
@@ -29,51 +29,67 @@ class Usuario {
         $this->apellido2 = $apellido2;
         $this->fechaNacimiento = $fechaNacimiento;
         $this->pais = $pais;
-        $this->contrasenia = $contrasenia;
         $this->codigoPostal = $codigoPostal;
         $this->telefono = $telefono;
         $this->rol = $rol;
     }
-    
-    public function insertarUsuario (){
-            $conex = new Conexion();
-          if ($conex->connect_errno != 0) {
+
+    public function insertarUsuario() {
+        $conex = new Conexion();
+        if ($conex->connect_errno != 0) {
             echo $conex->connect_error;
         } else {
-             $consulta1= $conex->query("INSERT INTO usuario VALUES('','$this->email','$this->nombreUsuario', '$this->contrasenia', '$this->nombre', '$this->apellido1', '$this->apellido2','$this->fechaNacimiento','$this->pais','$this->codigoPostal','$this->telefono','$this->rol') ");
+            $consulta1 = $conex->query("INSERT INTO usuario VALUES('','$this->email','$this->nombreUsuario', '$this->contrasenia', '$this->nombre', '$this->apellido1', '$this->apellido2','$this->fechaNacimiento','$this->pais','$this->codigoPostal','$this->telefono','$this->rol') ");
             if ($conex->errno != 0) {
                 return $conex->error;
-                
             } else {
-               if ($consulta1){
-                return true;
-               }
-               else{
-                   return $conex->error;
-               }
+                if ($consulta1) {
+                    return true;
+                } else {
+                    return $conex->error;
+                }
             }
         }
     }
 
-    public static function buscarPorCorreo ($correo){
-         $conex = new Conexion();
-          if ($conex->connect_errno != 0) {
+    public static function buscarPorCorreo($correo) {
+        $conex = new Conexion();
+        if ($conex->connect_errno != 0) {
             echo $conex->connect_error;
         } else {
-             $consulta1= $conex->query("SELECT * from usuario WHERE email = '$correo'");
+            $consulta1 = $conex->query("SELECT * from usuario WHERE email = '$correo'");
             if ($conex->errno != 0) {
                 return $conex->error;
-                
             } else {
-               if ($conex->affected_rows < 1){
-                   return FALSE;
-               }
-              
-                
+                if ($conex->affected_rows > 0) {
+                    $object = $consulta1->fetch_object();
+                return new self($object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol);
+                } else {
+                    return false;
+                }
+            }
+        }
+    }
+
+    public static function comprobarUsuario($email, $password) {
+        $conex = new Conexion();
+        if ($conex->connect_errno != 0) {
+            echo $conex->connect_error;
+        } else {
+            $consulta1 = $conex->query("SELECT * from usuario WHERE email = '$email' AND contrasenia = '$password'");
+            if ($conex->errno != 0) {
+                return $conex->error;
+            } else {
+                if ($conex->affected_rows < 1) {
+                    return FALSE;
+                }
+
+
                 return TRUE;
             }
         }
     }
+
     public function __get($name) {
         return $this->$name;
     }

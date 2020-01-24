@@ -1,6 +1,26 @@
 
 <script src="https://apis.google.com/js/api:client.js"></script>  
 <script type="text/javascript" src="./js/google-signin.js"></script>
+<script type="text/javascript" src="./js/controlmodal.js"></script>
+
+<?php
+require_once './clases/Usuario.php';
+@session_start();
+if (isset($_POST['entrar'])) {
+    if (Usuario::comprobarUsuario($_POST['email'], $_POST['password'])) {
+        $error = false;
+        $_SESSION['usuario'] = $_POST['email'];
+        if (isset($_POST['recuerdame'])) {
+            //HAY QUE AUMENTAR EL TIEMPO DE LA SESSION AQUI
+        }
+    } else {
+        $error = true;
+    }
+}
+if (isset($_POST['cerrarSesion'])) {
+    header('Location: logout.php');
+}
+?>
 <div class="container-fluid text-center">
     <!--NavBar Menu-->
     <!--NavBar Menu-->
@@ -82,24 +102,48 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./alGrano.php">¡AL GRANO!</a>
                         </li>
+                        <?php
+                        if (isset($_SESSION['usuario'])) {
+                            if ($usuario = Usuario::buscarPorCorreo($_SESSION['usuario'])) {
+                                if ($usuario->rol == 'administrador') {
+                                    ?>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./control.php">CONTROL</a>
+                                    </li>
+                                    <?php
+                                }
+                            }
+                        }
+                        ?>
                     </ul>
                     <div class="ml-auto">
-                        <a href="" id="dropdownLoginLI" class="nav-link" data-toggle="modal" data-target="#exampleModal">Login</a> 
-                        <div class="dropdown" id="dropdownLogoutLI" class="dropdown order-1" style="display:none;">
+                        <?php
+                        if (!isset($_SESSION['usuario'])) {
+                            ?>
+                            <a href="" id="dropdownLoginLI" class="nav-link" data-toggle="modal" data-target="#exampleModal">Login</a> 
 
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <p id="dropdownLogoutMenu1"></p>
-                                <img class="imgUsu" src="./img/usuario.png"></img>
+                            <?php
+                        } else {
+                            ?>
+                            <div class="dropdown" id="dropdownLogoutLI" class="dropdown order-1">
 
-                            </button>
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p id="dropdownLogoutMenu1"></p>
+                                    <img class="imgUsu" src="./img/usuario.png"></img>
 
-                            <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="./tusdatos.php">Tus datos</a>
-                                <form class="form" role="form">
-                                <button id="googleSignoutBtn" onclick="signOut()" class="btnSinEstilo">Cerrar Sesión</button>
-                                </form>
-                            </div>
-                        </div>
+                                </button>
+
+                                <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="./tusdatos.php">Tus datos</a>
+                                    <form class="form" action="" method="POST">
+                                        <input type="submit" id="googleSignoutBtn" onclick="signOut()" name="cerrarSesion" class="btnSinEstilo" value="Cerrar Sesión"></input>
+                                    </form>
+                                </div>
+                            </div>                   
+                            <?php
+                        }
+                        ?>
+
 
                     </div>
 
@@ -125,22 +169,38 @@
                         </button>
                     </div>
                     <div class="modal-body">
+                        <?php
+                        if (isset($error) && $error) {
+                            ?>
+                            <p class="text-danger">Email o contraseña incorrectos</p>
+                            <?php
+                        }
+                        ?>
                         <form action="" method="post">
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="usuario">
-
+                                <?php
+                                if (isset($error) && $error) {
+                                    ?>
+                                    <input type="text" class="form-control" placeholder="email" name="email" value="<?php echo $_POST['email'] ?>">
+                                    <?php
+                                } else {
+                                    ?>
+                                    <input type="text" class="form-control" placeholder="email" name="email">
+                                    <?php
+                                }
+                                ?>
                             </div>
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="password" class="form-control" placeholder="contraseña">
+                                <input type="password" class="form-control" placeholder="contraseña" name="password">
                             </div>
                             <div class="row align-items-center remember">
-                                <input type="checkbox">Recuérdame
+                                <input type="checkbox" name="recuerdame">Recuérdame
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Entrar" name='entrar' class="btn float-right login_btn">
@@ -157,3 +217,11 @@
         </div>
     </div>
     <script>startApp();</script>
+    <?php
+    if (isset($error) && $error) {
+        ?>
+        <script>error();</script>
+        <?php
+    }
+    ?>
+        

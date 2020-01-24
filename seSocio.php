@@ -18,7 +18,7 @@ if (isset($_SESSION['usuario'])){
     if (isset($_POST['enviar'])) {
        $usuario = new Usuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], 'valorador');
              if( $usuario->insertarUsuario()){
-                 $_SESSION['usuario']= serialize($usuario);
+                 $_SESSION['usuario']= $_POST['email'];
                  header('Location: index.php');
              }
                
