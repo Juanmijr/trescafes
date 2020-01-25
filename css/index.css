@@ -493,4 +493,9 @@ input:focus {
   color: #d17581;
 }
 
+.imgControl {
+  width: 4.68rem;
+  height: 4.68rem;
+}
+
 /*# sourceMappingURL=index.css.map */
