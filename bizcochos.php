@@ -9,6 +9,7 @@ and open the template in the editor.
         <?php include ('includes/head.php'); ?>
         <title>Bizcochos | Tres Cafés</title>
     </head>
+  
     <body>
         <?php include ('includes/navbar.php'); ?>
         <div class="row">
@@ -32,7 +33,7 @@ and open the template in the editor.
         <div class="row">
             <div class="col-12">
                 <hr>
-                <a class="text-secondary" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
+                <a class="text-title" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
                 <div class="collapse" id="footwear">
                     <div class="row">
                         <div class="chartContainer col-12 my-5">
@@ -61,8 +62,83 @@ and open the template in the editor.
                 }
             });
         </script>
-        <?php
-        include('includes/footer.php');
-        ?>
-    </body>
+
+
+        <div class="row">
+            <div class="col-12">
+                <hr>
+                <a class="text-title" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Valoraciones: </a>
+                <div class="collapse" id="footwear">
+
+
+                    <div class="container">
+                        <div class="row mb-4 mt-2" >
+                            <div class="col-md-12">
+                                <div class="well well-sm">
+                                    <div class="text-center">
+                                        <a class="btn btn-success btn-primary" href="#reviews-anchor" id="open-review-box">Hacer una valoración</a>
+                                    </div>
+
+                                    <div class="row" id="post-review-box" style="display:none;">
+                                        <div class="col-md-12">
+                                            <form accept-charset="UTF-8" action="" method="post">
+                                                <input id="ratings-hidden" name="rating" type="hidden"> 
+                                                <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="5"></textarea>
+
+                                                <div class="text-right">
+                                                    <div class="stars starrr" data-rating="0"></div>
+                                                    <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
+                                                        <span class="glyphicon glyphicon-remove"></span>Cancel</a>
+                                                    <button class="btn btn-success btn-primary" type="submit">Save</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="img/usuario.png" class="img-fluid"/>
+                                    <p class="text-secondary text-center">FECHA</p>
+                                </div>
+                                <div class="col-md-10">
+                                    <p>
+                                        <strong>NOMBRE USUARIO</strong>
+                                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+
+                                    </p>
+                                    <div class="clearfix"></div>
+                                    <p>VALORACIÓN DE TEXTO</p>
+                                    <p>
+                                        <a class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> COMPARTIR</a>
+                                        <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> ME GUSTA</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <?php
+    include('includes/footer.php');
+    ?>
+</body>
 </html>

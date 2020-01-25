@@ -193,6 +193,10 @@ footer a:hover {
   color: #e3a364 !important;
 }
 
+.card-inner {
+  margin-left: 4rem;
+}
+
 .botonesRS {
   color: #4b3621 !important;
 }
@@ -475,6 +479,18 @@ input:focus {
 
 .btnSinEstilo:hover {
   color: #e3a364 !important;
+}
+
+.animated {
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  transition: height 0.2s;
+}
+
+.stars {
+  margin: 20px 0;
+  font-size: 24px;
+  color: #d17581;
 }
 
 /*# sourceMappingURL=index.css.map */

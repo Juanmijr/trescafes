@@ -197,7 +197,9 @@ footer a:hover{
     font-weight: bold;
     color: $bg-secundary;
 }
-
+.card-inner{
+    margin-left: 4rem;
+}
 .botonesRS{
 
     color: $bg-primary;
@@ -483,4 +485,15 @@ box-shadow: 0 0 0 0 !important;
     color: $bg-secundary;
 }
 
+ .animated {
+    -webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    transition: height 0.2s;
+}
 
+.stars
+{
+    margin: 20px 0;
+    font-size: 24px;
+    color: #d17581;
+}
