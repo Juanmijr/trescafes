@@ -30,9 +30,9 @@ if (isset($_SESSION['usuario'])){
     ?>
 
     <!-- EMPIEZA EL REGISTRO -->
-    <div class="containerRegistrar mt-5 mb-5">
+    <div class="container mt-5 mb-5">
         <div class="d-flex justify-content-center ">
-            <div class="card1 ">
+            <div class="card card1">
                 <div class="card-header">
                     <h3 class="text-title">Sé Socio</h3>
 
