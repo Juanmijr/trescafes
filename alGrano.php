@@ -1,7 +1,7 @@
 <html>
     <head>
         <?php include ('includes/head.php'); ?>
-        <title></title>
+        <title>¡Al Grano! | Tres Cafés</title>
     </head>
     <body>
         <?php

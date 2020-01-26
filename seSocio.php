@@ -9,8 +9,9 @@ if (isset($_SESSION['usuario'])){
 
 <!DOCTYPE html>
 <html>
-
+    <head>
     <?php include ('includes/head.php'); ?> 
+        <title>Sé Socio | Tres Cafés</title>
 </head>
 <body >
 

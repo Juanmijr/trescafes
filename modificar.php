@@ -12,8 +12,8 @@ if (!isset($_POST['email']) || isset($_POST['cancelar'])) {
 } else {
     $usuarioModificar = Usuario::buscarPorCorreo($_POST['email']);
 }
-if(isset($_POST['guardar'])) {
-    if(Usuario::modificarUsuario($_POST['email'], $_POST['nombreUsuario'], $_POST['contrasenia'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codigoPostal'], $_POST['telefono'], $_POST['rol'])) {
+if (isset($_POST['guardar'])) {
+    if (Usuario::modificarUsuario($_POST['email'], $_POST['nombreUsuario'], $_POST['contrasenia'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codigoPostal'], $_POST['telefono'], $_POST['rol'])) {
         header('Location: control.php');
     }
 }
@@ -21,7 +21,7 @@ if(isset($_POST['guardar'])) {
 <html>
     <head>
         <?php include ('includes/head.php'); ?>
-        <title>Tus Datos | Tres Cafés</title>
+        <title>Modificar | Tres Cafés</title>
     </head>
     <body>
         <?php include ('includes/navbar.php'); ?>
@@ -31,21 +31,16 @@ if(isset($_POST['guardar'])) {
                 <div class="col-sm-9 text-title"><h1><?php echo $usuarioModificar->email; ?></h1></div>
             </div>
             <div class="row">
-                <div class="col-sm-3"><!--left col-->
-
-
+                <div class="col-sm-3">
                     <div class="text-center">
                         <img src="img/usuario.png" class="img-circle img-thumbnail">
                     </div></hr><br>
-
-                </div><!--/col-3-->
+                </div>
                 <div class="col-sm-9 text-left">
-
                     <div class="tab-content">
                         <hr>
                         <form class="form" action="" method="post">
                             <div class="form-group">
-
                                 <div class="col-xs-6">
                                     <h4>Nombre de usuario</h4>
                                     <input type="text" class="form-control" name="nombreUsuario" value="<?php echo $usuarioModificar->nombreUsuario; ?>">
@@ -121,15 +116,11 @@ if(isset($_POST['guardar'])) {
                                 </div>
                             </div>
                         </form>
-
                         <hr>
-
-
-                    </div><!--/tab-pane-->
-                </div><!--/tab-content-->
-
-            </div><!--/col-9-->
-        </div><!--/row-->
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php
         include('includes/footer.php');
         ?>

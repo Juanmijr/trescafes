@@ -1,7 +1,7 @@
 <html>
     <head>
         <?php include ('includes/head.php'); ?>
-        <title></title>
+        <title>Tres Cafés en Raya | Tres Cafés</title>
         <script src="js/juegoLolo.js"></script>
         <style>
             #miCanvas {

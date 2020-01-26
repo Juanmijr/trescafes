@@ -17,14 +17,14 @@ if (isset($_SESSION['usuario'])) {
     header('Location: index.php');
 }
 
-if(isset($_POST['eliminar'])) {
+if (isset($_POST['eliminar'])) {
     Usuario::EliminarUsuario($_POST['email']);
 }
 ?>
 <html>
     <head>
         <?php include ('includes/head.php'); ?>
-        <title>Tus Datos | Tres Cafés</title>
+        <title>Control | Tres Cafés</title>
     </head>
     <body>
         <?php
@@ -32,58 +32,40 @@ if(isset($_POST['eliminar'])) {
         if ($usuarios = Usuario::recuperarUsuarios()) {
             foreach ($usuarios as $usuario) {
                 ?>
-                <div class="cardControl my-2">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-sm-1">
-                                <img class="imgControl" src="img/usuario.png" />
-                            </div>
-                            <div class="col-sm-11">
-                                <section class="table-responsive table-borderless">
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>Email</th>
-                                                <th>Nombre de Usuario</th>
-                                                <th>Contraseña</th>
-                                                <th>Nombre</th>
-                                                <th>Primer Apellido</th>
-                                                <th>Segundo Apellido</th>
-                                                <th>Fecha de Nacimiento</th>
-                                                <th>País</th>
-                                                <th>Código Postal</th>
-                                                <th>Teléfono</th>
-                                                <th>Rol</th>
-                                                <th>Acción</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><?php echo $usuario->email; ?></td>
-                                                <td><?php echo $usuario->nombreUsuario; ?></td>
-                                                <td><?php echo $usuario->contrasenia; ?></td>
-                                                <td><?php echo $usuario->nombre; ?></td>
-                                                <td><?php echo $usuario->apellido1; ?></td>
-                                                <td><?php echo $usuario->apellido2; ?></td>
-                                                <td><?php echo $usuario->fechaNacimiento; ?></td>
-                                                <td><?php echo $usuario->pais; ?></td>
-                                                <td><?php echo $usuario->codigoPostal; ?></td>
-                                                <td><?php echo $usuario->telefono; ?></td>
-                                                <td><?php echo $usuario->rol; ?></td>
-                                                <td>
-                                                    <form action="modificar.php" method="post">
-                                                        <input type="hidden" name="email" value="<?php echo $usuario->email; ?>">
-                                                        <input type="submit" class="btn btn-secundary" name="modificar" value="Modificar">
-                                                    </form>
-                                                    <form action="" method="post">
-                                                        <input type="hidden" name="email" value="<?php echo $usuario->email; ?>">
-                                                        <input type="submit" class="btn btn-secundary" name="eliminar" value="Eliminar" onclick="return confirm('¿Estás seguro de eliminarlo?')">
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </section>  
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="text-center">
+                                <img src="img/usuario.png" class="img-circle img-thumbnail">
+                            </div></hr><br>
+                        </div>
+                        <div class="col-sm-9 text-left">
+                            <div class="tab-content">
+                                <hr>
+                                <h3><?php echo $usuario->nombre . " " . $usuario->apellido1 . " " . "$usuario->apellido2" ?></h3>
+                                <p class="m-0"><i class="fas fa-flag mr-2"></i><?php echo $usuario->codigoPostal . ", " . $usuario->pais ?></p>
+                                <p class="m-0"><i class="fas fa-mail-bulk mr-2"></i><?php echo $usuario->email ?></p>
+                                <p class="m-0"><i class="fas fa-user mr-2"></i><?php echo $usuario->nombreUsuario ?></p>
+                                <p class="m-0"><i class="fas fa-key mr-2"></i><?php echo $usuario->contrasenia ?></p>
+                                <p class="m-0"><i class="fas fa-calendar-alt mr-2"></i><?php echo $usuario->fechaNacimiento ?></p>
+                                <p class="m-0"><i class="fas fa-mobile mr-2"></i><?php echo $usuario->telefono ?></p>
+                                <p class="m-0"><i class="fas fa-user-tag mr-2"></i><?php echo $usuario->rol ?></p>
+                                <br>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <form class="form" action="" method="post">
+                                            <input type="hidden" name="email" value="<?php echo $usuario->email ?>">
+                                            <input class="btn btn-secundary" name="eliminar" value="Eliminar" onclick="confirm('¿Estás seguro de eliminarlo?')" type="submit">
+                                        </form>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <form class="form" action="modificar.php" method="post">
+                                            <input type="hidden" name="email" value="<?php echo $usuario->email ?>">
+                                            <input class="btn btn-primary" name="modificar" value="Modificar" type="submit">
+                                        </form>
+                                    </li>
+                                </ul>
+                                <hr>
                             </div>
                         </div>
                     </div>

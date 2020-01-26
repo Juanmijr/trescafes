@@ -9,7 +9,7 @@ and open the template in the editor.
         <?php 
         include('includes/head.php');
         ?>
-        <title>Todos nuestros productos | Tres Cafés</title>
+        <title>Productos | Tres Cafés</title>
     </head>
     <body>
         <?php
