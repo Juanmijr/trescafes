@@ -55,7 +55,17 @@ if (isset($_POST['eliminar'])) {
                                     <li class="list-inline-item">
                                         <form class="form" action="" method="post">
                                             <input type="hidden" name="email" value="<?php echo $usuario->email ?>">
-                                            <input class="btn btn-secundary" name="eliminar" value="Eliminar" onclick="return confirm('¿Estás seguro de eliminarlo?')" type="submit">
+                                            <?php
+                                            if ($_SESSION['usuario'] == $usuario->email) {
+                                                ?>
+                                                <input class="btn btn-secundary" name="eliminar" value="Eliminar" disabled  type="submit">
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <input class="btn btn-secundary" name="eliminar" value="Eliminar" onclick="return confirm('¿Estás seguro de eliminarlo?')" type="submit">
+                                                <?php
+                                            }
+                                            ?>
                                         </form>
                                     </li>
                                     <li class="list-inline-item">
