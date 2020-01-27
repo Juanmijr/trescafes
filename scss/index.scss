@@ -500,3 +500,10 @@ box-shadow: 0 0 0 0 !important;
     width: 4.68rem;
     height: 4.68rem;
 }
+.links-primary {
+margin-left: 0.25rem;
+color: $bg-secundary;
+}
+.links-primary:hover{
+    color: $bg-primary;
+}

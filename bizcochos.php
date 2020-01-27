@@ -33,7 +33,7 @@ and open the template in the editor.
         <div class="row">
             <div class="col-12">
                 <hr>
-                <a class="text-title" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
+                <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
                 <div class="collapse" id="footwear">
                     <div class="row">
                         <div class="chartContainer col-12 my-5">
@@ -67,7 +67,7 @@ and open the template in the editor.
         <div class="row">
             <div class="col-12">
                 <hr>
-                <a class="text-title" data-toggle="collapse" href="#valoraciones" aria-expanded="false" aria-controls="footwear">Valoraciones </a>
+                <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#valoraciones" aria-expanded="false" aria-controls="footwear">Valoraciones </a>
                 <div class="collapse" id="valoraciones">
 
 

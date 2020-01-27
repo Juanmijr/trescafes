@@ -29,10 +29,17 @@ if (isset($_POST['eliminar'])) {
     <body>
         <?php
         include ('includes/navbar.php');
-        if ($usuarios = Usuario::recuperarUsuarios()) {
-            foreach ($usuarios as $usuario) {
-                ?>
-                <div class="container mt-5">
+        ?>
+        <div class="container mt-5">
+            <div class="row mb-2">
+                <div class="col-sm-3">
+                    <a class="enlacesSinEstilo links-primary" href="anadirUsuario.php">Añadir usuario</a>
+                </div>
+            </div>
+            <?php
+            if ($usuarios = Usuario::recuperarUsuarios()) {
+                foreach ($usuarios as $usuario) {
+                    ?>     
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="text-center">
@@ -79,11 +86,12 @@ if (isset($_POST['eliminar'])) {
                             </div>
                         </div>
                     </div>
-                </div>
-                <?php
+
+                    <?php
+                }
             }
-        }
-        ?>
+            ?>
+        </div>
         <?php
         include('includes/footer.php');
         ?>

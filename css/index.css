@@ -496,4 +496,13 @@ input:focus {
   height: 4.68rem;
 }
 
+.links-primary {
+  margin-left: 0.25rem;
+  color: #e3a364 !important;
+}
+
+.links-primary:hover {
+  color: #4b3621 !important;
+}
+
 /*# sourceMappingURL=index.css.map */
