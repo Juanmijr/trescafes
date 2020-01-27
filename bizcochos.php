@@ -9,7 +9,7 @@ and open the template in the editor.
         <?php include ('includes/head.php'); ?>
         <title>Bizcochos | Tres Cafés</title>
     </head>
-  
+
     <body>
         <?php include ('includes/navbar.php'); ?>
         <div class="row">
@@ -76,23 +76,11 @@ and open the template in the editor.
                             <div class="col-md-12">
                                 <div class="well well-sm">
                                     <div class="text-center">
-                                        <a class="btn btn-success btn-primary" href="#reviews-anchor" id="open-review-box">Hacer una valoración</a>
+                                        <a class="btn btn-success btn-primary" href="#reviews-anchor" id="dropdownLoginLI" data-toggle="modal" data-target="#bizcochosModal">Hacer una valoración</a>
                                     </div>
 
                                     <div class="row" id="post-review-box" style="display:none;">
-                                        <div class="col-md-12">
-                                            <form accept-charset="UTF-8" action="" method="post">
-                                                <input id="ratings-hidden" name="rating" type="hidden"> 
-                                                <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="5"></textarea>
 
-                                                <div class="text-right">
-                                                    <div class="stars starrr" data-rating="0"></div>
-                                                    <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
-                                                        <span class="glyphicon glyphicon-remove"></span>Cancel</a>
-                                                    <button class="btn btn-success btn-primary" type="submit">Save</button>
-                                                </div>
-                                            </form>
-                                        </div>
                                     </div>
                                 </div> 
 
@@ -133,12 +121,49 @@ and open the template in the editor.
 
 
 
+        <div class="modal fade" id="bizcochosModal" tabindex="-1" role="dialog" aria-labelledby="bizcochosModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="col-md-12">
+                            <h2 class="text-title">Introduce una valoración :</h2>
+
+                            <form accept-charset="UTF-8" action="" method="post">
+                                <p class="clasificacion">
+                                    <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                    --><label for="radio1">★</label><!--
+                                    --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                    --><label for="radio2">★</label><!--
+                                    --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                    --><label for="radio3">★</label><!--
+                                    --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                    --><label for="radio4">★</label><!--
+                                    --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                    --><label for="radio5">★</label>
+                                </p>
+                                <input id="ratings-hidden" name="rating" type="hidden"> 
+                                <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Introduce tu valoración..." rows="5"></textarea>
 
 
 
+                                <div class="text-right">
+                                    <div class="stars starrr" data-rating="0"></div>
+                                    <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
+                                        <span class="glyphicon glyphicon-remove"></span>Cancelar</a>
+                                    <button class="btn login_btn" type="submit">Valorar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <?php
-    include('includes/footer.php');
-    ?>
-</body>
+        </div>
+
+
+
+        <?php
+        include('includes/footer.php');
+        ?>
+    </body>
 </html>
