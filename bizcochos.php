@@ -137,9 +137,7 @@ and open the template in the editor.
                                     --><input id="radio3" type="radio" name="estrellas" value="3"><!--
                                     --><label for="radio3">★</label><!--
                                     --><input id="radio4" type="radio" name="estrellas" value="2"><!--
-                                    --><label for="radio4">★</label><!--
-                                    --><input id="radio5" type="radio" name="estrellas" value="1"><!--
-                                    --><label for="radio5">★</label>
+                                    --><label for="radio4">★</label>
                                 </p>
                                 <input id="ratings-hidden" name="rating" type="hidden"> 
                                 <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Introduce tu valoración..." rows="5"></textarea>
@@ -159,6 +157,13 @@ and open the template in the editor.
             </div>
 
         </div>
+        
+        <?php
+        if (isset($_POST['valorar'])){
+            $valoracion = new Valoracion($_POST['idUsuario'], 'bizcochos', $_POST['comment'], date());
+            $valoracion->insertarValoracion();
+        }
+        ?>
 
 
 

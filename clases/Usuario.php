@@ -16,11 +16,10 @@ class Usuario {
     private $telefono;
     private $rol;
 
-    function getUsuarios() {
-        
-    }
+  
 
     public function __construct($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol) {
+        
         $this->email = $email;
         $this->nombreUsuario = $nombreUsuario;
         $this->contrasenia = $contrasenia;
@@ -52,24 +51,25 @@ class Usuario {
         }
     }
 
-    public static function buscarPorCorreo($correo) {
+    public static function buscarPorId($id) {
         $conex = new Conexion();
         if ($conex->connect_errno != 0) {
             echo $conex->connect_error;
         } else {
-            $consulta1 = $conex->query("SELECT * from usuario WHERE email = '$correo'");
+            $consulta1 = $conex->query("SELECT * from usuario WHERE idUsuario = '$id'");
             if ($conex->errno != 0) {
                 return $conex->error;
             } else {
                 if ($conex->affected_rows > 0) {
                     $object = $consulta1->fetch_object();
-                    return new self($object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol);
+                    return new self($object->idUsuario, $object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol);
                 } else {
                     return false;
                 }
             }
         }
     }
+    
 
     public static function comprobarUsuario($email, $password) {
         $conex = new Conexion();
