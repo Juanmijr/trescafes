@@ -3,7 +3,7 @@
 require_once 'Conexion.php';
 
 class Usuario {
-
+    private $idUsuario;
     private $email;
     private $nombreUsuario;
     private $contrasenia;
@@ -18,8 +18,8 @@ class Usuario {
 
   
 
-    public function __construct($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol) {
-        
+    public function __construct($idUsuario, $email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol) {
+        $this->idUsuario = $idUsuario;
         $this->email = $email;
         $this->nombreUsuario = $nombreUsuario;
         $this->contrasenia = $contrasenia;
@@ -51,12 +51,12 @@ class Usuario {
         }
     }
 
-    public static function buscarPorId($id) {
+    public static function buscarPorCorreo($email) {
         $conex = new Conexion();
         if ($conex->connect_errno != 0) {
             echo $conex->connect_error;
         } else {
-            $consulta1 = $conex->query("SELECT * from usuario WHERE idUsuario = '$id'");
+            $consulta1 = $conex->query("SELECT * from usuario WHERE email = '$email'");
             if ($conex->errno != 0) {
                 return $conex->error;
             } else {
@@ -98,7 +98,7 @@ class Usuario {
             $result = $conex->query("SELECT * FROM usuario");
             if ($conex->affected_rows != 0) {
                 while ($object = $result->fetch_object()) {
-                    $p = new self($object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol);
+                    $p = new self($object->idUsuario, $object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol);
                     $array[] = $p;
                 }
                 return $array;

@@ -160,7 +160,8 @@ and open the template in the editor.
         
         <?php
         if (isset($_POST['valorar'])){
-            $valoracion = new Valoracion($_POST['idUsuario'], 'bizcochos', $_POST['comment'], date());
+            $usuario = Usuario::buscarPorCorreo($_SESSION['email']);
+            $valoracion = new Valoracion($usuario->id, 'bizcochos', $_POST['comment'], date());
             $valoracion->insertarValoracion();
         }
         ?>
