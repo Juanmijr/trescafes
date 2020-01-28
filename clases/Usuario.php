@@ -33,12 +33,12 @@ class Usuario {
         $this->rol = $rol;
     }
 
-    public function insertarUsuario() {
+    public static function insertarUsuario($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol) {
         $conex = new Conexion();
         if ($conex->connect_errno != 0) {
             echo $conex->connect_error;
         } else {
-            $consulta1 = $conex->query("INSERT INTO usuario VALUES('','$this->email','$this->nombreUsuario', '$this->contrasenia', '$this->nombre', '$this->apellido1', '$this->apellido2','$this->fechaNacimiento','$this->pais','$this->codigoPostal','$this->telefono','$this->rol') ");
+            $consulta1 = $conex->query("INSERT INTO usuario VALUES('','$email','$nombreUsuario', '$contrasenia', '$nombre', '$apellido1', '$apellido2','$fechaNacimiento','$pais','$codigoPostal','$telefono','$rol') ");
             if ($conex->errno != 0) {
                 return $conex->error;
             } else {
