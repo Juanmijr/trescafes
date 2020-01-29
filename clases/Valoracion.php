@@ -56,7 +56,31 @@ class Valoracion {
         if ($conex->connect_errno != 0) {
             echo $conex->connect_error;
         } else {
-            $consulta1 = $conex->query("SELECT * from valoracion");
+            $consulta1 = $conex->query("SELECT * from valoracion WHERE producto = '$idProducto'");
+            if ($conex->errno != 0) {
+                return $conex->error;
+            } else {
+                if ($conex->affected_rows > 0) {
+                      $valoraciones  = array();
+                  while( $object = $consulta1->fetch_object()){
+                   $valoraciones[] = (new self($object->idValoracion, $object->usuario, $object->producto, $object->valoracion, $object->comentario, $object->fecha));
+                  }
+                  
+                  } else {
+                    return false;
+                }
+               
+            }
+             return $valoraciones;
+        }
+    }
+    
+        public static function buscarValoracionesporIDUsuario ($idUsuario){
+          $conex = new Conexion();
+        if ($conex->connect_errno != 0) {
+            echo $conex->connect_error;
+        } else {
+            $consulta1 = $conex->query("SELECT * from valoracion WHERE usuario = '$idUsuario'");
             if ($conex->errno != 0) {
                 return $conex->error;
             } else {

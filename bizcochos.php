@@ -16,7 +16,7 @@ and open the template in the editor.
     </head>
 
     <body>
-<?php include ('includes/navbar.php'); ?>
+        <?php include ('includes/navbar.php'); ?>
         <div class="row">
             <div class="col-sm-4 mt-5">
                 <div class="row">
@@ -75,7 +75,7 @@ and open the template in the editor.
                 <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#valoraciones" aria-expanded="false" aria-controls="footwear">Valoraciones </a>
                 <div class="collapse" id="valoraciones">
 
-<?php if (isset($_SESSION['usuario'])) { ?>
+                    <?php if (isset($_SESSION['usuario'])) { ?>
                         <div class="container">
                             <div class="row mb-4 mt-2" >
                                 <div class="col-md-12">
@@ -92,11 +92,11 @@ and open the template in the editor.
                                 </div>
                             </div>
                         </div>
-                        <?php } ?>
+                    <?php } ?>
 
-                        <?php
-                        $valoraciones = Valoracion::buscarValoracionesporID(1);
-
+                    <?php
+                    $valoraciones = Valoracion::buscarValoracionesporID(1);
+                    if (count($valoraciones) > 0) {
                         foreach ($valoraciones as $valoracion) {
                             ?>
                             <div class="card">
@@ -110,7 +110,7 @@ and open the template in the editor.
                                             <p>
                                                 <strong><?php echo ValoracionUsuarioProducto::nombreUsuarioporIDVALORACION($valoracion->idValoracion); ?></strong>
 
-        <?php for ($i = 0; $i < $valoracion->valoracion; $i++) { ?>
+                                                <?php for ($i = 0; $i < $valoracion->valoracion; $i++) { ?>
                                                     <span class="float-right"><i class="text-warning fa fa-star"></i></span>
 
                                                     <?php
@@ -131,70 +131,71 @@ and open the template in the editor.
                             </div>
                             <?php
                         }
-                        ?>
+                    }
+                    ?>
 
+                </div>
+                <hr>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="bizcochosModal" tabindex="-1" role="dialog" aria-labelledby="bizcochosModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <hr>
+                    <div class="modal-body">
+                        <div class="col-md-12">
+                            <h2 class="text-title">Introduce una valoración :</h2>
+
+
+
+                            <form accept-charset="UTF-8" action="" method="post">
+                                <p class="clasificacion">
+                                    <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                    --><label for="radio1">★</label><!--
+                                    --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                    --><label for="radio2">★</label><!--
+                                    --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                    --><label for="radio3">★</label><!--
+                                    --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                    --><label for="radio4">★</label>
+                                </p>
+                                <input id="ratings-hidden" name="rating" type="hidden"> 
+                                <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Introduce tu valoración..." rows="5"></textarea>
+
+
+
+                                <div class="text-right">
+                                    <div class="stars starrr" data-rating="0"></div>
+                                    <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
+                                        <span class="glyphicon glyphicon-remove"></span>Cancelar</a>
+                                    <input class="btn login_btn" name="valorar" type="submit" value="valorar"></input>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+        </div>
 
-
-            <div class="modal fade" id="bizcochosModal" tabindex="-1" role="dialog" aria-labelledby="bizcochosModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="col-md-12">
-                                <h2 class="text-title">Introduce una valoración :</h2>
+        <?php
+        if (isset($_POST['valorar'])) {
+            $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
+            Valoracion::insertarValoracion($usuario->idUsuario, 1, $_POST['estrellas'], $_POST['comment']);
+        }
+        ?>
 
 
 
-                                <form accept-charset="UTF-8" action="" method="post">
-                                    <p class="clasificacion">
-                                        <input id="radio1" type="radio" name="estrellas" value="5"><!--
-                                        --><label for="radio1">★</label><!--
-                                        --><input id="radio2" type="radio" name="estrellas" value="4"><!--
-                                        --><label for="radio2">★</label><!--
-                                        --><input id="radio3" type="radio" name="estrellas" value="3"><!--
-                                        --><label for="radio3">★</label><!--
-                                        --><input id="radio4" type="radio" name="estrellas" value="2"><!--
-                                        --><label for="radio4">★</label>
-                                    </p>
-                                    <input id="ratings-hidden" name="rating" type="hidden"> 
-                                    <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Introduce tu valoración..." rows="5"></textarea>
-
-
-
-                                    <div class="text-right">
-                                        <div class="stars starrr" data-rating="0"></div>
-                                        <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
-                                            <span class="glyphicon glyphicon-remove"></span>Cancelar</a>
-                                        <input class="btn login_btn" name="valorar" type="submit" value="valorar"></input>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <?php
-            if (isset($_POST['valorar'])) {
-                $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
-                Valoracion::insertarValoracion($usuario->idUsuario, 1, $_POST['estrellas'], $_POST['comment']);
-            }
-            ?>
-
-
-
-            <?php
-            include('includes/footer.php');
-            ?>
+        <?php
+        include('includes/footer.php');
+        ?>
     </body>
 </html>
