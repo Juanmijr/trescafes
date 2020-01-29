@@ -7,7 +7,7 @@ drop table if exists producto;
 drop table if exists usuario;
 
 create table usuario (
-	idUsuario int auto_increment,
+	idUsuario int auto_increment, 
 	email varchar(150) unique not null,
 	nombreUsuario varchar(50) not null,
 	contrasenia varchar(50) not null,
@@ -19,6 +19,7 @@ create table usuario (
 	codigoPostal int not null,
 	telefono int not null,
 	rol enum ('administrador','editor','valorador') not null,
+        imagenPerfil varchar(50), 
 
 	primary key (idUsuario)
 );
@@ -26,8 +27,12 @@ create table usuario (
 create table producto (
 	idProducto int auto_increment,
 	tipo enum ('cafe','reposteria','otro') not null,
-	nombreProducto varchar(100) not null,
+	nombreProducto varchar(100) unique not null,
 	descripcion varchar(500) not null,
+        imagenProducto varchar(50) not null,
+        proteinas real not null,
+        carbohidratos real not null,
+        grasas real not null,
 
 	primary key (idProducto)
 );
@@ -41,6 +46,6 @@ create table valoracion (
 	fecha date not null,
 
 	primary key (idValoracion),
-	foreign key (usuario) references usuario (idUsuario) on delete restrict on update cascade,
-	foreign key (producto) references producto (idProducto) on delete restrict on update cascade
+	foreign key (usuario) references usuario (idUsuario) on delete cascade on update cascade,
+	foreign key (producto) references producto (idProducto) on delete cascade on update cascade
 );

@@ -15,10 +15,11 @@ class Usuario {
     private $codigoPostal;
     private $telefono;
     private $rol;
+    private $rutaImagen;
 
   
 
-    public function __construct($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol) {
+    public function __construct($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol,$rutaImagen) {
         $this->email = $email;
         $this->nombreUsuario = $nombreUsuario;
         $this->contrasenia = $contrasenia;
@@ -30,6 +31,7 @@ class Usuario {
         $this->codigoPostal = $codigoPostal;
         $this->telefono = $telefono;
         $this->rol = $rol;
+        $this->rutaImagen = $rutaImagen;
     }
 
     public static function insertarUsuario($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol) {
@@ -37,7 +39,7 @@ class Usuario {
         if ($conex->connect_errno != 0) {
             echo $conex->connect_error;
         } else {
-            $consulta1 = $conex->query("INSERT INTO usuario VALUES('','$email','$nombreUsuario', '$contrasenia', '$nombre', '$apellido1', '$apellido2','$fechaNacimiento','$pais','$codigoPostal','$telefono','$rol') ");
+            $consulta1 = $conex->query("INSERT INTO usuario VALUES('','$email','$nombreUsuario', '$contrasenia', '$nombre', '$apellido1', '$apellido2','$fechaNacimiento','$pais','$codigoPostal','$telefono','$rol',null) ");
             if ($conex->errno != 0) {
                 return $conex->error;
             } else {
@@ -61,7 +63,7 @@ class Usuario {
             } else {
                 if ($conex->affected_rows > 0) {
                     $object = $consulta1->fetch_object();
-                    return new self($object->idUsuario, $object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol);
+                    return new self($object->idUsuario, $object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol, $object->rutaImagen);
                 } else {
                     return false;
                 }
@@ -97,7 +99,7 @@ class Usuario {
             $result = $conex->query("SELECT * FROM usuario");
             if ($conex->affected_rows != 0) {
                 while ($object = $result->fetch_object()) {
-                    $p = new self($object->idUsuario, $object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol);
+                    $p = new self($object->idUsuario, $object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol,$object->rutaImagen);
                     $array[] = $p;
                 }
                 return $array;
