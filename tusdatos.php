@@ -45,9 +45,6 @@ if (isset($_SESSION['usuario'])) {
                     <section class="table-responsive">
                         <span class='text-title'>VALORACIONES</span>
                         <table class="table table-hover mt-5">
-                            <?php 
-                                $valoraciones = Valoracion::buscarValoracionesporID(1);
-                            ?>
                             <thead>
                                 <tr>
                                     <th>Producto</th>

@@ -11,8 +11,17 @@ and open the template in the editor.
         session_start();
         require_once './clases/Valoracion.php';
         require_once 'clases/ValoracionUsuarioProducto.php';
+        require_once 'clases/Producto.php';
+        if(isset($_GET['producto'])) {
+            if($producto = Producto::buscarPorNombre($_GET['producto'])) {
+            } else {
+                header("Location: productos.php");
+            }
+        } else {
+            header("Location: productos.php");
+        }
         ?>
-        <title>Bizcochos | Tres Cafés</title>
+        <title><?php echo $producto->nombreProducto ?> | Tres Cafés</title>
     </head>
 
     <body>
@@ -26,13 +35,13 @@ and open the template in the editor.
                 </div>
                 <article class="row mt-5  mx-auto">
                     <div class="col-sm-12">
-                        <p class="text-title">BIZCOCHOS</p>
-                        <p class="text-secondary text-justify">Te encantarán nuestros esponjosos bizcochos de queso y yogurt, naranja y chocolate, manzana y nueces o de calabaza.</p>
+                        <p class="text-title text-uppercase"><?php echo $producto->nombreProducto ?></p>
+                        <p class="text-secondary text-justify"><?php echo $producto->descripcion ?></p>
                     </div>
                 </article>
             </div>
             <aside class="col-sm-8 mt-5">
-                <img class="imgProductos img-fluid" src="img/Productos/bizcocho.png">
+                <img class="imgProductos img-fluid" src="<?php echo $producto->imagenProducto ?>">
             </aside>
         </div>
         <div class="row">
@@ -54,9 +63,9 @@ and open the template in the editor.
             var myLineChart = new Chart(ctxD, {
                 type: 'doughnut',
                 data: {
-                    labels: ["<?php echo 'HOLA JORGE' ?>", "Carbohidratos(g)", "Grasas(g)"],
+                    labels: ["Proteinas", "Carbohidratos(g)", "Grasas(g)"],
                     datasets: [{
-                            data: [4.6, 36.35, 2.71],
+                            data: [<?php echo $producto->proteinas ?>, <?php echo $producto->carbohidratos ?>, <?php echo $producto->grasas ?>],
                             backgroundColor: ["#ba9b6b", "#6f6f6f", "#be8d5f"],
                             hoverBackgroundColor: ["#bfab8c", "#858585", "#dcaa7b"]
                         }]
@@ -95,7 +104,7 @@ and open the template in the editor.
                     <?php } ?>
 
                     <?php
-                    $valoraciones = Valoracion::buscarValoracionesporID(1);
+                    $valoraciones = Valoracion::buscarValoracionesporID($producto->idProducto);
                     if ($valoraciones != FALSE) {
                         foreach (@$valoraciones as $valoracion) {
                             ?>
@@ -131,6 +140,8 @@ and open the template in the editor.
                             </div>
                             <?php
                         }
+                    } else {
+                        echo"<p class='mt-5'>Aún no hay ninguna valoración</p>";
                     }
                     ?>
 
