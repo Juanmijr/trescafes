@@ -54,8 +54,9 @@ if (isset($_SESSION['usuario'])) {
                                 </tr>
                             </thead>
                             <tbody>
+                                
                                 <tr>
-                                    <th>Yorspresso</th>
+                                    <th></th>
                                     <td>4</td>
                                     <td>El mejor café del momento</td>
                                     <td>17-1-2020</td>

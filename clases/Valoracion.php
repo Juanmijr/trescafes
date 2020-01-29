@@ -31,12 +31,13 @@ class Valoracion {
         return $this->$name;
     }
 
-        public function insertarValoracion() {
+        public static function insertarValoracion($usuario, $producto, $valoracion, $comentario) {
         $conex = new Conexion();
         if ($conex->connect_errno != 0) {
             echo $conex->connect_error;
         } else {
-            $consulta1 = $conex->query("INSERT INTO valoracion VALUES('','$this->usuario','$this->producto', '$this->valoracion', '$this->comentario', '$this->fecha') ");
+            $fecha = date("Y-m-d",time());
+            $consulta1 = $conex->query("INSERT INTO valoracion  VALUES('','$usuario','$producto', '$valoracion', '$comentario','$fecha')");
             if ($conex->errno != 0) {
                 return $conex->error;
             } else {
@@ -49,5 +50,4 @@ class Valoracion {
         }
     }
 
-    
 }

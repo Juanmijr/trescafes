@@ -6,7 +6,9 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <?php include ('includes/head.php'); ?>
+        <?php include ('includes/head.php');
+        session_start();
+        require_once './clases/Valoracion.php';?>
         <title>Bizcochos | Tres Cafés</title>
     </head>
 
@@ -49,7 +51,7 @@ and open the template in the editor.
             var myLineChart = new Chart(ctxD, {
                 type: 'doughnut',
                 data: {
-                    labels: ["Proteinas(g)", "Carbohidratos(g)", "Grasas(g)"],
+                    labels: ["<?php echo 'HOLA JORGE'?>", "Carbohidratos(g)", "Grasas(g)"],
                     datasets: [{
                             data: [4.6, 36.35, 2.71],
                             backgroundColor: ["#ba9b6b", "#6f6f6f", "#be8d5f"],
@@ -124,9 +126,16 @@ and open the template in the editor.
         <div class="modal fade" id="bizcochosModal" tabindex="-1" role="dialog" aria-labelledby="bizcochosModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
+                    <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                     <div class="modal-body">
                         <div class="col-md-12">
                             <h2 class="text-title">Introduce una valoración :</h2>
+                            
+                          
 
                             <form accept-charset="UTF-8" action="" method="post">
                                 <p class="clasificacion">
@@ -148,7 +157,7 @@ and open the template in the editor.
                                     <div class="stars starrr" data-rating="0"></div>
                                     <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
                                         <span class="glyphicon glyphicon-remove"></span>Cancelar</a>
-                                    <button class="btn login_btn" type="submit">Valorar</button>
+                                        <input class="btn login_btn" name="valorar" type="submit" value="valorar"></input>
                                 </div>
                             </form>
                         </div>
@@ -160,9 +169,10 @@ and open the template in the editor.
         
         <?php
         if (isset($_POST['valorar'])){
-            $usuario = Usuario::buscarPorCorreo($_SESSION['email']);
-            $valoracion = new Valoracion($usuario->id, 'bizcochos', $_POST['comment'], date());
-            $valoracion->insertarValoracion();
+            $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
+       
+             Valoracion::insertarValoracion($usuario->idUsuario, 1, $_POST['estrellas'], $_POST['comment']);
+            
         }
         ?>
 
