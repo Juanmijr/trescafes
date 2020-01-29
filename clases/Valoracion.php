@@ -13,14 +13,15 @@
  */
 class Valoracion {
 
-       
+   private $idValoracion;   
     private $usuario;
     private $producto;
     private $valoracion;
     private $comentario;
     private $fecha;
 
-    public function __construct($usuario, $producto,$valoracion, $comentario, $fecha) {
+    public function __construct( $idValoracion, $usuario, $producto,$valoracion, $comentario, $fecha) {
+        $this->idValoracion = $idValoracion;
         $this->usuario = $usuario;
         $this->producto = $producto;
         $this->valoracion = $valoracion;
@@ -49,5 +50,32 @@ class Valoracion {
             }
         }
     }
-
+    
+    public static function buscarValoracionesporID ($idProducto){
+          $conex = new Conexion();
+        if ($conex->connect_errno != 0) {
+            echo $conex->connect_error;
+        } else {
+            $consulta1 = $conex->query("SELECT * from valoracion");
+            if ($conex->errno != 0) {
+                return $conex->error;
+            } else {
+                if ($conex->affected_rows > 0) {
+                      $valoraciones  = array();
+                  while( $object = $consulta1->fetch_object()){
+                   $valoraciones[] = (new self($object->idValoracion, $object->usuario, $object->producto, $object->valoracion, $object->comentario, $object->fecha));
+                  }
+                  
+                  } else {
+                    return false;
+                }
+               
+            }
+             return $valoraciones;
+        }
+    }
+    public function __toString() {
+        return "Usuario -> ". $this->usuario ;
+    }
 }
+

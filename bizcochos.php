@@ -8,7 +8,9 @@ and open the template in the editor.
     <head>
         <?php include ('includes/head.php');
         session_start();
-        require_once './clases/Valoracion.php';?>
+        require_once './clases/Valoracion.php';
+        require_once 'clases/ValoracionUsuarioProducto.php';
+        ?>
         <title>Bizcochos | Tres Cafés</title>
     </head>
 
@@ -89,24 +91,33 @@ and open the template in the editor.
                             </div>
                         </div>
                     </div>
+                    
+                    <?php 
+                   $valoraciones = Valoracion::buscarValoracionesporID(1);
+                  
+                        foreach ($valoraciones as $valoracion){
+                            ?>
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-2">
                                     <img src="img/usuario.png" class="img-fluid"/>
-                                    <p class="text-secondary text-center">FECHA</p>
+                                    <p class="text-secondary text-center"><?php echo $valoracion->fecha; ?></p>
                                 </div>
                                 <div class="col-md-10">
                                     <p>
-                                        <strong>NOMBRE USUARIO</strong>
+                                        <strong><?php echo ValoracionUsuarioProducto::nombreUsuarioporIDVALORACION($valoracion->idValoracion); ?></strong>
+                                        
+                                        <?php for($i = 0 ; $i < $valoracion->valoracion; $i++){?>
                                         <span class="float-right"><i class="text-warning fa fa-star"></i></span>
-                                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
-                                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
-                                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+
+                                        <?php
+                                        }
+                                        ?>
 
                                     </p>
                                     <div class="clearfix"></div>
-                                    <p>VALORACIÓN DE TEXTO</p>
+                                    <p><?php echo $valoracion->comentario;?></p>
                                     <p>
                                         <a class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> COMPARTIR</a>
                                         <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> ME GUSTA</a>
@@ -116,6 +127,11 @@ and open the template in the editor.
 
                         </div>
                     </div>
+                    <?php
+                        }
+                    
+                    ?>
+                    
                 </div>
                 <hr>
             </div>
@@ -170,7 +186,6 @@ and open the template in the editor.
         <?php
         if (isset($_POST['valorar'])){
             $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
-       
              Valoracion::insertarValoracion($usuario->idUsuario, 1, $_POST['estrellas'], $_POST['comment']);
             
         }
