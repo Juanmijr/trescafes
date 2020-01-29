@@ -18,8 +18,7 @@ class Usuario {
 
   
 
-    public function __construct($idUsuario, $email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol) {
-        $this->idUsuario = $idUsuario;
+    public function __construct($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol) {
         $this->email = $email;
         $this->nombreUsuario = $nombreUsuario;
         $this->contrasenia = $contrasenia;

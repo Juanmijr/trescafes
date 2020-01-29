@@ -6,6 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        
         <?php include ('includes/head.php'); ?>
         <title>Tres Cafés</title>
     </head>
