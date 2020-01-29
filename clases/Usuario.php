@@ -15,11 +15,12 @@ class Usuario {
     private $codigoPostal;
     private $telefono;
     private $rol;
-    private $rutaImagen;
+    private $imagenPerfil;
 
   
 
-    public function __construct($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol,$rutaImagen) {
+    public function __construct($idUsuario, $email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol,$imagenPerfil) {
+        $this->idUsuario = $idUsuario;
         $this->email = $email;
         $this->nombreUsuario = $nombreUsuario;
         $this->contrasenia = $contrasenia;
@@ -31,7 +32,7 @@ class Usuario {
         $this->codigoPostal = $codigoPostal;
         $this->telefono = $telefono;
         $this->rol = $rol;
-        $this->rutaImagen = $rutaImagen;
+        $this->imagenPerfil = $imagenPerfil;
     }
 
     public static function insertarUsuario($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol) {
@@ -63,7 +64,7 @@ class Usuario {
             } else {
                 if ($conex->affected_rows > 0) {
                     $object = $consulta1->fetch_object();
-                    return new self($object->idUsuario, $object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol, $object->rutaImagen);
+                    return new self($object->idUsuario, $object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol, $object->imagenPerfil);
                 } else {
                     return false;
                 }
@@ -99,7 +100,7 @@ class Usuario {
             $result = $conex->query("SELECT * FROM usuario");
             if ($conex->affected_rows != 0) {
                 while ($object = $result->fetch_object()) {
-                    $p = new self($object->idUsuario, $object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol,$object->rutaImagen);
+                    $p = new self($object->idUsuario, $object->email, $object->nombreUsuario, $object->contrasenia, $object->nombre, $object->apellido1, $object->apellido2, $object->fechaNacimiento, $object->pais, $object->codigoPostal, $object->telefono, $object->rol,$object->imagenPerfil);
                     $array[] = $p;
                 }
                 return $array;

@@ -46,6 +46,6 @@ create table valoracion (
 	fecha date not null,
 
 	primary key (idValoracion),
-	foreign key (usuario) references usuario (idUsuario) on delete cascade on update cascade,
-	foreign key (producto) references producto (idProducto) on delete cascade on update cascade
+	foreign key (usuario) references usuario (idUsuario) on delete restrict on update cascade,
+	foreign key (producto) references producto (idProducto) on delete restrict on update cascade
 );
