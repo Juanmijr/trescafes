@@ -96,7 +96,7 @@ and open the template in the editor.
 
                     <?php
                     $valoraciones = Valoracion::buscarValoracionesporID(1);
-                    if (@count($valoraciones) > 0) {
+                    if ($valoraciones != FALSE) {
                         foreach (@$valoraciones as $valoracion) {
                             ?>
                             <div class="card">
