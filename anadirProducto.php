@@ -22,15 +22,23 @@ if (isset($_SESSION['usuario'])) {
     <body>
         <?php
         if (isset($_POST['btnAnadirProducto'])) {
+            if (is_uploaded_file($_FILES['imagenProducto']['tmp_name'])) {
+                $fich_unic = time()."-".$_FILES['file']['name'];
+                //para que no se repita el nombre del fichero se concatena el tiempo unix
+                $imagenProducto = "img/".$fich_unic;
+                move_uploaded_file($_FILES['imagenProducto']['tmp_name'], $imagenProducto);
+            } else {
+                echo "Error en la subida del fichero";
+            }
+            
             $tipo = $_POST['tipo'];
             $nombreProducto = $_POST['nombreProducto'];
             $descripcion = $_POST['descripcion'];
-            
             $proteinas = $_POST['proteinas'];
             $carbohidratos = $_POST['carbohidratos'];
             $grasas = $_POST['grasas'];
             //Insertar producto en la bd
-            Producto::insertarProductos($tipo, $nombreProducto, $descripcion, '', $proteinas, $carbohidratos, $grasas);
+            Producto::insertarProductos($tipo, $nombreProducto, $descripcion, $imagenProducto, $proteinas, $carbohidratos, $grasas);
             header('Location: productos.php');
         }
         ?>
@@ -49,7 +57,7 @@ if (isset($_SESSION['usuario'])) {
                                  <div class="col-sm-12">
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"></span>
+                                            <span class="input-group-text"><i class="fas fa-coffee"></i></span>
                                         </div>
                                         <select name="tipo" class="form-control">
                                             <option value="cafe">Café</option>
@@ -63,7 +71,7 @@ if (isset($_SESSION['usuario'])) {
                                 <div class="col-sm-12">
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"></span>
+                                            <span class="input-group-text"><i class="fas fa-file-signature"></i></span>
                                         </div>
                                         <input type="text" name="nombreProducto" class="form-control" placeholder="nombre del producto">
                                     </div>
@@ -80,9 +88,9 @@ if (isset($_SESSION['usuario'])) {
                             
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <span class="text-secondary">Adjuntar una imagen del producto: </span>
-                                        <input type="file" name="imagenProducto">
+                                    <div class="custom-file mb-3">
+                                        <input type="file" class="custom-file-input" name="imagenProducto" lang="es">
+                                        <label class="custom-file-label" for="imagenProducto">Elegir imagen</label>
                                     </div>
                                 </div>
                             </div>
@@ -91,15 +99,15 @@ if (isset($_SESSION['usuario'])) {
                                 <div class="col-sm-4">
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"></span>
+                                            <span class="input-group-text"><i class="fas fa-apple-alt"></i></span>
                                         </div>
-                                        <input type="number" name="proteinas" class="" placeholder="proteinas">
+                                        <input type="number" name="proteinas" class="form-control" placeholder="proteinas">
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"></span>
+                                            <span class="input-group-text"><i class="fas fa-fish"></i></span>
                                         </div>
                                         <input type="number" name="carbohidratos" class="form-control" placeholder="carbohidratos">
                                     </div>
@@ -107,7 +115,7 @@ if (isset($_SESSION['usuario'])) {
                                 <div class="col-sm-4">
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"></span>
+                                            <span class="input-group-text"><i class="fas fa-cookie"></i></span>
                                         </div>
                                         <input type="number" name="grasas" class="form-control" placeholder="grasas">
                                     </div>
