@@ -43,5 +43,30 @@ class ValoracionUsuarioProducto {
         
         }
     }
+    
+    public static function nombreProductoporIDValoracion ($idValoracion){
+           $conex = new Conexion();
+        if ($conex->connect_errno != 0) {
+            echo $conex->connect_error;
+        } else {
+
+            $consulta1 = $conex->query("SELECT producto.nombreProducto FROM usuario, producto, valoracion WHERE idValoracion = '$idValoracion' && valoracion.producto = producto.idProducto && usuario.idUsuario = valoracion.usuario");
+            
+            if ($conex->errno != 0) {
+                return $conex->error;
+            } else {
+
+                if ($conex->affected_rows > 0) {
+                     $object = $consulta1->fetch_object();
+                    
+                        return $object->nombreProducto;
+                    
+                } else {
+                    return false;
+                }
+            }
+        
+        }
+    }
 
 }

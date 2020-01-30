@@ -57,14 +57,14 @@ if (isset($_POST['cerrarSesion'])) {
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
                                                                 >Nuestros cafés</a>
-                                    <?php
-                                    if ($productos = Producto::recuperarProductos()) {
-                                        echo "<ul class='dropdown-menu'>";
-                                        foreach ($productos as $value) {
-                                            if ($value->tipo == "cafe"){
-                                            ?>
-                                                <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a>
-                                        <?php
+                                                                <?php
+                                                                if ($productos = Producto::recuperarProductos()) {
+                                                                    echo "<ul class='dropdown-menu'>";
+                                                                    foreach ($productos as $value) {
+                                                                        if ($value->tipo == "cafe") {
+                                                                            ?>
+                                            <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a>
+                                                <?php
                                             }
                                         }
                                         echo "</ul>";
@@ -76,14 +76,14 @@ if (isset($_POST['cerrarSesion'])) {
                                                                 >Repostería</a>
                                     <ul class="dropdown-menu">
                                         <?php
-                                         foreach ($productos as $value) {
-                                            if ($value->tipo == "reposteria"){
-                                            ?>
-                                              <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a>
-                                        <?php
+                                        foreach ($productos as $value) {
+                                            if ($value->tipo == "reposteria") {
+                                                ?>
+                                                <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a>
+                                                    <?php
+                                                }
                                             }
-                                        }
-                                        ?>
+                                            ?>
                                     </ul>
 
                                 </li>
@@ -92,14 +92,14 @@ if (isset($_POST['cerrarSesion'])) {
                                                                 >Otros</a>
                                     <ul class="dropdown-menu">
                                         <?php
-                                         foreach ($productos as $value) {
-                                            if ($value->tipo == "otro"){
-                                            ?>
-                                              <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a>
-                                        <?php
+                                        foreach ($productos as $value) {
+                                            if ($value->tipo == "otro") {
+                                                ?>
+                                                <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a>
+                                                    <?php
+                                                }
                                             }
-                                        }
-                                        ?>
+                                            ?>
                                     </ul>
 
                                 </li>
@@ -150,8 +150,18 @@ if (isset($_POST['cerrarSesion'])) {
 
                                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <p id="dropdownLogoutMenu1"></p>
-                                    <img class="imgUsu" src="./img/usuario.png"></img>
-
+                                    <?php
+                                    $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
+                                    if ($usuario->imagenPerfil != NULL) {
+                                        ?>
+                                        <img class="imgUsu" src="<?php echo $usuario->imagenPerfil ?>"></img>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <img class="imgUsu" src="../img/usuario.png"></img>
+                                        <?php
+                                    }
+                                    ?>
                                 </button>
 
                                 <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="dropdownMenuButton">
