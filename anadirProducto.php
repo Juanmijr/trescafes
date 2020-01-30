@@ -25,6 +25,7 @@ if (isset($_SESSION['usuario'])) {
             $tipo = $_POST['tipo'];
             $nombreProducto = $_POST['nombreProducto'];
             $descripcion = $_POST['descripcion'];
+            
             $proteinas = $_POST['proteinas'];
             $carbohidratos = $_POST['carbohidratos'];
             $grasas = $_POST['grasas'];
@@ -43,7 +44,7 @@ if (isset($_SESSION['usuario'])) {
                         <h3 class="text-title">Añadir Producto</h3>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="">
+                        <form method="POST" action="" enctype="multipart/form-data">
                             <div class="row">
                                  <div class="col-sm-12">
                                     <div class="input-group form-group">
@@ -76,14 +77,23 @@ if (isset($_SESSION['usuario'])) {
                                     </div>
                                 </div>
                             </div>
-
+                            
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <span class="text-secondary">Adjuntar una imagen del producto: </span>
+                                        <input type="file" name="imagenProducto">
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"></span>
                                         </div>
-                                        <input type="number" name="proteinas" class="form-control" placeholder="proteinas">
+                                        <input type="number" name="proteinas" class="" placeholder="proteinas">
                                     </div>
                                 </div>
                                 <div class="col-sm-4">

@@ -21,6 +21,11 @@ a.btn-primary:focus, a.btn-primary:hover, button.btn-secundary:focus, button.btn
   width: 2.1875rem;
 }
 
+.imagenTodosProductos {
+  width: 25rem;
+  height: 16.625rem;
+}
+
 imgInf {
   width: 1.5rem;
 }
