@@ -5,13 +5,14 @@
 
 <?php
 require_once './clases/Usuario.php';
+require_once './clases/Producto.php';
 @session_start();
 if (isset($_POST['entrar'])) {
     if (Usuario::comprobarUsuario($_POST['email'], $_POST['password'])) {
         $error = false;
         $_SESSION['usuario'] = $_POST['email'];
         if (isset($_POST['recuerdame'])) {
-            //HAY QUE AUMENTAR EL TIEMPO DE LA SESSION AQUI
+            //
         }
     } else {
         $error = true;
@@ -56,20 +57,33 @@ if (isset($_POST['cerrarSesion'])) {
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
                                                                 >Nuestros cafés</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-item"><a class="dropdown-item" href="./loloccino.php">Loloccino</a>
-                                        <li class="dropdown-item"><a class="dropdown-item" href="./juanmocha.php">Juanmocha</a>
-                                        <li class="dropdown-item"><a class="dropdown-item" href="./yorspresso.php">Yorspresso</a>
-                                    </ul>
+                                    <?php
+                                    if ($productos = Producto::recuperarProductos()) {
+                                        echo "<ul class='dropdown-menu'>";
+                                        foreach ($productos as $value) {
+                                            if ($value->tipo == "cafe"){
+                                            ?>
+                                                <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a>
+                                        <?php
+                                            }
+                                        }
+                                        echo "</ul>";
+                                    }
+                                    ?>
                                 </li>
 
                                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
                                                                 >Repostería</a>
                                     <ul class="dropdown-menu">
-                                        <li class="dropdown-item"><a class="dropdown-item" href="./tartas.php">Tarta</a>
-                                        <li class="dropdown-item"><a class="dropdown-item" href="./magdalenas.php">Magdalenas</a>
-                                        <li class="dropdown-item"><a class="dropdown-item" href="./galletas.php">Galletas</a>
-                                        <li class="dropdown-item"><a class="dropdown-item" href="./bizcochos.php">Bizcochos</a>
+                                        <?php
+                                         foreach ($productos as $value) {
+                                            if ($value->tipo == "reposteria"){
+                                            ?>
+                                              <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a>
+                                        <?php
+                                            }
+                                        }
+                                        ?>
                                     </ul>
 
                                 </li>
@@ -77,8 +91,15 @@ if (isset($_POST['cerrarSesion'])) {
                                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
                                                                 >Otros</a>
                                     <ul class="dropdown-menu">
-                                        <li class="dropdown-item"><a class="dropdown-item" href="./chocolates.php">Chocolate</a>
-                                        <li class="dropdown-item"><a class="dropdown-item" href="./infusiones.php">Infusiones</a>
+                                        <?php
+                                         foreach ($productos as $value) {
+                                            if ($value->tipo == "otro"){
+                                            ?>
+                                              <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a>
+                                        <?php
+                                            }
+                                        }
+                                        ?>
                                     </ul>
 
                                 </li>
