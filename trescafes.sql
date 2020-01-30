@@ -23,7 +23,9 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-
+drop database if exists trescafes;
+create database trescafes;
+use trescafes;
 --
 -- Estructura de tabla para la tabla `producto`
 --

@@ -41,26 +41,28 @@ require_once './clases/Producto.php';
                     <section class="row">
                         <div class="col-sm-4 text-center">
                             <div class="hover hover-1">
-                                <a class="enlacesSinEstilo" href="producto.php?producto=loloccino"><img src="<?php echo $value->imagenProducto; ?>">
+                                <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img src="<?php echo $value->imagenProducto; ?>">
+                                    </div>
+                                    <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
+                                    <img src="img/siguiente.png"></a>
                             </div>
-                            <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
-                            <img src="img/siguiente.png"></a>
-                        </div>
                     </section>
                 </article>
-                            <?php
-                        }
-                    }
-
-        if ($usuario = Usuario::buscarPorCorreo($_SESSION['usuario'])) {
-            if ($usuario->rol == 'editor') {
-                ?>
-                <div class="row mb-2">
-                    <div class="col-sm-3">
-                        <a class="enlacesSinEstilo links-primary" href="anadirProducto.php">Añadir producto</a>
-                    </div>
-                </div>
                 <?php
+            }
+        }
+
+        if (isset($_SESSION['usuario'])) {
+            if ($usuario = Usuario::buscarPorCorreo($_SESSION['usuario'])) {
+                if ($usuario->rol == 'editor') {
+                    ?>
+                    <div class="row mb-2">
+                        <div class="col-sm-3">
+                            <a class="enlacesSinEstilo links-primary" href="anadirProducto.php">Añadir producto</a>
+                        </div>
+                    </div>
+                    <?php
+                }
             }
         }
         ?>

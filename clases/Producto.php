@@ -48,7 +48,7 @@ class Producto {
         if ($conex->connect_errno) {
             return FALSE;
         } else {
-            $result = $conex->query("SELECT * FROM producto");
+            $result = $conex->query("SELECT * FROM producto order by tipo");
             if ($conex->affected_rows != 0) {
                 while ($object = $result->fetch_object()) {
                     $p = new self($object->idProducto, $object->tipo, $object->nombreProducto, $object->descripcion, $object->imagenProducto, $object->proteinas, $object->carbohidratos, $object->grasas);
