@@ -24,7 +24,7 @@ require_once './clases/Producto.php';
         
                 if (isset($_SESSION['usuario'])) {
             if ($usuario = Usuario::buscarPorCorreo($_SESSION['usuario'])) {
-                if ($usuario->rol == 'editor') {
+                if ($usuario->rol == 'editor' || $usuario->rol == "administrador") {
                     ?>
                     <div class="row mb-2">
                         <div class="col-sm-3 mt-5">

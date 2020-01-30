@@ -101,7 +101,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-apple-alt"></i></span>
                                         </div>
-                                        <input type="number" name="proteinas" class="form-control" placeholder="proteinas">
+                                        <input type="number" name="proteinas" class="form-control" step=".01" placeholder="proteinas">
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
@@ -109,7 +109,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-fish"></i></span>
                                         </div>
-                                        <input type="number" name="carbohidratos" class="form-control" placeholder="carbohidratos">
+                                        <input type="number" name="carbohidratos" class="form-control" step=".01" placeholder="carbohidratos">
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
@@ -117,7 +117,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-cookie"></i></span>
                                         </div>
-                                        <input type="number" name="grasas" class="form-control" placeholder="grasas">
+                                        <input type="number" name="grasas" class="form-control" step=".01" placeholder="grasas">
                                     </div>
                                 </div>
                             </div>
