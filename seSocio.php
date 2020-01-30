@@ -16,20 +16,31 @@ if (isset($_SESSION['usuario'])) {
         <script src="js/validarRegistro.js"></script>
         <script>
             $(function () {
-                $("#btnEnviar").on("click", function (e) {
-                    var email = $("#email").val();
-
+                $("#email").on("keyup", function (e) {
                     $.ajax({
                         type: "POST",
                         url: "consulta.php",
+                        data: {email: $('#email').val()},
                         success: function (respuesta) {
                             if (respuesta == 0) {
                                 $("#spanOculto").show();
                                 $("#spanOculto").html("Correo en uso");
+                                $("#btnEnviar").prop('disabled', true);
+
+                            } else {
+                                $("#spanOculto").hide();
+                                $("#btnEnviar").prop('disabled', false);
                             }
                         }
                     });
                 })
+
+                $("#form1").submit(function () {
+                    if (contrasena)
+                        return true;
+                    else
+                        return false;
+                });
             })
         </script>
     </head>
