@@ -129,12 +129,12 @@ class Usuario {
         }
     }
     
-    public static function modificarUsuario($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol) {
+    public static function modificarUsuario($email, $nombreUsuario, $contrasenia, $nombre, $apellido1, $apellido2, $fechaNacimiento, $pais, $codigoPostal, $telefono, $rol, $imagenPerfil) {
         $conex = new Conexion();
         if ($conex->connect_errno != 0) {
             echo $conex->connect_error;
         } else {
-            $consulta1 = $conex->query("UPDATE usuario SET nombreUsuario = '$nombreUsuario', contrasenia = '$contrasenia', nombre = '$nombre', apellido1 = '$apellido1', apellido2 = '$apellido2', fechaNacimiento = '$fechaNacimiento', pais = '$pais', codigoPostal = '$codigoPostal', telefono = '$telefono', rol = '$rol' WHERE email = '$email'");
+            $consulta1 = $conex->query("UPDATE usuario SET nombreUsuario = '$nombreUsuario', contrasenia = '$contrasenia', nombre = '$nombre', apellido1 = '$apellido1', apellido2 = '$apellido2', fechaNacimiento = '$fechaNacimiento', pais = '$pais', codigoPostal = '$codigoPostal', telefono = '$telefono', rol = '$rol', imagenPerfil = '$imagenPerfil' WHERE email = '$email'");
             if ($conex->errno != 0) {
                 return $conex->error;
             } else {

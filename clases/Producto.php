@@ -62,6 +62,24 @@ class Producto {
         $conex->close();
     }
     
+        public static function EliminarProducto($nombre) {
+        $conex = new Conexion();
+        if ($conex->connect_errno != 0) {
+            echo $conex->connect_error;
+        } else {
+            $consulta1 = $conex->query("DELETE FROM producto WHERE nombreProducto = '$nombre' ");
+            if ($conex->errno != 0) {
+                return $conex->error;
+            } else {
+                if ($consulta1) {
+                    return true;
+                } else {
+                    return $conex->error;
+                }
+            }
+        }
+    }
+    
     public static function insertarProductos($tipo,$nombreProducto,$descripcion,$imagenProducto,$proteinas,$carbohidratos,$grasas) {
         $conex = new Conexion();
         if ($conex->connect_errno != 0) {

@@ -43,7 +43,7 @@ if (isset($_POST['eliminar'])) {
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="text-center">
-                                <img src="img/usuario.png" class="img-circle img-thumbnail">
+                                <img src="<?php echo $usuario->imagenPerfil ?>" class="img-circle img-thumbnail">
                             </div></hr><br>
                         </div>
                         <div class="col-sm-9 text-left">

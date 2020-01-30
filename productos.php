@@ -22,7 +22,11 @@ require_once './clases/Producto.php';
         <?php
         include('includes/navbar.php');
         
-                if (isset($_SESSION['usuario'])) {
+        if(isset($_POST['eliminar'])) {
+            Producto::EliminarProducto($_POST['nombreProducto']);
+        }
+        
+        if (isset($_SESSION['usuario'])) {
             if ($usuario = Usuario::buscarPorCorreo($_SESSION['usuario'])) {
                 if ($usuario->rol == 'editor' || $usuario->rol == "administrador") {
                     ?>
@@ -37,105 +41,146 @@ require_once './clases/Producto.php';
         }
 
         if ($productos = Producto::recuperarProductos()) {
-                ?>
-                <article>
-                    <section class="row">
-                        <div class="col-sm-4">
+            ?>
+            <article>
+                <section class="row">
+                    <div class="col-sm-4">
 
-                        </div>
-                        <div class="col-sm-4 text-center pt-5 text-title">
-                            CAFÉS
-                        </div>
-                        <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4 text-center pt-5 text-title">
+                        CAFÉS
+                    </div>
+                    <div class="col-sm-4">
 
-                        </div>
-                    </section>
-                    <section class="row">
+                    </div>
+                </section>
+                <section class="row">
                     <?php
                     foreach ($productos as $value) {
-                        if ($value->tipo == "cafe"){
-                        ?>
-                 
-                        <div class="col-sm-4 text-center">
-                            <div class="hover hover-1">
-                                <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" src="<?php echo $value->imagenProducto; ?>">
-                                    </div>
-                                    <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
-                                    <img src="img/siguiente.png"></a>
-                            </div>
-                    
-                    <?php
+                        if ($value->tipo == "cafe") {
+                            ?>
+
+                            <div class="col-sm-4 text-center">
+                                <div class="hover hover-1">
+                                    <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" src="<?php echo $value->imagenProducto; ?>">
+                                        </div>
+                                        <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
+                                        <img src="img/siguiente.png"></a>
+                                    <?php
+                                    if (isset($_SESSION['usuario'])) {
+                                        if ($usuario->rol == 'administrador') {
+                                            ?>
+                                            <form action="" method="post" >
+                                                <div class="form-group">
+                                                    <input type="hidden" name="nombreProducto" value="<?php echo $value->nombreProducto ?>">
+                                                    <input type="submit" value="Eliminar" name='eliminar' class="mt-2 mr-2 btn btn-primary" onclick="return confirm('¿Estás seguro de eliminarlo?')">
+                                                </div>                                            </form>
+
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </div>
+
+                                <?php
+                            }
                         }
-                    }
-                    ?>
-                    </section>
-                </article>
-        <article>
-                    <section class="row">
-                        <div class="col-sm-4">
+                        ?>
+                </section>
+            </article>
+            <article>
+                <section class="row">
+                    <div class="col-sm-4">
 
-                        </div>
-                        <div class="col-sm-4 text-center pt-5 text-title">
-                            REPOSTERÍA
-                        </div>
-                        <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4 text-center pt-5 text-title">
+                        REPOSTERÍA
+                    </div>
+                    <div class="col-sm-4">
 
-                        </div>
-                    </section>
-                    <section class="row">
+                    </div>
+                </section>
+                <section class="row">
                     <?php
                     foreach ($productos as $value) {
-                        if ($value->tipo == "reposteria"){
-                        ?>
-                 
-                        <div class="col-sm-4 text-center">
-                            <div class="hover hover-1">
-                                <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" src="<?php echo $value->imagenProducto; ?>">
-                                    </div>
-                                    <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
-                                    <img src="img/siguiente.png"></a>
-                            </div>
-                    
-                    <?php
+                        if ($value->tipo == "reposteria") {
+                            ?>
+
+                            <div class="col-sm-4 text-center">
+                                <div class="hover hover-1">
+                                    <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" src="<?php echo $value->imagenProducto; ?>">
+                                        </div>
+                                        <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
+                                        <img src="img/siguiente.png"></a>
+                                    <?php
+                                    if (isset($_SESSION['usuario'])) {
+                                        if ($usuario->rol == 'administrador') {
+                                            ?>
+                                            <form action="" method="post">
+                                                <div class="form-group">
+                                                    <input type="hidden" name="nombreProducto" value="<?php echo $value->nombreProducto ?>">
+                                                    <input type="submit" value="Eliminar" name='eliminar' class="mt-2 mr-2 btn btn-primary" onclick="return confirm('¿Estás seguro de eliminarlo?')">
+                                                </div>                                            </form>
+
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </div>
+
+                                <?php
+                            }
                         }
-                    }
-                    ?>
-                    </section>
-                </article>
-        <article>
-                    <section class="row">
-                        <div class="col-sm-4">
+                        ?>
+                </section>
+            </article>
+            <article>
+                <section class="row">
+                    <div class="col-sm-4">
 
-                        </div>
-                        <div class="col-sm-4 text-center pt-5 text-title">
-                            OTROS
-                        </div>
-                        <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4 text-center pt-5 text-title">
+                        OTROS
+                    </div>
+                    <div class="col-sm-4">
 
-                        </div>
-                    </section>
-                    <section class="row">
+                    </div>
+                </section>
+                <section class="row">
                     <?php
                     foreach ($productos as $value) {
-                        if ($value->tipo == "otro"){
-                        ?>
-                 
-                        <div class="col-sm-4 text-center">
-                            <div class="hover hover-1">
-                                <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" src="<?php echo $value->imagenProducto; ?>">
-                                    </div>
-                                    <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
-                                    <img src="img/siguiente.png"></a>
-                            </div>
-                    
-                    <?php
+                        if ($value->tipo == "otro") {
+                            ?>
+
+                            <div class="col-sm-4 text-center">
+                                <div class="hover hover-1">
+                                    <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" src="<?php echo $value->imagenProducto; ?>">
+                                        </div>
+                                        <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
+                                        <img src="img/siguiente.png"></a>
+                                    <?php
+                                    if (isset($_SESSION['usuario'])) {
+                                        if ($usuario->rol == 'administrador') {
+                                            ?>
+                                            <form action="" method="post">
+                                                <div class="form-group">
+                                                    <input type="hidden" name="nombreProducto" value="<?php echo $value->nombreProducto ?>">
+                                                    <input type="submit" value="Eliminar" name='eliminar' class="mt-2 mr-2 btn btn-primary" onclick="return confirm('¿Estás seguro de eliminarlo?')">
+                                                </div>                                            </form>
+
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </div>
+
+                                <?php
+                            }
                         }
-                    }
-                    ?>
-                    </section>
-                </article>
-                <?php
-            
+                        ?>
+                </section>
+            </article>
+            <?php
         }
         ?>
 

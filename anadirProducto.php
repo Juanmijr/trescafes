@@ -5,7 +5,7 @@ session_start();
 
 if (isset($_SESSION['usuario'])) {
     $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
-    if ($usuario->rol != 'editor') {
+    if ($usuario->rol == 'valorador') {
         header('Location: index.php');
     }
 } else {
