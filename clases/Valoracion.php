@@ -74,7 +74,23 @@ class Valoracion {
              return $valoraciones;
         }
     }
-    
+     public static function EliminarProducto($idValoracion) {
+        $conex = new Conexion();
+        if ($conex->connect_errno != 0) {
+            echo $conex->connect_error;
+        } else {
+            $consulta1 = $conex->query("DELETE FROM valoracion WHERE idValoracion = '$idValoracion' ");
+            if ($conex->errno != 0) {
+                return $conex->error;
+            } else {
+                if ($consulta1) {
+                    return true;
+                } else {
+                    return $conex->error;
+                }
+            }
+        }
+    }
         public static function buscarValoracionesporIDUsuario ($idUsuario){
           $conex = new Conexion();
         if ($conex->connect_errno != 0) {

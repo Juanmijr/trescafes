@@ -1,8 +1,6 @@
-
 <script src="https://apis.google.com/js/api:client.js"></script>  
 <script type="text/javascript" src="./js/google-signin.js"></script>
 <script type="text/javascript" src="./js/controlmodal.js"></script>
-
 <?php
 require_once './clases/Usuario.php';
 require_once './clases/Producto.php';
@@ -29,14 +27,11 @@ if (isset($_POST['cerrarSesion'])) {
         <div class="col p-0">
             <nav class="navbar navbar-expand-lg bg-primary">
                 <a class="navbar-brand" href="index.php"><img class="imgLogo " src="img/ejemplo.png"></a>
-
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <i><img class="imgUsu" src="img/Menu_icon_2_icon-icons.com_71856.png"></img></i>
                 </button>
-
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="nav navbar-nav navbar-letra">
-
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="collapsingNavbar"
                                data-toggle="dropdown" aria-haspopup="true"  aria-labelledby="dropdownMenuButton" aria-expanded="false">
@@ -48,7 +43,6 @@ if (isset($_POST['cerrarSesion'])) {
                                 <li><a class="dropdown-item" href="utensilios.php">Utensilios</a></li>
                                 <li><a class="dropdown-item" href="elaboracion.php">Elaboración</a></li>
                             </ul>
-
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="collapsingNavbar"
                                data-toggle="dropdown" aria-haspopup="true"  aria-labelledby="dropdownMenuButton" aria-expanded="false">
@@ -56,55 +50,46 @@ if (isset($_POST['cerrarSesion'])) {
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle">Nuestros cafés</a>
-                                                                <?php
-                                                                if ($productos = Producto::recuperarProductos()) {
-                                                                    echo "<ul class='dropdown-menu'>";
-                                                                    foreach ($productos as $value) {
-                                                                        if ($value->tipo == "cafe") {
-                                ?>
-                                <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a></li>
-                                                <?php
-                                            }
+                                    <?php
+                                    if ($productos = Producto::recuperarProductos()) {
+                                        echo "<ul class='dropdown-menu'>";
+                                        foreach ($productos as $value) {
+                                            if ($value->tipo == "cafe") {
+                                                ?>
+                                            <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a></li>
+                                            <?php
                                         }
-                                        echo "</ul>";
                                     }
-                                    ?>
-                                </li>
-
-                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
-                                                                >Repostería</a>
+                                    echo "</ul>";
+                                }
+                                ?>
+                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle">Repostería</a>
                                     <ul class="dropdown-menu">
                                         <?php
                                         foreach ($productos as $value) {
                                             if ($value->tipo == "reposteria") {
                                                 ?>
-                                                <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a>
-                                                    <?php
-                                                }
+                                                <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a></li>
+                                                <?php
                                             }
-                                            ?>
+                                        }
+                                        ?>
                                     </ul>
-
                                 </li>
-
-                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
-                                                                >Otros</a>
+                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle">Otros</a>
                                     <ul class="dropdown-menu">
                                         <?php
                                         foreach ($productos as $value) {
                                             if ($value->tipo == "otro") {
                                                 ?>
-                                                <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a>
-                                                    <?php
-                                                }
+                                                <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a></li>
+                                                <?php
                                             }
-                                            ?>
+                                        }
+                                        ?>
                                     </ul>
-
                                 </li>
-
                                 <li class="dropdown-item"><a class="dropdown-item" href="./novedades.php">Novedades</a>
-
                                 </li>
                                 <li class="dropdown-item"><a class="dropdown-item" href="productos.php">Todos los productos</a>
                                 </li>
@@ -165,13 +150,8 @@ if (isset($_POST['cerrarSesion'])) {
                             <?php
                         }
                         ?>
-
-
                     </div>
-
                 </div>
-
-
             </nav>
         </div>
 

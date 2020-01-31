@@ -35,7 +35,7 @@ and open the template in the editor.
             $descripcionProducto = $_POST['descripcionProducto'];
             $ocultoid = $_POST['ocultoID'];
             Producto::ActualizarProducto($ocultoid, $nombreProducto, $descripcionProducto, $imagenProducto);
-            header("Location: productos.php");
+            header('Location: index.php');
         }
         ?>
 

@@ -21,7 +21,18 @@ and open the template in the editor.
         } else {
             header("Location: productos.php");
         }
+
+        if (isset($_POST['eliminarValoracion'])) {
+            Valoracion::EliminarProducto($_POST['idValoracion']);
+        }
+
+
+        if (isset($_POST['valorar'])) {
+            $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
+            Valoracion::insertarValoracion($usuario->idUsuario, $producto->idProducto, $_POST['estrellas'], $_POST['comment']);
+        }
         ?>
+
         <title><?php echo $producto->nombreProducto ?> | Tres Cafés</title>
     </head>
     <body>
@@ -188,8 +199,24 @@ and open the template in the editor.
                                             <div class="clearfix"></div>
                                             <p><?php echo $valoracion->comentario; ?></p>
                                             <p>
-                                                <a class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> COMPARTIR</a>
-                                                <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> ME GUSTA</a>
+
+
+                                                <?php
+                                                if (isset($_SESSION['usuario'])) {
+                                                    if ($usuario->rol == 'administrador' || $usuario->idUsuario == $valoracion->usuario) {
+              
+                                                        ?>
+                                                    <form method="POST" action="">
+                                                        <input type="hidden" name="idValoracion" value="<?php echo $valoracion->idValoracion; ?>">
+                                                        <button class="float-right btn btn-danger ml-2" name='eliminarValoracion' type="submit" onclick="return confirm('¿Estás seguro que desea eliminar?')"> <i class="fa fa-trash"></i> ELIMINAR</button>
+                                                    </form>                                              
+
+
+                                                    <?php
+                                                }
+                                            }
+                                            ?>
+
                                             </p>
                                         </div>
                                     </div>
@@ -256,12 +283,6 @@ and open the template in the editor.
 
         </div>
 
-        <?php
-        if (isset($_POST['valorar'])) {
-            $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
-            Valoracion::insertarValoracion($usuario->idUsuario, $producto->idProducto, $_POST['estrellas'], $_POST['comment']);
-        }
-        ?>
 
 
 
