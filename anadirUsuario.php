@@ -21,7 +21,7 @@ if (isset($_SESSION['usuario'])) {
         <script src="js/validarRegistro.js"></script>
         <script>
             $(function () {
-                $("#email").on("keyup", function (e) {
+                $("#email").on("change", function (e) {
                     $.ajax({
                         type: "POST",
                         url: "consulta.php",
@@ -29,7 +29,6 @@ if (isset($_SESSION['usuario'])) {
                         success: function (respuesta) {
                             if (respuesta == 0) {
                                 $("#spanOculto").show();
-                                $("#spanOculto").html("Correo en uso");
                                 $("#btnEnviar").prop('disabled', true);
 
                             } else {
@@ -101,6 +100,9 @@ if (isset($_SESSION['usuario'])) {
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
                                         <input id="contrasena2" type="password" name="pass2" required="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Confirma la contraseña" class="form-control" placeholder="repite contraseña">
+                                        <div id="spanOcultoPass" style="display: none" class="invalid-feedback">
+                                        Las contraseñas no coinciden
+                                      </div>
                                     </div>
                                 </div>
                             </div>
@@ -137,7 +139,9 @@ if (isset($_SESSION['usuario'])) {
                                             <span class="input-group-text"><i class="fas fa-mail-bulk"></i></span>
                                         </div>
                                         <input id="email" type="email" name="email" required="" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" class="form-control" placeholder="email">
-                                        <span id="spanOculto" style="display: none"></span>
+                                        <div id="spanOculto" style="display: none" class="invalid-feedback">
+                                        Correo en uso
+                                      </div>
                                     </div>
                                 </div>
                             </div>
