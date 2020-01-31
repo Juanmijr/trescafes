@@ -17,12 +17,52 @@ if (isset($_SESSION['usuario'])) {
     <head>
         <?php include ('includes/head.php'); ?> 
         <title>Añadir usuario | Tres Cafés</title>
+        <script src="jquery/jquery-3.3.1.min.js"></script>
+        <script src="js/validarRegistro.js"></script>
+        <script>
+            $(function () {
+                $("#email").on("keyup", function (e) {
+                    $.ajax({
+                        type: "POST",
+                        url: "consulta.php",
+                        data: {email: $('#email').val()},
+                        success: function (respuesta) {
+                            if (respuesta == 0) {
+                                $("#spanOculto").show();
+                                $("#spanOculto").html("Correo en uso");
+                                $("#btnEnviar").prop('disabled', true);
+
+                            } else {
+                                $("#spanOculto").hide();
+                                $("#btnEnviar").prop('disabled', false);
+                            }
+                        }
+                    });
+                })
+
+                $("#form1").submit(function () {
+                    if (contrasena)
+                        return true;
+                    else
+                        return false;
+                });
+            })
+        </script>
     </head>
     <body >
         <?php
         if (isset($_POST['enviar'])) {
-            Usuario::insertarUsuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], $_POST['rol'],'');
-            header('Location: control.php');
+            if (is_uploaded_file($_FILES['imagenUsuario']['tmp_name'])) {
+                $fich_unic = time() . "-" . $_FILES['file']['name'];
+                //para que no se repita el nombre del fichero se concatena el tiempo unix
+                $imagenUsuario = "img/" . $fich_unic;
+                move_uploaded_file($_FILES['imagenUsuario']['tmp_name'], $imagenUsuario);
+            } else {
+                $imagenUsuario = "img/usuario.png";
+            }
+            if (Usuario::insertarUsuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], 'valorador', $imagenUsuario)) {
+                header('Location: control.php');
+            }
         }
         include ('includes/navbar.php');
         ?>
@@ -34,14 +74,14 @@ if (isset($_SESSION['usuario'])) {
                         <h3 class="text-title">Añadir usuario</h3>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="">
+                        <form id="form1" method="POST" action="" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group form-group">
-                                    <div class="input-group-prepend">
+                                        <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input type="text" name="usuario" class="form-control" placeholder="usuario">
+                                        <input id="usuario" type="text" name="usuario" required=""  minlength="6" maxlength="50" pattern='[A-Za-z0-9@.-_]+' title="Se permiten letras, numeros y (@.-_)" class="form-control" placeholder="usuario">
 
                                     </div>
                                 </div>
@@ -52,7 +92,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
-                                        <input type="password" name="pass" class="form-control" placeholder="contraseña">
+                                        <input id="contrasena1" type="password" required="" name="pass" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Debe tener al menos una mayúscula, minúsucula, un dígito, 0 espacios en blanco y un caracter especial" class="form-control" placeholder="contraseña">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -60,7 +100,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
-                                        <input type="password" name="pass2" class="form-control" placeholder="repite contraseña">
+                                        <input id="contrasena2" type="password" name="pass2" required="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Confirma la contraseña" class="form-control" placeholder="repite contraseña">
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +110,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input type="text" name="apellido1" class="form-control" placeholder="apellido 1">
+                                        <input id="apellido1"  pattern='[A-Za-z]+' required="" type="text" name="apellido1" class="form-control" placeholder="apellido 1">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -78,7 +118,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input type="text" name="apellido2" class="form-control" placeholder="apellido 2">
+                                        <input id="apellido2" pattern='[A-Za-z]*' type="text" name="apellido2" class="form-control" placeholder="apellido 2">
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +128,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input type="text" name="nombre" class="form-control" placeholder="nombre">
+                                        <input id="nombre" type="text" name="nombre" required="" pattern='[A-Za-z]+' class="form-control" placeholder="nombre">
                                     </div>   
                                 </div>
                                 <div class="col-sm-6">
@@ -96,7 +136,8 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-mail-bulk"></i></span>
                                         </div>
-                                        <input type="text" name="email" class="form-control" placeholder="email">
+                                        <input id="email" type="email" name="email" required="" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" class="form-control" placeholder="email">
+                                        <span id="spanOculto" style="display: none"></span>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +147,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
                                         </div>
-                                        <input type="date" name="fechaNacimiento" class="form-control" placeholder="fecha de nacimiento">
+                                        <input type="date" name="fechaNacimiento" required="" class="form-control" placeholder="fecha de nacimiento">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -114,7 +155,15 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-mobile"></i></span>
                                         </div>
-                                        <input type="number" name="telefono" class="form-control" placeholder="Teléfono">
+                                        <input id="telefono" pattern='[0-9]{9}' required="true" type="tel" name="telefono" class="form-control" placeholder="Teléfono">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="custom-file mb-3">
+                                        <input type="file" class="custom-file-input" name="imagenUsuario" lang="es">
+                                        <label class="custom-file-label" for="imagenUsuario">Elegir imagen</label>
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +174,6 @@ if (isset($_SESSION['usuario'])) {
                                             <span class="input-group-text"><i class="fas fa-flag"></i></span>
                                         </div>
                                         <select id="inputState" name="pais" class="form-control">
-                                            <option value="Elegir" id="AF">Elegir opción</option>
                                             <option value="Afganistán" id="AF">Afganistán</option>
                                             <option value="Albania" id="AL">Albania</option>
                                             <option value="Alemania" id="DE">Alemania</option>
@@ -190,7 +238,7 @@ if (isset($_SESSION['usuario'])) {
                                             <option value="Eritrea" id="ER">Eritrea</option>
                                             <option value="Eslovaquia" id="SK">Eslovaquia</option>
                                             <option value="Eslovenia" id="SI">Eslovenia</option>
-                                            <option value="España" id="ES">España</option>
+                                            <option value="España" selected="" id="ES">España</option>
                                             <option value="Estados Unidos" id="US">Estados Unidos</option>
                                             <option value="Estonia" id="EE">Estonia</option>
                                             <option value="c" id="ET">Etiopía</option>
@@ -372,24 +420,12 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-flag"></i></span>
                                         </div>
-                                        <input type="text" name="codPostal" class="form-control" placeholder="Código Postal">
+                                        <input id="codPostal" type="text" required="" pattern="[0-9]{5}" name="codPostal" class="form-control" placeholder="Código Postal">
                                     </div>
                                 </div>
-                                 <div class="col-sm-12">
-                                    <div class="input-group form-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                        </div>
-                                        <select name="rol" class="form-control">
-                                            <option value="valorador">Valorador</option>
-                                            <option value="editor">Editor</option>
-                                            <option value="administrador">Administrador</option>
-                                        </select>
-                                    </div>
-                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="enviar" value="Registrar" class="btn float-right login_btn">
+                                <input id="btnEnviar" type="submit" name="enviar" value="Entrar" class="btn float-right login_btn">
                             </div>
                         </form>
                     </div>
