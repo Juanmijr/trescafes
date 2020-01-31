@@ -85,7 +85,7 @@ if (isset($_SESSION['usuario'])) {
                             </table>
                             <?php
                         } else {
-                            echo "ESTA CUENTA NO HA REALIZADO VALORACIONES";
+                            echo "<br><br>ESTA CUENTA NO HA REALIZADO VALORACIONES";
                         }
                         ?>
 
