@@ -54,7 +54,7 @@ if (isset($_SESSION['usuario'])) {
                 $imagenUsuario = "img/".$fich_unic;
                 move_uploaded_file($_FILES['imagenUsuario']['tmp_name'], $imagenUsuario);
             } else {
-                echo "Error en la subida del fichero";
+                $imagenUsuario = "img/usuario.png";
             }
             if (Usuario::insertarUsuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], 'valorador', $imagenUsuario)) {
                 $_SESSION['usuario'] = $_POST['email'];

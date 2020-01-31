@@ -26,15 +26,7 @@ if (isset($_SESSION['usuario'])) {
                 <div class="col-sm-3">
                     <div class="text-center">
                         <?php
-                        if ($usuario->imagenPerfil != NULL || $usuario->imagenPerfil != "") {
                             ?><img src="<?php echo $usuario->imagenPerfil; ?>" class="img-circle img-thumbnail">
-                            <?php
-                        } else {
-                            ?>
-                            <img class="img-circle img-thumbnail" src="img/usuario.png"></img>
-                            <?php
-                        }
-                        ?>
                     </div></hr><br>
                 </div>
                 <div class="col-sm-9 text-left">
