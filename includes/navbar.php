@@ -1,4 +1,4 @@
-<script src="https://apis.google.com/js/api:client.js"></script>  
+<script src="https://apis.google.com/js/api:client.js"></script>
 <script type="text/javascript" src="./js/google-signin.js"></script>
 <script type="text/javascript" src="./js/controlmodal.js"></script>
 <?php
@@ -55,7 +55,7 @@ if (isset($_POST['cerrarSesion'])) {
                                         echo "<ul class='dropdown-menu'>";
                                         foreach ($productos as $value) {
                                             if ($value->tipo == "cafe") {
-                                                ?>
+                                            ?>
                                             <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a></li>
                                             <?php
                                         }
@@ -125,7 +125,7 @@ if (isset($_POST['cerrarSesion'])) {
                         <?php
                         if (!isset($_SESSION['usuario'])) {
                             ?>
-                            <a href="" id="dropdownLoginLI" class="nav-link" data-toggle="modal" data-target="#exampleModal">Login</a> 
+                            <a href="" id="dropdownLoginLI" class="nav-link" data-toggle="modal" data-target="#exampleModal">Login</a>
 
                             <?php
                         } else {
@@ -137,7 +137,7 @@ if (isset($_POST['cerrarSesion'])) {
                                     <?php
                                     $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
                                     ?>
-                                    <img class="imgUsu" src="./<?php echo $usuario->imagenPerfil ?>"></img>                                   
+                                    <img class="imgUsu" src="./<?php echo $usuario->imagenPerfil ?>"></img>
                                 </button>
 
                                 <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="dropdownMenuButton">
@@ -146,7 +146,7 @@ if (isset($_POST['cerrarSesion'])) {
                                         <input type="submit" id="googleSignoutBtn" onclick="signOut()" name="cerrarSesion" class="btnSinEstilo" value="Cerrar Sesión"></input>
                                     </form>
                                 </div>
-                            </div>                   
+                            </div>
                             <?php
                         }
                         ?>
@@ -226,4 +226,3 @@ if (isset($_POST['cerrarSesion'])) {
         <?php
     }
     ?>
-        

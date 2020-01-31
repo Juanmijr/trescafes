@@ -12,8 +12,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        include('includes/navbar.php');
-        
+        require_once './clases/Producto.php';
         //Se recogen los valores ocultos
         if (isset($_POST['editar'])) {
             $ocultoNombre = $_POST['ocultoNombre'];
@@ -28,16 +27,19 @@ and open the template in the editor.
                 $imagenProducto = "img/" . $fich_unic;
                 move_uploaded_file($_FILES['imagenProducto']['tmp_name'], $imagenProducto);
             } else {
-                $imagenProducto = $_POST['imagenProducto'];
+                $imagenProducto = $_POST['imagenOculta'];
             }
 
             $nombreProducto = $_POST['nombreProducto'];
             $descripcionProducto = $_POST['descripcionProducto'];
             $ocultoid = $_POST['ocultoID'];
             Producto::ActualizarProducto($ocultoid, $nombreProducto, $descripcionProducto, $imagenProducto);
-            header('Location: index.php');
-        }
-        ?>
+            header('Location: productos.php');
+    
+         }
+         include('includes/navbar.php');
+
+         ?>
 
         <form action="" method="post" enctype="multipart/form-data">
             <div class="row">
@@ -56,6 +58,7 @@ and open the template in the editor.
                     </article>
                     <div class="row custom-file">
                         <input type="file" class="custom-file-input" name="imagenProducto" lang="es">
+                        <input type="hidden" name="imagenOculta" value="<?php echo $ocultoImagen; ?>">
                         <label class="custom-file-label" for="imagenProducto">Elegir imagen</label>
                     </div>
                 </div>
