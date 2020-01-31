@@ -55,15 +55,14 @@ if (isset($_POST['cerrarSesion'])) {
                                 PRODUCTOS
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
-                                                                >Nuestros cafés</a>
+                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle">Nuestros cafés</a>
                                                                 <?php
                                                                 if ($productos = Producto::recuperarProductos()) {
                                                                     echo "<ul class='dropdown-menu'>";
                                                                     foreach ($productos as $value) {
                                                                         if ($value->tipo == "cafe") {
-                                                                            ?>
-                                            <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a>
+                                ?>
+                                <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a></li>
                                                 <?php
                                             }
                                         }
@@ -152,8 +151,8 @@ if (isset($_POST['cerrarSesion'])) {
                                     <p id="dropdownLogoutMenu1"></p>
                                     <?php
                                     $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
-                                        ?>
-                                        <img class="imgUsu" src="./<?php echo $usuario->imagenPerfil ?>"></img>                                   
+                                    ?>
+                                    <img class="imgUsu" src="./<?php echo $usuario->imagenPerfil ?>"></img>                                   
                                 </button>
 
                                 <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="dropdownMenuButton">

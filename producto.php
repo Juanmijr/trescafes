@@ -29,52 +29,53 @@ and open the template in the editor.
         <?php
         if (isset($_SESSION['usuario'])) {
             if ($usuario = Usuario::buscarPorCorreo($_SESSION['usuario'])) {
-                if ($usuario->rol == 'editor' || $usuario->rol == "administrador") {
-                    ?>
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="col-sm-4 mt-5">
+                ?>
+                <form action="editarProducto.php" method="post">
+                    <div class="row">
+                        <div class="col-sm-4 mt-5">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a href="productos.php"> <img src="img/volver.png"></a>
+                                </div>
+                            </div>
+                            <article class="row mt-5  mx-auto">
+                                <div class="col-sm-12">
+                                    <p class="text-title text-uppercase"><?php echo $producto->nombreProducto ?></p>
+                                    <input type="hidden" name="ocultoNombre" value="<?php echo $producto->nombreProducto; ?>">
+                                    <input type="hidden" name="ocultoId" value="<?php echo $producto->idProducto; ?>">
+                                    <p class="text-secondary text-justify"><?php echo $producto->descripcion ?></p>
+                                    <input type="hidden" name="ocultoDescripcion" value="<?php echo $producto->descripcion; ?>">
+                                </div>
+                            </article>
+                        </div>
+                        <aside class="col-sm-8 mt-5">
+                            <img class="imgProductos img-fluid" src="<?php echo $producto->imagenProducto ?>">
+                            <input type="hidden" name="ocultoImagen" value="<?php echo $producto->imagenProducto; ?>">
+                            <?php
+                            if ($usuario->rol != "valorador") {
+                                ?>
+                                <input type="submit" name="editar" value="Editar" class="btn-primary">
+                                <?php
+                            }
+                            ?>
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <hr>
+                            <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
+                            <div class="collapse" id="footwear">
                                 <div class="row">
-                                    <div class="col-sm-12">
-                                        <a href="productos.php"> <img src="img/volver.png"></a>
+                                    <div class="chartContainer col-12 my-5">
+                                        <canvas id="doughnutChart"></canvas>
                                     </div>
-                                </div>
-                                <article class="row mt-5  mx-auto">
-                                    <div class="col-sm-12">
-                                        <p class="text-title text-uppercase"><input type="text" name="nombreProducto" value="<?php echo $producto->nombreProducto ?>"></p>
-                                        <p class="text-secondary text-justify"><textarea name="descripcionProducto"><?php echo $producto->descripcion ?></textarea></p>
-                                    </div>
-                                </article>
-                                <div class="row custom-file">
-                                    <input type="file" class="custom-file-input" name="imagenProducto" lang="es">
-                                    <label class="custom-file-label" for="imagenProducto">Elegir imagen</label>
                                 </div>
                             </div>
-
-                            <aside class="col-sm-8 mt-5">
-                                <img class="imgProductos img-fluid" src="<?php echo $producto->imagenProducto ?>">
-                                <input type="submit"  class="btn-primary" name="btnEditar" value="Editar">
-                            </aside>
-
+                            <hr>
                         </div>
-
-                        <div class="row">
-                            <div class="col-12">
-                                <hr>
-                                <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
-                                <div class="collapse" id="footwear">
-                                    <div class="row">
-                                        <div class="chartContainer col-12 my-5">
-                                            <canvas id="doughnutChart"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                            </div>
-                        </div>
-                    </form>
-                    <?php
-                }
+                    </div>
+                </form>
+                <?php
             }
         } else {
             ?>
@@ -112,21 +113,6 @@ and open the template in the editor.
             </div>
             <?php
         }
-        if (isset($_POST['btnEditar'])) {
-            if (is_uploaded_file($_FILES['imagenProducto']['tmp_name'])) {
-                $fich_unic = time() . "-" . $_FILES['imagenProducto']['name'];
-                //para que no se repita el nombre del fichero se concatena el tiempo unix
-                $imagenProducto = "img/" . $fich_unic;
-                move_uploaded_file($_FILES['imagenProducto']['tmp_name'], $imagenProducto);
-            } else {
-                echo "Error en la subida del fichero";
-            }
-
-            $nombreProducto = $_POST['nombreProducto'];
-            $descripcionProducto = $_POST['descripcionProducto'];
-            Producto::ActualizarProducto($producto->idProducto, $nombreProducto, $descripcionProducto, $imagenProducto);
-            header("Location: productos.php");
-        }
         ?>
 
 
@@ -156,7 +142,7 @@ and open the template in the editor.
                 <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#valoraciones" aria-expanded="false" aria-controls="footwear">Valoraciones </a>
                 <div class="collapse" id="valoraciones">
 
-<?php if (isset($_SESSION['usuario'])) { ?>
+                    <?php if (isset($_SESSION['usuario'])) { ?>
                         <div class="container">
                             <div class="row mb-4 mt-2" >
                                 <div class="col-md-12">

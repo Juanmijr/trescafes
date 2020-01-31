@@ -60,7 +60,7 @@ if (isset($_SESSION['usuario'])) {
                                             <span class="input-group-text"><i class="fas fa-coffee"></i></span>
                                         </div>
                                         <select name="tipo" class="form-control">
-                                            <option value="cafe">Café</option>
+                                            <option value="cafe" selected="">Café</option>
                                             <option value="reposteria">Repostería</option>
                                             <option value="otro">Otro</option>
                                         </select>
@@ -73,7 +73,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-file-signature"></i></span>
                                         </div>
-                                        <input type="text" name="nombreProducto" class="form-control" placeholder="nombre del producto">
+                                        <input type="text" name="nombreProducto" required="" class="form-control" placeholder="nombre del producto">
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@ if (isset($_SESSION['usuario'])) {
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="input-group form-group">
-                                        <textarea name="descripcion" style="width: 100%" placeholder="descripción del producto"></textarea>
+                                        <textarea required="" name="descripcion" style="width: 100%" placeholder="descripción del producto"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@ if (isset($_SESSION['usuario'])) {
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="custom-file mb-3">
-                                        <input type="file" class="custom-file-input" name="imagenProducto" lang="es">
+                                        <input type="file" class="custom-file-input" required="" name="imagenProducto" lang="es">
                                         <label class="custom-file-label" for="imagenProducto">Elegir imagen</label>
                                     </div>
                                 </div>
