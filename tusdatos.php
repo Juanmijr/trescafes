@@ -7,6 +7,7 @@ and open the template in the editor.
 <?php
 session_start();
 require_once './clases/Usuario.php';
+require_once './clases/ValoracionUsuarioProducto.php';
 if (isset($_SESSION['usuario'])) {
     $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
 } else {
@@ -53,37 +54,49 @@ if (isset($_SESSION['usuario'])) {
                 <div class="col">
                     <section class="table-responsive">
                         <span class='text-title'>VALORACIONES</span>
-                        <table class="table table-hover mt-5">
-                            <thead>
-                                <tr>
-                                    <th>Producto</th>
-                                    <th>Valoración</th>
-                                    <th>Comentario</th>
-                                    <th>Fecha</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                
-                                <tr>
-                                    <th></th>
-                                    <td>4</td>
-                                    <td>El mejor café del momento</td>
-                                    <td>17-1-2020</td>
-                                </tr>
-                                <tr>
-                                    <th>Loloccino</th>
-                                    <td>3.7</td>
-                                    <td>Madre mía tendríais que probarlo</td>
-                                    <td>20-12-2019</td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+                        <?php
+                        $valoraciones = Valoracion::buscarValoracionesporIDUsuario($usuario->idUsuario);
+                        if ($valoraciones != false) {
+                            ?>
+                            <table class="table table-hover mt-5">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Valoración</th>
+                                        <th>Comentario</th>
+                                        <th>Fecha</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    foreach ($valoraciones as $valoracion) {
+                                        ?>
+                                        <tr>
+                                            <th><?php echo ValoracionUsuarioProducto::nombreProductoporIDValoracion($valoracion->idValoracion) ?></th>
+                                            <td><?php echo $valoracion->valoracion ?></td>
+                                            <td><?php echo $valoracion->comentario?></td>
+                                            <td><?php echo $valoracion->fecha?></td>
+                                        </tr>
+                                        <?php
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                            <?php
+                        } else {
+                            echo "ESTA CUENTA NO HA REALIZADO VALORACIONES";
+                        }
+                        ?>
+
+
+
                     </section>
                 </div>
             </div>
         </div>
-        <?php
-        include('includes/footer.php');
-        ?>
+<?php
+include('includes/footer.php');
+?>
     </body>
 </html>

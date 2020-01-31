@@ -48,7 +48,15 @@ if (isset($_SESSION['usuario'])) {
 
         <?php
         if (isset($_POST['enviar'])) {
-            if (Usuario::insertarUsuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], 'valorador','')) {
+              if (is_uploaded_file($_FILES['imagenUsuario']['tmp_name'])) {
+                $fich_unic = time()."-".$_FILES['file']['name'];
+                //para que no se repita el nombre del fichero se concatena el tiempo unix
+                $imagenUsuario = "img/".$fich_unic;
+                move_uploaded_file($_FILES['imagenUsuario']['tmp_name'], $imagenUsuario);
+            } else {
+                echo "Error en la subida del fichero";
+            }
+            if (Usuario::insertarUsuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], 'valorador', $imagenUsuario)) {
                 $_SESSION['usuario'] = $_POST['email'];
                 header('Location: index.php');
             }
@@ -67,7 +75,7 @@ if (isset($_SESSION['usuario'])) {
 
                     </div>
                     <div class="card-body">
-                        <form id="form1" method="POST" action="">
+                        <form id="form1" method="POST" action="" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group form-group">
@@ -149,6 +157,14 @@ if (isset($_SESSION['usuario'])) {
                                             <span class="input-group-text"><i class="fas fa-mobile"></i></span>
                                         </div>
                                         <input id="telefono" pattern='[0-9]{9}' required="true" type="tel" name="telefono" class="form-control" placeholder="Teléfono">
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="custom-file mb-3">
+                                        <input type="file" class="custom-file-input" name="imagenUsuario" lang="es">
+                                        <label class="custom-file-label" for="imagenUsuario">Elegir imagen</label>
                                     </div>
                                 </div>
                             </div>
