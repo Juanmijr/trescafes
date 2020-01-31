@@ -163,8 +163,8 @@ ALTER TABLE `valoracion`
 -- Filtros para la tabla `valoracion`
 --
 ALTER TABLE `valoracion`
-  ADD CONSTRAINT `valoracion_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `usuario` (`idUsuario`) ON UPDATE RESTRICT,
-  ADD CONSTRAINT `valoracion_ibfk_2` FOREIGN KEY (`producto`) REFERENCES `producto` (`idProducto`) ON UPDATE RESTRICT;
+  ADD CONSTRAINT `valoracion_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `usuario` (`idUsuario`) ON DELETE RESTRICT ON UPDATE CASCADE,
+  ADD CONSTRAINT `valoracion_ibfk_2` FOREIGN KEY (`producto`) REFERENCES `producto` (`idProducto`) ON DELETE RESTRICT ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

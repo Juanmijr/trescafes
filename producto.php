@@ -12,8 +12,9 @@ and open the template in the editor.
         require_once './clases/Valoracion.php';
         require_once 'clases/ValoracionUsuarioProducto.php';
         require_once 'clases/Producto.php';
-        if(isset($_GET['producto'])) {
-            if($producto = Producto::buscarPorNombre($_GET['producto'])) {
+        if (isset($_GET['producto'])) {
+            if ($producto = Producto::buscarPorNombre($_GET['producto'])) {
+                
             } else {
                 header("Location: productos.php");
             }
@@ -23,41 +24,112 @@ and open the template in the editor.
         ?>
         <title><?php echo $producto->nombreProducto ?> | Tres Cafés</title>
     </head>
-
     <body>
         <?php include ('includes/navbar.php'); ?>
-        <div class="row">
-            <div class="col-sm-4 mt-5">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <a href="productos.php"> <img src="img/volver.png"></a>
-                    </div>
-                </div>
-                <article class="row mt-5  mx-auto">
-                    <div class="col-sm-12">
-                        <p class="text-title text-uppercase"><?php echo $producto->nombreProducto ?></p>
-                        <p class="text-secondary text-justify"><?php echo $producto->descripcion ?></p>
-                    </div>
-                </article>
-            </div>
-            <aside class="col-sm-8 mt-5">
-                <img class="imgProductos img-fluid" src="<?php echo $producto->imagenProducto ?>">
-            </aside>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <hr>
-                <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
-                <div class="collapse" id="footwear">
+        <?php
+        if (isset($_SESSION['usuario'])) {
+            if ($usuario = Usuario::buscarPorCorreo($_SESSION['usuario'])) {
+                if ($usuario->rol == 'editor' || $usuario->rol == "administrador") {
+                    ?>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-sm-4 mt-5">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <a href="productos.php"> <img src="img/volver.png"></a>
+                                    </div>
+                                </div>
+                                <article class="row mt-5  mx-auto">
+                                    <div class="col-sm-12">
+                                        <p class="text-title text-uppercase"><input type="text" name="nombreProducto" value="<?php echo $producto->nombreProducto ?>"></p>
+                                        <p class="text-secondary text-justify"><textarea name="descripcionProducto"><?php echo $producto->descripcion ?></textarea></p>
+                                    </div>
+                                </article>
+                                <div class="row custom-file">
+                                    <input type="file" class="custom-file-input" name="imagenProducto" lang="es">
+                                    <label class="custom-file-label" for="imagenProducto">Elegir imagen</label>
+                                </div>
+                            </div>
+
+                            <aside class="col-sm-8 mt-5">
+                                <img class="imgProductos img-fluid" src="<?php echo $producto->imagenProducto ?>">
+                                <input type="submit"  class="btn-primary" name="btnEditar" value="Editar">
+                            </aside>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <hr>
+                                <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
+                                <div class="collapse" id="footwear">
+                                    <div class="row">
+                                        <div class="chartContainer col-12 my-5">
+                                            <canvas id="doughnutChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                    </form>
+                    <?php
+                }
+            }
+        } else {
+            ?>
+            <div class="row">
+                <div class="col-sm-4 mt-5">
                     <div class="row">
-                        <div class="chartContainer col-12 my-5">
-                            <canvas id="doughnutChart"></canvas>
+                        <div class="col-sm-12">
+                            <a href="productos.php"> <img src="img/volver.png"></a>
                         </div>
                     </div>
+                    <article class="row mt-5  mx-auto">
+                        <div class="col-sm-12">
+                            <p class="text-title text-uppercase"><?php echo $producto->nombreProducto ?></p>
+                            <p class="text-secondary text-justify"><?php echo $producto->descripcion ?></p>
+                        </div>
+                    </article>
                 </div>
-                <hr>
+                <aside class="col-sm-8 mt-5">
+                    <img class="imgProductos img-fluid" src="<?php echo $producto->imagenProducto ?>">
+                </aside>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-12">
+                    <hr>
+                    <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
+                    <div class="collapse" id="footwear">
+                        <div class="row">
+                            <div class="chartContainer col-12 my-5">
+                                <canvas id="doughnutChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <?php
+        }
+        if (isset($_POST['btnEditar'])) {
+            if (is_uploaded_file($_FILES['imagenProducto']['tmp_name'])) {
+                $fich_unic = time() . "-" . $_FILES['imagenProducto']['name'];
+                //para que no se repita el nombre del fichero se concatena el tiempo unix
+                $imagenProducto = "img/" . $fich_unic;
+                move_uploaded_file($_FILES['imagenProducto']['tmp_name'], $imagenProducto);
+            } else {
+                echo "Error en la subida del fichero";
+            }
+
+            $nombreProducto = $_POST['nombreProducto'];
+            $descripcionProducto = $_POST['descripcionProducto'];
+            Producto::ActualizarProducto($producto->idProducto, $nombreProducto, $descripcionProducto, $imagenProducto);
+            header("Location: productos.php");
+        }
+        ?>
+
+
         <script>//Chart
             var ctxD = document.getElementById("doughnutChart").getContext('2d');
             var myLineChart = new Chart(ctxD, {
@@ -84,7 +156,7 @@ and open the template in the editor.
                 <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#valoraciones" aria-expanded="false" aria-controls="footwear">Valoraciones </a>
                 <div class="collapse" id="valoraciones">
 
-                    <?php if (isset($_SESSION['usuario'])) { ?>
+<?php if (isset($_SESSION['usuario'])) { ?>
                         <div class="container">
                             <div class="row mb-4 mt-2" >
                                 <div class="col-md-12">

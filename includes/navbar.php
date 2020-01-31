@@ -152,13 +152,13 @@ if (isset($_POST['cerrarSesion'])) {
                                     <p id="dropdownLogoutMenu1"></p>
                                     <?php
                                     $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
-                                    if ($usuario->imagenPerfil != NULL) {
+                                    if ($usuario->imagenPerfil != NULL || $usuario->imagenPerfil != "") {
                                         ?>
-                                        <img class="imgUsu" src="<?php echo $usuario->imagenPerfil ?>"></img>
+                                        <img class="imgUsu" src="./<?php echo $usuario->imagenPerfil ?>"></img>
                                         <?php
                                     } else {
                                         ?>
-                                        <img class="imgUsu" src="../img/usuario.png"></img>
+                                        <img class="imgUsu" src="./img/usuario.png"></img>
                                         <?php
                                     }
                                     ?>

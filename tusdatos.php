@@ -24,7 +24,16 @@ if (isset($_SESSION['usuario'])) {
             <div class="row">
                 <div class="col-sm-3">
                     <div class="text-center">
-                        <img src="img/usuario.png" class="img-circle img-thumbnail">
+                        <?php
+                        if ($usuario->imagenPerfil != NULL || $usuario->imagenPerfil != "") {
+                            ?><img src="<?php echo $usuario->imagenPerfil; ?>" class="img-circle img-thumbnail">
+                            <?php
+                        } else {
+                            ?>
+                            <img class="img-circle img-thumbnail" src="img/usuario.png"></img>
+                            <?php
+                        }
+                        ?>
                     </div></hr><br>
                 </div>
                 <div class="col-sm-9 text-left">

@@ -48,7 +48,7 @@ if (isset($_SESSION['usuario'])) {
 
         <?php
         if (isset($_POST['enviar'])) {
-            if (Usuario::insertarUsuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], 'valorador')) {
+            if (Usuario::insertarUsuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], 'valorador','')) {
                 $_SESSION['usuario'] = $_POST['email'];
                 header('Location: index.php');
             }

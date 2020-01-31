@@ -21,7 +21,7 @@ if (isset($_SESSION['usuario'])) {
     <body >
         <?php
         if (isset($_POST['enviar'])) {
-            Usuario::insertarUsuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], $_POST['rol']);
+            Usuario::insertarUsuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], $_POST['rol'],'');
             header('Location: control.php');
         }
         include ('includes/navbar.php');

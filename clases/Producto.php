@@ -62,7 +62,27 @@ class Producto {
         $conex->close();
     }
     
-        public static function EliminarProducto($nombre) {
+    
+    public static function ActualizarProducto($idProducto,$nombre,$descripcion,$imagen) {
+        $conex = new Conexion();
+        if ($conex->connect_errno != 0) {
+            echo $conex->connect_error;
+        } else {
+            $consulta1 = $conex->query("UPDATE producto SET nombreProducto = '$nombre', descripcion = '$descripcion', imagenProducto= '$imagen' WHERE idProducto = $idProducto");
+            if ($conex->errno != 0) {
+                return $conex->error;
+            } else {
+                if ($conex->affected_rows < 1) {
+                    return FALSE;
+                }
+
+
+                return TRUE;
+            }
+        }
+    }
+    
+    public static function EliminarProducto($nombre) {
         $conex = new Conexion();
         if ($conex->connect_errno != 0) {
             echo $conex->connect_error;
