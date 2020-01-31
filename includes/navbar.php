@@ -158,7 +158,7 @@ if (isset($_POST['cerrarSesion'])) {
                                         <?php
                                     } else {
                                         ?>
-                                        <img class="imgUsu" src="./img/usuario.png"></img>
+                                        <img class="imgUsu" src=" "></img>
                                         <?php
                                     }
                                     ?>

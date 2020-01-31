@@ -247,7 +247,9 @@ and open the template in the editor.
                                     --><input id="radio3" type="radio" name="estrellas" value="3"><!--
                                     --><label for="radio3">★</label><!--
                                     --><input id="radio4" type="radio" name="estrellas" value="2"><!--
-                                    --><label for="radio4">★</label>
+                                    --><label for="radio4">★</label><!--
+                                    --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                    --><label for="radio5">★</label>
                                 </p>
                                 <input id="ratings-hidden" name="rating" type="hidden"> 
                                 <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Introduce tu valoración..." rows="5"></textarea>
@@ -271,7 +273,7 @@ and open the template in the editor.
         <?php
         if (isset($_POST['valorar'])) {
             $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
-            Valoracion::insertarValoracion($usuario->idUsuario, 1, $_POST['estrellas'], $_POST['comment']);
+            Valoracion::insertarValoracion($usuario->idUsuario, $producto->idProducto, $_POST['estrellas'], $_POST['comment']);
         }
         ?>
 
