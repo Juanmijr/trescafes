@@ -47,10 +47,10 @@ if (isset($_SESSION['usuario'])) {
 
         <?php
         if (isset($_POST['enviar'])) {
-              if (is_uploaded_file($_FILES['imagenUsuario']['tmp_name'])) {
-                $fich_unic = time()."-".$_FILES['file']['name'];
+            if (is_uploaded_file($_FILES['imagenUsuario']['tmp_name'])) {
+                $fich_unic = time() . "-" . $_FILES['file']['name'];
                 //para que no se repita el nombre del fichero se concatena el tiempo unix
-                $imagenUsuario = "img/".$fich_unic;
+                $imagenUsuario = "img/" . $fich_unic;
                 move_uploaded_file($_FILES['imagenUsuario']['tmp_name'], $imagenUsuario);
             } else {
                 $imagenUsuario = "img/usuario.png";
@@ -92,7 +92,10 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
-                                        <input id="contrasena1" type="password" required="" name="pass" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Debe tener al menos una mayúscula, minúsucula, un dígito, 0 espacios en blanco y un caracter especial" class="form-control" placeholder="contraseña">
+                                        <input type="password" id="inputPassword5" class="form-control" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="password">  
+                                        <small class="form-text text-muted">
+                                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                                    </small>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -100,10 +103,10 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
-                                        <input id="contrasena2" type="password" name="pass2" required="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Confirma la contraseña" class="form-control" placeholder="repite contraseña">
+                                        <input id="contrasena2" type="password" name="pass2" required=""  title="Confirma la contraseña" class="form-control" placeholder="repite contraseña">
                                         <div id="spanOcultoPass" style="display: none" class="invalid-feedback">
-                                        Las contraseñas no coinciden
-                                      </div>
+                                            Las contraseñas no coinciden
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -141,8 +144,8 @@ if (isset($_SESSION['usuario'])) {
                                         </div>
                                         <input id="email" type="email" name="email" required="" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" class="form-control" placeholder="email">
                                         <div id="spanOculto" style="display: none" class="invalid-feedback">
-                                        Correo en uso
-                                      </div>
+                                            Correo en uso
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -164,7 +167,7 @@ if (isset($_SESSION['usuario'])) {
                                     </div>
                                 </div>
                             </div>
-                              <div class="row">
+                            <div class="row">
                                 <div class="col-sm-12">
                                     <div class="custom-file mb-3">
                                         <input type="file" class="custom-file-input" name="imagenUsuario" lang="es">
