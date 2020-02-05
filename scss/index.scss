@@ -536,3 +536,7 @@ label:hover ~ label {
 input[type="radio"]:checked ~ label {
   color: orange;
 }
+
+.valid-feedback {
+    color: gray;
+}

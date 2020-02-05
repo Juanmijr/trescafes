@@ -81,7 +81,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input id="usuario" type="text" name="usuario" required=""  minlength="6" maxlength="50" pattern='[A-Za-z0-9@.-_]+' title="Se permiten letras, numeros y (@.-_)" class="form-control" placeholder="usuario">
+                                        <input id="usuario" type="text" name="usuario" required="" title="Se permiten letras, numeros y (@.-_)" class="form-control" placeholder="usuario *">
 
                                     </div>
                                 </div>
@@ -92,10 +92,10 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
-                                        <input type="password" id="inputPassword5" class="form-control" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="password">  
-                                        <small class="form-text text-muted">
-                                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-                                    </small>
+                                        <input type="password" id="inputPassword5" class="form-control" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="password *">  
+                                        <div class="valid-feedback d-block">
+                                            Debe tener al menos una mayúscula, una minúscula, un número y un carácter no alfanumérico. (Al menos 8 caracteres)
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -103,7 +103,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
-                                        <input id="contrasena2" type="password" name="pass2" required=""  title="Confirma la contraseña" class="form-control" placeholder="repite contraseña">
+                                        <input id="contrasena2" type="password" name="pass2" required=""  title="Confirma la contraseña" class="form-control" placeholder="repite contraseña *">
                                         <div id="spanOcultoPass" style="display: none" class="invalid-feedback">
                                             Las contraseñas no coinciden
                                         </div>
@@ -116,7 +116,10 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input id="apellido1"  pattern='[A-Za-z]+' required="" type="text" name="apellido1" class="form-control" placeholder="apellido 1">
+                                        <input id="apellido1"  pattern='[A-Za-z]+' required="" type="text" name="apellido1" class="form-control" placeholder="apellido 1 *">
+                                        <div class="valid-feedback d-block">
+                                            Solo se admiten letras
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -125,6 +128,9 @@ if (isset($_SESSION['usuario'])) {
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
                                         <input id="apellido2" pattern='[A-Za-z]*' type="text" name="apellido2" class="form-control" placeholder="apellido 2">
+                                         <div class="valid-feedback d-block">
+                                            Solo se admiten letras
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +140,10 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input id="nombre" type="text" name="nombre" required="" pattern='[A-Za-z]+' class="form-control" placeholder="nombre">
+                                        <input id="nombre" type="text" name="nombre" required="" pattern='[A-Za-z]+' class="form-control" placeholder="nombre *">
+                                         <div class="valid-feedback d-block">
+                                            Solo se admiten letras
+                                        </div>
                                     </div>   
                                 </div>
                                 <div class="col-sm-6">
@@ -142,7 +151,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-mail-bulk"></i></span>
                                         </div>
-                                        <input id="email" type="email" name="email" required="" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" class="form-control" placeholder="email">
+                                        <input id="email" type="email" name="email" required="" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" class="form-control" placeholder="email *">
                                         <div id="spanOculto" style="display: none" class="invalid-feedback">
                                             Correo en uso
                                         </div>
@@ -155,7 +164,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
                                         </div>
-                                        <input type="date" name="fechaNacimiento" required="" class="form-control" placeholder="fecha de nacimiento">
+                                        <input type="text" onfocus="(this.type='date')" name="fechaNacimiento" required="" class="form-control" placeholder="fecha de nacimiento *">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -163,7 +172,10 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-mobile"></i></span>
                                         </div>
-                                        <input id="telefono" pattern='[0-9]{9}' required="true" type="tel" name="telefono" class="form-control" placeholder="Teléfono">
+                                        <input id="telefono" pattern='[0-9]{9}' required="true" type="tel" name="telefono" class="form-control" placeholder="teléfono *">
+                                         <div class="valid-feedback d-block">
+                                            Solo se admiten números (Exactamente 9)
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -428,7 +440,10 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-flag"></i></span>
                                         </div>
-                                        <input id="codPostal" type="text" required="" pattern="[0-9]{5}" name="codPostal" class="form-control" placeholder="Código Postal">
+                                        <input id="codPostal" type="text" required="" pattern="[0-9]{5}" name="codPostal" class="form-control" placeholder="Código Postal *">
+                                         <div class="valid-feedback d-block">
+                                            Solo se admiten números (Exactamente 5)
+                                        </div>
                                     </div>
                                 </div>
                             </div>
