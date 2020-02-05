@@ -1,7 +1,7 @@
 $(document).ready(function () {
     //variables
-    var pass1 = $('[name=pass]');
-    var pass2 = $('[name=pass2]');
+    var pass1 = $('#pass');
+    var pass2 = $('#pass2');
     var contrasena = false;
     
     //función que comprueba las dos contraseñas

@@ -16,7 +16,7 @@ if (isset($_SESSION['usuario'])) {
         <script src="js/validarRegistro.js"></script>
         <script>
             $(function () {
-                $("#email").on("change", function (e) {
+                $("#email").on("change", function () {
                     $.ajax({
                         type: "POST",
                         url: "consulta.php",
@@ -33,33 +33,40 @@ if (isset($_SESSION['usuario'])) {
                         }
                     });
                 })
+                var refreshButton = document.querySelector(".refresh-captcha");
+                refreshButton.onclick = function () {
+                    document.querySelector(".captcha-image").src = 'ejemploCaptcha.php?';
+                }
 
-                $("#form1").submit(function () {
-                    if (contrasena)
-                        return true;
-                    else
-                        return false;
-                });
             })
+
+
+
         </script>
     </head>
     <body>
 
         <?php
         if (isset($_POST['enviar'])) {
-            if (is_uploaded_file($_FILES['imagenUsuario']['tmp_name'])) {
-                $fich_unic = time() . "-" . $_FILES['file']['name'];
-                //para que no se repita el nombre del fichero se concatena el tiempo unix
-                $imagenUsuario = "img/" . $fich_unic;
-                move_uploaded_file($_FILES['imagenUsuario']['tmp_name'], $imagenUsuario);
-            } else {
-                $imagenUsuario = "img/usuario.png";
+            if ($_SESSION['CAPTCHA'] == $_POST['captcha']) {
+                if (is_uploaded_file($_FILES['imagenUsuario']['tmp_name'])) {
+                    $fich_unic = time() . "-" . $_FILES['file']['name'];
+                    //para que no se repita el nombre del fichero se concatena el tiempo unix
+                    $imagenUsuario = "img/" . $fich_unic;
+                    move_uploaded_file($_FILES['imagenUsuario']['tmp_name'], $imagenUsuario);
+                } else {
+                    $imagenUsuario = "img/usuario.png";
+                }
+                if (Usuario::insertarUsuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], 'valorador', $imagenUsuario)) {
+                    $_SESSION['usuario'] = $_POST['email'];
+                    header('Location: index.php');
+                }
             }
-            if (Usuario::insertarUsuario($_POST['email'], $_POST['usuario'], $_POST['pass'], $_POST['nombre'], $_POST['apellido1'], $_POST['apellido2'], $_POST['fechaNacimiento'], $_POST['pais'], $_POST['codPostal'], $_POST['telefono'], 'valorador', $imagenUsuario)) {
-                $_SESSION['usuario'] = $_POST['email'];
-                header('Location: index.php');
-            }
+        } else {
+           // echo $_SESSION['CAPTCHA'];
         }
+
+
 
 
         include ('includes/navbar.php');
@@ -92,7 +99,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
-                                        <input type="password" id="inputPassword5" class="form-control" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="password *">  
+                                        <input type="password" id="pass" name="pass" class="form-control" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="password *">  
                                         <div class="valid-feedback d-block">
                                             Debe tener al menos una mayúscula, una minúscula, un número y un carácter no alfanumérico. (Al menos 8 caracteres)
                                         </div>
@@ -103,7 +110,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
-                                        <input id="contrasena2" type="password" name="pass2" required=""  title="Confirma la contraseña" class="form-control" placeholder="repite contraseña *">
+                                        <input id="pass2" type="password" name="pass2" required=""  title="Confirma la contraseña" class="form-control" placeholder="repite contraseña *">
                                         <div id="spanOcultoPass" style="display: none" class="invalid-feedback">
                                             Las contraseñas no coinciden
                                         </div>
@@ -128,7 +135,7 @@ if (isset($_SESSION['usuario'])) {
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
                                         <input id="apellido2" pattern='[A-Za-z]*' type="text" name="apellido2" class="form-control" placeholder="apellido 2">
-                                         <div class="valid-feedback d-block">
+                                        <div class="valid-feedback d-block">
                                             Solo se admiten letras
                                         </div>
                                     </div>
@@ -141,7 +148,7 @@ if (isset($_SESSION['usuario'])) {
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
                                         <input id="nombre" type="text" name="nombre" required="" pattern='[A-Za-z]+' class="form-control" placeholder="nombre *">
-                                         <div class="valid-feedback d-block">
+                                        <div class="valid-feedback d-block">
                                             Solo se admiten letras
                                         </div>
                                     </div>   
@@ -164,7 +171,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
                                         </div>
-                                        <input type="text" onfocus="(this.type='date')" name="fechaNacimiento" required="" class="form-control" placeholder="fecha de nacimiento *">
+                                        <input type="text" onfocus="(this.type = 'date')" name="fechaNacimiento" required="" class="form-control" placeholder="fecha de nacimiento *">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -173,7 +180,7 @@ if (isset($_SESSION['usuario'])) {
                                             <span class="input-group-text"><i class="fas fa-mobile"></i></span>
                                         </div>
                                         <input id="telefono" pattern='[0-9]{9}' required="true" type="tel" name="telefono" class="form-control" placeholder="teléfono *">
-                                         <div class="valid-feedback d-block">
+                                        <div class="valid-feedback d-block">
                                             Solo se admiten números (Exactamente 9)
                                         </div>
                                     </div>
@@ -441,10 +448,19 @@ if (isset($_SESSION['usuario'])) {
                                             <span class="input-group-text"><i class="fas fa-flag"></i></span>
                                         </div>
                                         <input id="codPostal" type="text" required="" pattern="[0-9]{5}" name="codPostal" class="form-control" placeholder="Código Postal *">
-                                         <div class="valid-feedback d-block">
+                                        <div class="valid-feedback d-block">
                                             Solo se admiten números (Exactamente 5)
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="elem-group">
+
+                                    <img src="ejemploCaptcha.php" alt="CAPTCHA" class="captcha-image"><a class="btn btn-secundary refresh-captcha ml-3"><i class="fas fa-redo"></i></a><br>
+                                    <span class="valid-feedback d-block mt-3">Introduce el captcha</span>
+                                    <input type="text" id="captcha" name="captcha" >
+
                                 </div>
                             </div>
                             <div class="form-group">
@@ -456,8 +472,8 @@ if (isset($_SESSION['usuario'])) {
                 </div>
             </div>
         </div>
-        <?php
-        include('includes/footer.php');
-        ?>
+<?php
+include('includes/footer.php');
+?>
     </body>
 </html>

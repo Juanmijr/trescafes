@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 $permitted_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   
 function generate_string($input, $strength = 5) {
@@ -16,7 +16,7 @@ function generate_string($input, $strength = 5) {
  
 $string_length = 6;
 $captcha_string = generate_string($permitted_chars, $string_length);
- 
+ $_SESSION['CAPTCHA'] = $captcha_string;
 
 // CREAR UNA IMAGEN
 
@@ -30,7 +30,7 @@ $texto = imagecolorallocate($imagen, 75, 54, 33);
 ImageFill($imagen, 50,0,$fondo);
 
 //IMPRIMIR UN TEXTO A LA IMAGEN
-imagestring($imagen, 80, 25, 10, "$captcha_string", $texto);
+imagestring($imagen, 80, 25, 10, "$_SESSION[CAPTCHA]", $texto);
 
 //IMPRIMIR LA IMAGEN
 
