@@ -536,4 +536,9 @@ input[type=radio]:checked ~ label {
   color: gray;
 }
 
+.imgIndexProductos {
+  width: 400px;
+  height: 266px;
+}
+
 /*# sourceMappingURL=index.css.map */

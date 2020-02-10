@@ -92,8 +92,8 @@ and open the template in the editor.
                 <hr>
             </div> 
             <div class="col-sm-8">
-                <img class="img-fluid imgHome" src="img/todosproductos/Espresso.png"></img>
-                <img class="img-fluid imgHome" src="img/todosproductos/loloccino.png"></img>
+                <img class="img-fluid imgIndexProductos" src="img/Productos/Espresso.png"></img>
+                <img class="img-fluid imgHome" src="img/Productos/loloccino.png"></img>
             </div>
             <div class="col-sm-4 text-center pt-5 text-secondary">
                 <p>Al hacerte socio de TRES CAFÉS</p> 
