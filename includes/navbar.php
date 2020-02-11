@@ -164,7 +164,7 @@ if (isset($_POST['cerrarSesion'])) {
                     <div class="modal-header">
                         <h3>Inicia Sesión</h3>
                         <div class="d-flex justify-content-end social_icon">
-                            <span><i id="googleSignInBtn" class="fab fa-google-plus-square"></i></span>
+                            <span onclick="startApp()"><i id="googleSignInBtn" class="fab fa-google-plus-square"></i></span>
                         </div>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -218,7 +218,6 @@ if (isset($_POST['cerrarSesion'])) {
             </div>
         </div>
     </div>
-    <script>startApp();</script>
     <?php
     if (isset($error) && $error) {
         ?>
