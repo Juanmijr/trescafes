@@ -47,7 +47,6 @@ if (isset($_SESSION['usuario'])) {
     <body>
 
         <?php
-        print_r($_FILES['imagenUsuario']);
         if (isset($_POST['enviar'])) {
             if ($_SESSION['CAPTCHA'] == $_POST['captcha']) {
                 if (is_uploaded_file($_FILES['imagenUsuario']['tmp_name'])) {
@@ -72,7 +71,6 @@ if (isset($_SESSION['usuario'])) {
 
         include ('includes/navbar.php');
         ?>
-
         <!-- EMPIEZA EL REGISTRO -->
         <div class="containerRegistrar mt-5 mb-5">
             <div class="d-flex justify-content-center ">
@@ -190,7 +188,7 @@ if (isset($_SESSION['usuario'])) {
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="custom-file mb-3">
-                                        <input type="file" class="custom-file-input" name="imagenUsuario" lang="es">
+                                        <input type="file" class="custom-file-input" id="imagenUsuario" name="imagenUsuario" lang="es">
                                         <label class="custom-file-label" for="imagenUsuario">Elegir imagen</label>
                                     </div>
                                 </div>
@@ -474,5 +472,17 @@ if (isset($_SESSION['usuario'])) {
 <?php
 include('includes/footer.php');
 ?>
+                <script>
+            $('#imagenUsuario').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                if(fileName == '') {
+                    $(this).next('.custom-file-label').html('Elegir imagen');
+                } else {
+                    $(this).next('.custom-file-label').html(fileName);
+                }
+                //replace the "Choose a file" label
+            })
+        </script>
     </body>
 </html>
