@@ -122,7 +122,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input id="apellido1"  pattern='[A-Za-z]+' required="" type="text" name="apellido1" class="form-control" placeholder="apellido 1 *" value="<?php if (isset($_POST['apellido1Google'])){ echo "$_POST[apellido1Google]";}else{if (isset($_POST['enviar'])){ echo $_POST['apellido1']; }}  ?>">
+                                        <input id="apellido1"  pattern='^[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$' required="" type="text" name="apellido1" class="form-control" placeholder="apellido 1 *" value="<?php if (isset($_POST['apellido1Google'])){ echo "$_POST[apellido1Google]";}else{if (isset($_POST['enviar'])){ echo $_POST['apellido1']; }}  ?>">
                                         <div class="valid-feedback d-block">
                                             Solo se admiten letras
                                         </div>
@@ -133,7 +133,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input id="apellido2" pattern='[A-Za-z]*' type="text" name="apellido2" class="form-control" placeholder="apellido 2"value="<?php if (isset($_POST['apellido2Google'])){ echo "$_POST[apellido2Google]";}else{if (isset($_POST['enviar'])){ echo $_POST['apellido2']; }}  ?>">
+                                        <input id="apellido2"  pattern='^[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$' type="text" name="apellido2" class="form-control" placeholder="apellido 2"value="<?php if (isset($_POST['apellido2Google'])){ echo "$_POST[apellido2Google]";}else{if (isset($_POST['enviar'])){ echo $_POST['apellido2']; }}  ?>">
                                         <div class="valid-feedback d-block">
                                             Solo se admiten letras
                                         </div>
@@ -146,7 +146,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input id="nombre" type="text" name="nombre" required="" pattern='[A-Za-z]+' class="form-control" placeholder="nombre *" value="<?php if (isset($_POST['nombreGoogle'])){ echo "$_POST[nombreGoogle]";}else{if (isset($_POST['enviar'])){ echo $_POST['nombre']; }} ?>">
+                                        <input id="nombre" type="text" name="nombre" required=""  pattern='^[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$' class="form-control" placeholder="nombre *" value="<?php if (isset($_POST['nombreGoogle'])){ echo "$_POST[nombreGoogle]";}else{if (isset($_POST['enviar'])){ echo $_POST['nombre']; }} ?>">
                                         <div class="valid-feedback d-block">
                                             Solo se admiten letras
                                         </div>
