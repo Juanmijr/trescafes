@@ -541,4 +541,22 @@ input[type=radio]:checked ~ label {
   height: 266px;
 }
 
+.cookie-alert {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 320px;
+  margin: 0 !important;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 500ms ease-out;
+}
+
+.cookie-alert.show {
+  opacity: 1;
+  transform: translateY(0%);
+  transition-delay: 1000ms;
+}
+
 /*# sourceMappingURL=index.css.map */
