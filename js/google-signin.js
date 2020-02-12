@@ -18,20 +18,31 @@ function attachSignin(element) {
                 var givenName = auth2.currentUser.get().getBasicProfile().getGivenName();
                 var familyName = auth2.currentUser.get().getBasicProfile().getFamilyName();
                 var imagenUrl = auth2.currentUser.get().getBasicProfile().getImageUrl();
-                
+
                 $.ajax({
-                        type: "POST",
-                        url: "consulta.php",
-                        data: {email: email},
-                        success: function (respuesta) {
-                            if (respuesta == 0) {
+                    type: "POST",
+                    url: "consulta.php",
+                    data: {email: email},
+                    success: function (respuesta) {
+                        if (respuesta == 0) {
+
+                            $("#formulario").submit();
 
 
-                            } else {
+                        } else {
+                            var arrayDeCadenas = familyName.split(" ");
+                            var apellido1 = arrayDeCadenas[0];
+                            var apellido2 = arrayDeCadenas[1];
+                            $('#emailGoogle').val(email);
+                            $('#nombreGoogle').val(givenName);
+                            $('#apellido1Google').val(apellido1);
+                            $('#apellido2Google').val(apellido2);
 
-                            }
+                            $('#imagenGoogle').val(imagenUrl);
+                            $('#seSocio').submit();
                         }
-                    });
+                    }
+                });
             }, function (error) {
         alert(JSON.stringify(error, undefined, 2));
     });

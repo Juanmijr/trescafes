@@ -20,6 +20,15 @@ if (isset($_POST['cerrarSesion'])) {
     header('Location: logout.php');
 }
 ?>
+<form id="formulario">
+
+</form>
+<form id="seSocio" action="seSocio.php" method="POST">
+    <input type="hidden" name="emailGoogle" id="emailGoogle" >
+    <input type="hidden" name="nombreGoogle" id="nombreGoogle">
+    <input type="hidden" name="apellido1Google" id="apellido1Google">
+    <input type="hidden" name="apellido2Google" id="apellido2Google">
+</form>
 <div class="container-fluid text-center">
     <!--NavBar Menu-->
     <!--NavBar Menu-->
@@ -164,8 +173,10 @@ if (isset($_POST['cerrarSesion'])) {
                     <div class="modal-header">
                         <h3>Inicia Sesión</h3>
                         <div class="d-flex justify-content-end social_icon">
-                            <span onclick="startApp()"><i id="googleSignInBtn" class="fab fa-google-plus-square"></i></span>
+                            <span onclick="startApp()" name="google"><i id="googleSignInBtn"  class="fab fa-google-plus-square"></i></span>
                         </div>
+                        
+                        
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
