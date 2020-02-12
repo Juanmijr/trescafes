@@ -1,22 +1,21 @@
-            (function () {
+(function () {
     "use strict";
 
     var cookieAlert = document.querySelector(".cookie-alert");
     var acceptCookies = document.querySelector(".accept-cookies");
 
-    cookieAlert.offsetHeight; // Force browser to trigger reflow (https://stackoverflow.com/a/39451131)
+    cookieAlert.offsetHeight;
 
     if (!getCookie("acceptCookies")) {
         cookieAlert.classList.add("show");
     }
 
     acceptCookies.addEventListener("click", function () {
-        setCookie("acceptCookies", true, 60);
+        setCookie("acceptCookies", true, 365);
         cookieAlert.classList.remove("show");
     });
 })();
 
-// Cookie functions stolen from w3schools
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
