@@ -541,7 +541,7 @@ input[type=radio]:checked ~ label {
   height: 266px;
 }
 
-.cookie-alert {
+.cookie-alertNovedades {
   position: fixed;
   bottom: 15px;
   right: 15px;
@@ -554,7 +554,7 @@ input[type=radio]:checked ~ label {
   background-color: #e3a364 !important;
 }
 
-.cookie-alert.show {
+.cookie-alertNovedades.show {
   opacity: 1;
   transform: translateY(0%);
   transition-delay: 1000ms;
@@ -567,6 +567,26 @@ input[type=radio]:checked ~ label {
 
 .enlaceSecundario:hover {
   text-decoration: none;
+  color: white;
+}
+
+.cookiealert {
+  z-index: 999999999999 !important;
+}
+
+.cookies_popup_body h3 {
+  text-align: center;
+}
+
+.cookies_popup_body p {
+  text-align: center;
+}
+
+.cookiealert .modal-body {
+  padding: 45px 100px;
+}
+
+.colortextocookie {
   color: white;
 }
 

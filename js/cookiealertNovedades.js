@@ -1,18 +1,18 @@
 (function () {
     "use strict";
 
-    var cookieAlert = document.querySelector(".cookie-alert");
-    var acceptCookies = document.querySelector(".accept-cookies");
+    var cookieAlertNovedades = document.querySelector(".cookie-alertNovedades");
+    var acceptCookiesNovedades = document.querySelector(".accept-cookiesNovedades");
 
-    cookieAlert.offsetHeight;
+    cookieAlertNovedades.offsetHeight;
 
-    if (!getCookie("acceptCookies")) {
-        cookieAlert.classList.add("show");
+    if (!getCookie("acceptCookiesNovedades")) {
+        cookieAlertNovedades.classList.add("show");
     }
 
-    acceptCookies.addEventListener("click", function () {
-        setCookie("acceptCookies", true, 365);
-        cookieAlert.classList.remove("show");
+    acceptCookiesNovedades.addEventListener("click", function () {
+        setCookie("acceptCookiesNovedades", true, 30);
+        cookieAlertNovedades.classList.remove("show");
     });
 })();
 
@@ -38,3 +38,4 @@ function getCookie(cname) {
     }
     return "";
 }
+

@@ -65,7 +65,7 @@ if (isset($_POST['cerrarSesion'])) {
                                         echo "<ul class='dropdown-menu'>";
                                         foreach ($productos as $value) {
                                             if ($value->tipo == "cafe") {
-                                            ?>
+                                                ?>
                                             <li class="dropdown-item"><a class="dropdown-item" href="./producto.php?producto=<?php echo $value->nombreProducto; ?>"><?php echo $value->nombreProducto; ?></a></li>
                                             <?php
                                         }
@@ -176,8 +176,8 @@ if (isset($_POST['cerrarSesion'])) {
                         <div class="d-flex justify-content-end social_icon">
                             <span onclick="startApp()" name="google"><i id="googleSignInBtn"  class="fab fa-google-plus-square"></i></span>
                         </div>
-                        
-                        
+
+
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -237,16 +237,58 @@ if (isset($_POST['cerrarSesion'])) {
         <?php
     }
     ?>
-<div class="card cookie-alert">
-  <div class="card-body">
-    <h5 class="card-title">&#x1F36A; ¿Te gustan las cookies?</h5>
-    <p class="card-text">Usamos cookies para asegurarnos de que tengas la mejor experiencia en nuestra web.</p>
-    <div class="btn-toolbar justify-content-end">
-      <a href="./terminosLegales.php" target="_blank" class="btn btn-link enlaceSecundario">Leer más</a>
-      <a href="#" class="btn btn-primary accept-cookies">Aceptar</a>
+    <div class="card cookie-alertNovedades">
+        <div class="card-body">
+            <h5 class="card-title">&#x1F36A; ¿Te gustan las cookies?</h5>
+            <p class="card-text"></p>
+            <div class="btn-toolbar justify-content-end">
+                <a href="./terminosLegales.php" target="_blank" class="btn btn-link enlaceSecundario">Leer más</a>
+                <a href="#" class="btn btn-primary accept-cookiesNovedades">Aceptar</a>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-        <script src="./js/cookiealert.js">
 
-</script>
+    <div class="modal fade cookiealert" id="cookiespopup" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+
+                    <div class="modal_content">
+
+                        <div class="cookies_popup_body">
+                            <h3>Nosotros valoramos tu privacidad</h3>
+                            <p class="colortextocookie">En nuestro sitio web utilizamos cookies propias y terceros (Google Analytics) para mejorar tu experiencia de usuario y recoger datos estadísticos sobre el uso de nuestra web por parte de los usuarios. Las cookies se asocian únicamente al navegador que está utilizando, de modo que no se almacena ningún tipo de datos personales sobre el usuario que visita nuestra página web. Usted puede configurar su navegador para que notifique y/o rechace la instalación de las cookies, sin que ello perjudique la posibilidad del usuario de poder acceder a las distintas zonas de la web. Si navegas por nuestra web, estarás aceptando el uso de las cookies en las condiciones establecidas en esta Política de Cookies. Esta política puede ser actualizada, por lo que te invitamos a revisarla de forma regular.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="cpb_btns">
+                                <a href="./terminosLegales.php" class="btn btn-outline-primary btn-block">
+                                    Leer Más
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="cpb_btns">
+                                <button type="button" class="btn btn-primary btn-block acceptcookies" aria-label="Close">
+                                    Aceptar
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/cookiealertNovedades.js"></script>
+    <script src="./js/cookiealertTerminos.js"></script>
