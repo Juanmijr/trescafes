@@ -45,10 +45,12 @@ if (isset($_SESSION['usuario'])) {
         </script>
     </head>
     <body>
-
+        
         <?php
+        $errorCaptcha = 0;
         if (isset($_POST['enviar'])) {
             if ($_SESSION['CAPTCHA'] == $_POST['captcha']) {
+                $errorCaptcha = 1;
                 if (is_uploaded_file($_FILES['imagenUsuario']['tmp_name'])) {
                     $fich_unic = time() . "-" . $_FILES['file']['name'];
                     //para que no se repita el nombre del fichero se concatena el tiempo unix
@@ -61,9 +63,10 @@ if (isset($_SESSION['usuario'])) {
                     $_SESSION['usuario'] = $_POST['email'];
                     header('Location: index.php');
                 }
+                
+            } else {
+                $errorCaptcha = 0;
             }
-        } else {
-           // echo $_SESSION['CAPTCHA'];
         }
 
 
@@ -455,9 +458,15 @@ if (isset($_SESSION['usuario'])) {
                                 <div class="elem-group">
 
                                     <img src="ejemploCaptcha.php" alt="CAPTCHA" class="captcha-image"><a class="btn btn-secundary refresh-captcha ml-3"><i class="fas fa-redo"></i></a><br>
-                                    <span class="valid-feedback d-block mt-3">Introduce el captcha</span>
-                                    <input type="text" id="captcha" name="captcha" >
-
+                                    <span class="valid-feedback d-block mt-3">Introduce el captcha *</span>
+                                    <input type="text" id="captcha" required="" name="captcha" >
+                                    <?php
+                                    if (isset($_POST['enviar']) && $errorCaptcha == 0) {
+                                    ?>
+                                    <span class="invalid-feedback" style="display: block">Error en el captcha</span>
+                                    <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                             <div class="form-group">

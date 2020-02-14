@@ -191,13 +191,14 @@ and open the template in the editor.
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
+                                        <?php $nuevaValoracion = ValoracionUsuarioProducto::nombreUsuarioporIDVALORACION($valoracion->idValoracion); ?>
                                         <div class="col-md-2">
-                                            <img src="img/usuario.png" class="img-fluid"/>
+                                            <img src="<?php echo $nuevaValoracion->imagenPerfil?>" class="img-fluid"/>
                                             <p class="text-secondary text-center"><?php echo $valoracion->fecha; ?></p>
                                         </div>
                                         <div class="col-md-10">
                                             <p>
-                                                <strong><?php echo ValoracionUsuarioProducto::nombreUsuarioporIDVALORACION($valoracion->idValoracion); ?></strong>
+                                                <strong><?php echo $nuevaValoracion->nombreUsuario; ?></strong>
 
                                                 <?php for ($i = 0; $i < $valoracion->valoracion; $i++) { ?>
                                                     <span class="float-right"><i class="text-warning fa fa-star"></i></span>
@@ -271,7 +272,7 @@ and open the template in the editor.
                                     --><label for="radio3">★</label><!--
                                     --><input id="radio4" type="radio" name="estrellas" value="2"><!--
                                     --><label for="radio4">★</label><!--
-                                    --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                    --><input id="radio5" type="radio" name="estrellas" value="1" checked=""><!--
                                     --><label for="radio5">★</label>
                                 </p>
                                 <input id="ratings-hidden" name="rating" type="hidden"> 
