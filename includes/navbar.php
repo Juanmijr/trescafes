@@ -237,16 +237,7 @@ if (isset($_POST['cerrarSesion'])) {
         <?php
     }
     ?>
-    <div class="card cookie-alertNovedades">
-        <div class="card-body">
-            <h5 class="card-title">&#x1F36A; ¿Te gustan las cookies?</h5>
-            <p class="card-text"></p>
-            <div class="btn-toolbar justify-content-end">
-                <a href="./terminosLegales.php" target="_blank" class="btn btn-link enlaceSecundario">Leer más</a>
-                <a href="#" class="btn btn-primary accept-cookiesNovedades">Aceptar</a>
-            </div>
-        </div>
-    </div>
+
 
     <div class="modal fade cookiealert" id="cookiespopup" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -259,8 +250,9 @@ if (isset($_POST['cerrarSesion'])) {
                     <div class="modal_content">
 
                         <div class="cookies_popup_body">
-                            <h3>Nosotros valoramos tu privacidad</h3>
-                            <p class="colortextocookie">En nuestro sitio web utilizamos cookies propias y terceros (Google Analytics) para mejorar tu experiencia de usuario y recoger datos estadísticos sobre el uso de nuestra web por parte de los usuarios. Las cookies se asocian únicamente al navegador que está utilizando, de modo que no se almacena ningún tipo de datos personales sobre el usuario que visita nuestra página web. Usted puede configurar su navegador para que notifique y/o rechace la instalación de las cookies, sin que ello perjudique la posibilidad del usuario de poder acceder a las distintas zonas de la web. Si navegas por nuestra web, estarás aceptando el uso de las cookies en las condiciones establecidas en esta Política de Cookies. Esta política puede ser actualizada, por lo que te invitamos a revisarla de forma regular.
+                            <h3 class="text-title">Nosotros valoramos tu privacidad</h3>
+                            <hr>
+                            <p class="colortextocookie text-justify">En nuestro sitio web utilizamos cookies propias y terceros (Google Analytics) para mejorar tu experiencia de usuario y recoger datos estadísticos sobre el uso de nuestra web por parte de los usuarios. Las cookies se asocian únicamente al navegador que está utilizando, de modo que no se almacena ningún tipo de datos personales sobre el usuario que visita nuestra página web. Usted puede configurar su navegador para que notifique y/o rechace la instalación de las cookies, sin que ello perjudique la posibilidad del usuario de poder acceder a las distintas zonas de la web. Si navegas por nuestra web, estarás aceptando el uso de las cookies en las condiciones establecidas en esta Política de Cookies. Esta política puede ser actualizada, por lo que te invitamos a revisarla de forma regular.
                             </p>
                         </div>
                     </div>
@@ -269,7 +261,7 @@ if (isset($_POST['cerrarSesion'])) {
 
                         <div class="col-md-6">
                             <div class="cpb_btns">
-                                <a href="./terminosLegales.php" class="btn btn-outline-primary btn-block">
+                                <a href="./terminosLegales.php" class="btn enlacePrimario btn-link">
                                     Leer Más
                                 </a>
                             </div>
@@ -277,7 +269,7 @@ if (isset($_POST['cerrarSesion'])) {
 
                         <div class="col-md-6">
                             <div class="cpb_btns">
-                                <button type="button" class="btn btn-primary btn-block acceptcookies" aria-label="Close">
+                                <button type="button" class="btn btn-secundary btn-block acceptcookies" aria-label="Close">
                                     Aceptar
                                 </button>
                             </div>
@@ -289,6 +281,20 @@ if (isset($_POST['cerrarSesion'])) {
             </div>
         </div>
     </div>
-
+    
+    <?php if (isset($_SESSION['usuario'])){  
+    ?>
+    <div class="card cookie-alertNovedades">
+        <div class="card-body">
+            <h5 class="card-title">&#x1F36A; ¿Quieres estar al día con nuestros productos?</h5>
+            <p class="card-text text-justify">Acepta la cookie para recibir las últimas novedades de nuestro catálogo y disfrutar de una mejor experiencia en TresCafés</p>
+            <div class="btn-toolbar justify-content-end">
+                <a href="#" class="btn btn-primary accept-cookiesNovedades">Aceptar</a>
+            </div>
+        </div>
+    </div>
     <script src="./js/cookiealertNovedades.js"></script>
+    <?php
+    }
+    ?>
     <script src="./js/cookiealertTerminos.js"></script>

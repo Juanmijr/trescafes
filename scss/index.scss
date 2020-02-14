@@ -591,3 +591,12 @@ input[type="radio"]:checked ~ label {
 .colortextocookie {
     color: white;
 }
+
+.enlacePrimario {
+    text-decoration: none;
+    color: $bg-secundary;
+}
+.enlacePrimario:hover {
+    text-decoration: none;
+    color: white;
+}
