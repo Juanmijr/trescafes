@@ -114,6 +114,23 @@ class Valoracion {
              return $valoraciones;
         }
     }
+    
+     public static function contarValoraciones ($idProducto){
+          $conex = new Conexion();
+        if ($conex->connect_errno != 0) {
+            echo $conex->connect_error;
+        } else {
+            $consulta1 = $conex->query("SELECT * from valoracion WHERE producto = '$idProducto' ");
+            if ($conex->errno != 0) {
+                return $conex->error;
+            } else {
+               return $conex->affected_rows;
+               
+            }
+           
+        }
+    }
+    
     public function __toString() {
         return "Usuario -> ". $this->usuario ;
     }
