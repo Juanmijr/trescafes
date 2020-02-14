@@ -174,7 +174,7 @@ if (isset($_POST['cerrarSesion'])) {
                     <div class="modal-header">
                         <h3>Inicia Sesión</h3>
                         <div class="d-flex justify-content-end social_icon">
-                            <span onclick="startApp()" name="google"><i id="googleSignInBtn"  class="fab fa-google-plus-square"></i></span>
+                            <span name="google"><i id="googleSignInBtn"  class="fab fa-google-plus-square"></i></span>
                         </div>
 
 
@@ -299,3 +299,4 @@ if (isset($_POST['cerrarSesion'])) {
     }
     ?>
     <script src="./js/cookiealertTerminos.js"></script>
+    <script>startApp();</script>
