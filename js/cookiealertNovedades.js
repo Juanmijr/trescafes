@@ -3,6 +3,7 @@
 
     var cookieAlertNovedades = document.querySelector(".cookie-alertNovedades");
     var acceptCookiesNovedades = document.querySelector(".accept-cookiesNovedades");
+    var denieCookiesNovedades = document.querySelector(".denie-cookiesNovedades");
 
     cookieAlertNovedades.offsetHeight;
 
@@ -12,6 +13,10 @@
 
     acceptCookiesNovedades.addEventListener("click", function () {
         setCookie("acceptCookiesNovedades", true, 30);
+        cookieAlertNovedades.classList.remove("show");
+    });
+    denieCookiesNovedades.addEventListener("click", function () {
+        setCookie("acceptCookiesNovedades", false, 30);
         cookieAlertNovedades.classList.remove("show");
     });
 })();

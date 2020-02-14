@@ -261,7 +261,7 @@ if (isset($_POST['cerrarSesion'])) {
 
                         <div class="col-md-6">
                             <div class="cpb_btns">
-                                <a href="./terminosLegales.php" class="btn enlacePrimario btn-link">
+                                <a href="http://www.interior.gob.es/politica-de-cookies" target="_blank" class="enlacePrimario">
                                     Leer Más
                                 </a>
                             </div>
@@ -289,6 +289,7 @@ if (isset($_POST['cerrarSesion'])) {
             <h5 class="card-title">&#x1F36A; ¿Quieres estar al día con nuestros productos?</h5>
             <p class="card-text text-justify">Acepta la cookie para recibir las últimas novedades de nuestro catálogo y disfrutar de una mejor experiencia en TresCafés</p>
             <div class="btn-toolbar justify-content-end">
+                <a href="#" class="btn enlaceSecundario btn-link denie-cookiesNovedades">Denegar</a>
                 <a href="#" class="btn btn-primary accept-cookiesNovedades">Aceptar</a>
             </div>
         </div>

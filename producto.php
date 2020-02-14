@@ -8,8 +8,8 @@ and open the template in the editor.
 
 
     <head>
-      
-        
+
+
         <?php
         include ('includes/head.php');
         session_start();
@@ -33,11 +33,11 @@ and open the template in the editor.
 
         if (isset($_POST['valorar'])) {
             $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
-             
+
             Valoracion::insertarValoracion($usuario->idUsuario, $producto->idProducto, $_POST['estrellas'], $_POST['comentario']);
         }
         ?>
-        
+
         <link rel="canonical" href="https://quilljs.com/standalone/full/">
         <link type="application/atom+xml" rel="alternate" href="https://quilljs.com/feed.xml" title="Quill - Your powerful rich text editor" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" />
@@ -275,54 +275,54 @@ and open the template in the editor.
                                     --><label for="radio5">★</label>
                                 </p>
                                 <input id="ratings-hidden" name="rating" type="hidden"> 
+                                <div class="bg-white">
+                                    <div class="bg-secundary">
+                                        <div class="standalone-container">
+                                            <div id="snow-container"></div>
+                                        </div>
 
-                                <div class="bg-secundary">
-                                <div class="standalone-container">
-                                    <div id="snow-container"></div>
+
+
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+                                        <script src="js/quill.min.js"></script>
+
+                                        <script>
+                                                                    var quill = new Quill('#snow-container', {
+                                                                        placeholder: 'Introduzca una valoracion...',
+                                                                        theme: 'snow'
+                                                                    });
+                                        </script>
+                                        <script>
+                                            function llamaTexto() {
+
+                                                var texto = quill.root.innerHTML;
+                                                $("#oculto").val(texto);
+                                            }
+                                        </script>
+                                    </div>
                                 </div>
-
-
-
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
-
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-                                <script src="js/quill.min.js"></script>
-
-                                <script>
-                                            var quill = new Quill('#snow-container', {
-                                                placeholder: 'Introduzca una valoracion...',
-                                                theme: 'snow'
-                                            });
-                                </script>
-<script>
-    function llamaTexto(){    
-        
-    var texto = quill.root.innerHTML; 
-    alert("Estoy aqui: " + texto);
-        $("#oculto").val(texto);
-    }
-    </script>
-                        </div>
 
                                 <span id='contenedor'></span>
                                 <div class="text-right">
                                     <div class="stars starrr" data-rating="0"></div>
                                     <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
                                         <span class="glyphicon glyphicon-remove"></span>Cancelar</a>
-                                        <input class="btn login_btn" name="valorar" onclick="llamaTexto()" type="submit" value="valorar" ></input>
-                                         <input type="hidden" name="comentario" id="oculto">
+                                    <input class="btn login_btn" name="valorar" onclick="llamaTexto()" type="submit" value="valorar" ></input>
+                                    <input type="hidden" name="comentario" id="oculto">
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-        
-   
+        </div>
 
-    
+
+
+
 
 
         <?php
