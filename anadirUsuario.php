@@ -15,13 +15,12 @@ if (isset($_SESSION['usuario'])) {
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include ('includes/head.php'); ?> 
-        <title>Añadir usuario | Tres Cafés</title>
+        <?php include ('includes/head.php'); ?>
         <script src="jquery/jquery-3.3.1.min.js"></script>
         <script src="js/validarRegistro.js"></script>
         <script>
             $(function () {
-                $("#email").on("change", function (e) {
+                $("#email").on("change", function () {
                     $.ajax({
                         type: "POST",
                         url: "consulta.php",
@@ -38,17 +37,14 @@ if (isset($_SESSION['usuario'])) {
                         }
                     });
                 })
-
-                $("#form1").submit(function () {
-                    if (contrasena)
-                        return true;
-                    else
-                        return false;
-                });
             })
+
+
+
         </script>
     </head>
-    <body >
+    <body>
+
         <?php
         if (isset($_POST['enviar'])) {
             if (is_uploaded_file($_FILES['imagenUsuario']['tmp_name'])) {
@@ -63,14 +59,19 @@ if (isset($_SESSION['usuario'])) {
                 header('Location: control.php');
             }
         }
+
+
+
+
         include ('includes/navbar.php');
         ?>
         <!-- EMPIEZA EL REGISTRO -->
-        <div class="container mt-5 mb-5">
+        <div class="containerRegistrar mt-5 mb-5">
             <div class="d-flex justify-content-center ">
-                <div class="card card1">
+                <div class="card1 ">
                     <div class="card-header">
                         <h3 class="text-title">Añadir usuario</h3>
+
                     </div>
                     <div class="card-body">
                         <form id="form1" method="POST" action="" enctype="multipart/form-data">
@@ -80,7 +81,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input id="usuario" type="text" name="usuario" required=""  minlength="6" maxlength="50" pattern='[A-Za-z0-9@.-_]+' title="Se permiten letras, numeros y (@.-_)" class="form-control" placeholder="usuario">
+                                        <input id="usuario" type="text" name="usuario" required="" title="Se permiten letras, numeros y (@.-_)" class="form-control" placeholder="usuario *" value="">
 
                                     </div>
                                 </div>
@@ -91,7 +92,10 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
-                                        <input id="contrasena1" type="password" required="" name="pass" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Debe tener al menos una mayúscula, minúsucula, un dígito, 0 espacios en blanco y un caracter especial" class="form-control" placeholder="contraseña">
+                                        <input type="password" id="pass" name="pass" class="form-control" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="password *">  
+                                        <div class="valid-feedback d-block">
+                                            Debe tener al menos una mayúscula, una minúscula, un número y un carácter no alfanumérico. (Al menos 8 caracteres)
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -99,10 +103,10 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
-                                        <input id="contrasena2" type="password" name="pass2" required="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Confirma la contraseña" class="form-control" placeholder="repite contraseña">
+                                        <input id="pass2" type="password" name="pass2" required=""  title="Confirma la contraseña" class="form-control" placeholder="repite contraseña *">
                                         <div id="spanOcultoPass" style="display: none" class="invalid-feedback">
-                                        Las contraseñas no coinciden
-                                      </div>
+                                            Las contraseñas no coinciden
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +116,10 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input id="apellido1"  pattern='[A-Za-z]+' required="" type="text" name="apellido1" class="form-control" placeholder="apellido 1">
+                                        <input id="apellido1"  pattern='^[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$' required="" type="text" name="apellido1" class="form-control" placeholder="apellido 1 *" value="">
+                                        <div class="valid-feedback d-block">
+                                            Solo se admiten letras
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -120,7 +127,10 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input id="apellido2" pattern='[A-Za-z]*' type="text" name="apellido2" class="form-control" placeholder="apellido 2">
+                                        <input id="apellido2"  pattern='^[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$' type="text" name="apellido2" class="form-control" placeholder="apellido 2"value="">
+                                        <div class="valid-feedback d-block">
+                                            Solo se admiten letras
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +140,11 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
-                                        <input id="nombre" type="text" name="nombre" required="" pattern='[A-Za-z]+' class="form-control" placeholder="nombre">
+                                        <input id="nombre" type="text" name="nombre" required=""  pattern='^[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$' class="form-control" placeholder="nombre *" value="">
+
+                                        <div class="valid-feedback d-block">
+                                            Solo se admiten letras
+                                        </div>
                                     </div>   
                                 </div>
                                 <div class="col-sm-6">
@@ -138,10 +152,10 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-mail-bulk"></i></span>
                                         </div>
-                                        <input id="email" type="email" name="email" required="" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" class="form-control" placeholder="email">
+                                        <input id="email" type="email" name="email" required="" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" class="form-control" placeholder="email *" value="">
                                         <div id="spanOculto" style="display: none" class="invalid-feedback">
-                                        Correo en uso
-                                      </div>
+                                            Correo en uso
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +165,7 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
                                         </div>
-                                        <input type="date" name="fechaNacimiento" required="" class="form-control" placeholder="fecha de nacimiento">
+                                        <input type="text" onfocus="(this.type = 'date')" name="fechaNacimiento" required="" class="form-control" placeholder="fecha de nacimiento *" value="">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -159,14 +173,18 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-mobile"></i></span>
                                         </div>
-                                        <input id="telefono" pattern='[0-9]{9}' required="true" type="tel" name="telefono" class="form-control" placeholder="Teléfono">
+                                        <input id="telefono" pattern='[0-9]{9}' required="true" type="tel" name="telefono" class="form-control" placeholder="teléfono *" value="">
+
+                                        <div class="valid-feedback d-block">
+                                            Solo se admiten números (Exactamente 9)
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="custom-file mb-3">
-                                        <input type="file" class="custom-file-input" name="imagenUsuario" lang="es">
+                                        <input type="file" class="custom-file-input" id="imagenUsuario" name="imagenUsuario" lang="es">
                                         <label class="custom-file-label" for="imagenUsuario">Elegir imagen</label>
                                     </div>
                                 </div>
@@ -416,7 +434,6 @@ if (isset($_SESSION['usuario'])) {
                                             <option value="Zambia" id="ZM">Zambia</option>
                                             <option value="Zimbabue" id="ZW">Zimbabue</option>
                                         </select>
-
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -424,7 +441,9 @@ if (isset($_SESSION['usuario'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-flag"></i></span>
                                         </div>
-                                        <input id="codPostal" type="text" required="" pattern="[0-9]{5}" name="codPostal" class="form-control" placeholder="Código Postal">
+                                        <input id="codPostal" type="text" required="" pattern="[0-9]{5}" name="codPostal" class="form-control" placeholder="Código Postal *" value="">                                        <div class="valid-feedback d-block">
+                                            Solo se admiten números (Exactamente 5)
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -437,8 +456,22 @@ if (isset($_SESSION['usuario'])) {
                 </div>
             </div>
         </div>
-        <?php
-        include('includes/footer.php');
-        ?>
+<?php
+include('includes/footer.php');
+?>
+        <script>
+            $('#imagenUsuario').on('change', function () {
+                //get the file name
+                var fileName = $(this).val();
+                if (fileName == '') {
+                    $(this).next('.custom-file-label').html('Elegir imagen');
+                } else {
+                    $(this).next('.custom-file-label').html(fileName);
+                }
+                //replace the "Choose a file" label
+            })
+        </script>
     </body>
 </html>
+
+
