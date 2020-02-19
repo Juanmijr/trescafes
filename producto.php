@@ -34,6 +34,7 @@ and open the template in the editor.
         if (isset($_POST['valorar'])) {
             $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
 
+            
             Valoracion::insertarValoracion($usuario->idUsuario, $producto->idProducto, $_POST['estrellas'], $_POST['comentario']);
         }
         ?>
