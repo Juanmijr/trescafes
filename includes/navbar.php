@@ -38,7 +38,7 @@ if (isset($_POST['cerrarSesion'])) {
             <nav class="navbar navbar-expand-lg bg-primary">
                 <a class="navbar-brand" href="index.php"><img class="imgLogo " src="img/ejemplo.png"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <i><img class="imgUsu" src="img/Menu_icon_2_icon-icons.com_71856.png"></img></i>
+                    <i><img class="imgUsu" src="img/Menu_icon_2_icon-icons.com_71856.png" alt="imgLogo"></img></i>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="nav navbar-nav navbar-letra">
