@@ -81,13 +81,13 @@
             <div class="row">
 
                 <div class="col">
-                    <a href="https://www.facebook.com" target="_blank"><img src="img/icons8-facebook-rodeado-de-círculo-50.png"><img></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
                 </div>
                 <div class="col">
-                    <a href="https://www.instagram.com" target="_blank"><img src="img/icons8-instagram-50.png"><img></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="col">
-                    <a href="https://www.twitter.com" target="_blank"><img src="img/icons8-twitter-50.png"><img></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
 

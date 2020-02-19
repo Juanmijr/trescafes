@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html lang="es">
     <head>
         
         <?php include ('includes/head.php'); ?>
@@ -55,17 +55,17 @@ and open the template in the editor.
                 <div class="row">
                     <div class="col-sm-4 border-right">
                         <h2>Facebook</h2>
-                        <img src="img/icons8-facebook-rodeado-de-círculo-48.png"><br>
+                        <img src="img/icons8-facebook-rodeado-de-círculo-48.png" alt="facebook"><br>
                         <button href="#" class="btn btn-secundary mt-2" >SEGUIR</button>
                     </div>
                     <div class="col-sm-4 border-right">
                         <h2>Instagram</h2>
-                        <img src="img/icons8-instagram-48.png"><br>
+                        <img src="img/icons8-instagram-48.png" alt="instagram"><br>
                         <button href="#" class="btn btn-secundary mt-2" >SEGUIR</button>
                     </div>
                     <div class="col-sm-4">
                         <h2>Twitter</h2>
-                        <img src="img/icons8-twitter-48.png"><br>
+                        <img src="img/icons8-twitter-48.png" alt="twitter"><br>
                         <button href="#" class="btn btn-secundary mt-2" >SEGUIR</button>
                     </div>
                 </div>
@@ -92,8 +92,8 @@ and open the template in the editor.
                 <hr>
             </div> 
             <div class="col-sm-8">
-                <img class="img-fluid imgIndexProductos" src="img/Productos/Espresso.png"></img>
-                <img class="img-fluid imgHome" src="img/Productos/loloccino.png"></img>
+                <img class="img-fluid imgIndexProductos" src="img/Productos/Espresso.png" alt="yorspresso"></img>
+                <img class="img-fluid imgHome" src="img/Productos/loloccino.png" alt="loloccino"></img>
             </div>
             <div class="col-sm-4 text-center pt-5 text-secondary">
                 <p>Al hacerte socio de TRES CAFÉS</p> 
