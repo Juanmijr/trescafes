@@ -8,7 +8,7 @@
         <div class="col-sm-3">
 
             <!-- Content -->
-            <h5 class="font-weight-bold text-uppercase mb-4">Tres Cafés</h5>
+            <h4 class="font-weight-bold text-uppercase mb-4">Tres Cafés</h4>
             <p class="text-footer-cuerpo">Comprometidos en capturar tú momento perfecto y concentrarlo en una taza de café.</p>
 
         </div>
@@ -19,7 +19,7 @@
         <div class="col-sm-3">
 
             <!-- Links -->
-            <h5 class="font-weight-bold text-uppercase mb-4">descubre más</h5>
+            <h4 class="font-weight-bold text-uppercase mb-4">descubre más</h4>
 
             <ul class="list-unstyled text-footer-cuerpo ">
                 <li>
@@ -51,7 +51,7 @@
         <div class="col-sm-3">
 
             <!-- Contact details -->
-            <h5 class="font-weight-bold text-uppercase mb-4">DIRECCIÓN</h5>
+            <h4 class="font-weight-bold text-uppercase mb-4">DIRECCIÓN</h4>
 
             <ul class="list-unstyled text-footer-cuerpo">
                 <li>
@@ -76,18 +76,18 @@
         <div class="col-sm-3">
 
             <!-- Social buttons -->
-            <h5 class="font-weight-bold text-uppercase mb-4">SÍGUENOS</h5>
+            <h4 class="font-weight-bold text-uppercase mb-4">SÍGUENOS</h4>
 
             <div class="row">
 
                 <div class="col">
-                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i><span class="text-footer-cuerpo">Facebook</span></a>
                 </div>
                 <div class="col">
-                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i><span class="text-footer-cuerpo">Instagram</span></a>
                 </div>
                 <div class="col">
-                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i><span class="text-footer-cuerpo">Twitter</span></a>
                 </div>
             </div>
 

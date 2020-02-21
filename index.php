@@ -47,8 +47,8 @@ and open the template in the editor.
         <hr>
         <section class="row text-footer-cuerpo">
             <div class="col-sm-7 text-justify  text-secondary ">
-                <p class="font-weight-bold">SÍGUENOS EN NUESTRAS</p>
-                <p class="redesSociales">REDES SOCIALES</p>
+                <h3 aria-hidden="true" class="font-weight-bold">SÍGUENOS EN NUESTRAS</h3>
+                <h1 class="redesSociales">REDES SOCIALES</h1>
                 <p>¿Quieres ser el primero en conocer todas las novedades, participar en nuestros concursos y disfrutar de las mejores ofertas?  ¡Pues dale a seguir y forma parte de la comunidad TRÉS CAFÉS!</p>
             </div>
             <div class="col-sm-5 mt-5 botonesRS">
@@ -75,7 +75,7 @@ and open the template in the editor.
         <section class="row bannerJuego" >
 
             <div class="col-sm-4 text-justify pt-5 text-secondary">
-                <p class="font-weight-bold">Si eres SOCIO y quieres conseguir ofertas sobre nuestros productos</p>
+                <h3 class="font-weight-bold">Si eres SOCIO y quieres conseguir ofertas sobre nuestros productos</h3>
             </div>
             <div class="col-sm-4 mt-5">
                 
@@ -84,7 +84,7 @@ and open the template in the editor.
                 </form>
             </div>
             <div class="col-sm-4 text-justify pt-5 text-secondary">
-                <p class="font-weight-bold">JUEGA A NUESTROS JUEGOS Y CONSÍGUE DESCUENTOS!!</p>
+                <h3 class="font-weight-bold">JUEGA A NUESTROS JUEGOS Y CONSÍGUE DESCUENTOS!!</h3>
             </div>
         </section>
         <section class="row" href="seSocio.php">
@@ -97,13 +97,13 @@ and open the template in the editor.
             </div>
             <div class="col-sm-4 text-center pt-5 text-secondary">
                 <p>Al hacerte socio de TRES CAFÉS</p> 
-                <p class="font-weight-bold">¡TRÉS CAFÉS TOTALMENTE GRATIS!</p>
+                <h3 class="font-weight-bold">¡TRÉS CAFÉS TOTALMENTE GRATIS!</h3>
             </div>
         </section>
         <a class="enlacesSinEstilo" href="empleo.php">
             <section class="row" href="empleo.php" style="background-image: url('img/BannerEmpleo.png');">
                 <div class=" col-sm-12 text-center pt-5 text-secondary">
-                    <p class="text-empleo"> TRABAJA CON NOSOTROS </p>
+                    <h1 class="text-empleo"> TRABAJA CON NOSOTROS </h1>
                 </div>
 
             </section>

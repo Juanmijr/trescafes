@@ -96,7 +96,7 @@ nav a:hover {
 .text-empleo{
     font-size: 3rem;
     font-family: 'Lato', sans-serif ;
-    color: #575757;
+    color: white;
     font-weight: bold;
 }
 .imgNovedades{
@@ -599,4 +599,11 @@ input[type="radio"]:checked ~ label {
 .enlacePrimario:hover {
     text-decoration: none;
     color: white;
+}
+
+h4{
+    font-size: 1.275rem;
+}
+h3 {
+    font-size: 1.4rem;
 }

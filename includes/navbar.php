@@ -36,9 +36,9 @@ if (isset($_POST['cerrarSesion'])) {
     <div class="row">
         <div class="col p-0">
             <nav class="navbar navbar-expand-lg bg-primary">
-                <a class="navbar-brand" href="index.php"><img class="imgLogo " src="img/ejemplo.png"></a>
+                <a class="navbar-brand" href="index.php"><img class="imgLogo " src="img/ejemplo.png" alt="imagenlogo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <i><img class="imgUsu" src="img/Menu_icon_2_icon-icons.com_71856.png" alt="imgLogo"></img></i>
+                    <i><img class="imgUsu" src="img/Menu_icon_2_icon-icons.com_71856.png" alt="imagenlogo"></img></i>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="nav navbar-nav navbar-letra">
@@ -47,7 +47,7 @@ if (isset($_POST['cerrarSesion'])) {
                                data-toggle="dropdown" aria-haspopup="true"  aria-labelledby="dropdownMenuButton" aria-expanded="false">
                                 CAFÉ
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <ul class="dropdown-menu"  id="dropdownMenuButton" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="calidad.php">Calidad</a></li>
                                 <li><a class="dropdown-item" href="encuentraCafePerfecto.php">Encuentra tu café perfecto</a></li>
                                 <li><a class="dropdown-item" href="utensilios.php">Utensilios</a></li>
@@ -178,7 +178,7 @@ if (isset($_POST['cerrarSesion'])) {
                         </div>
 
 
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" style="color: white" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -191,6 +191,7 @@ if (isset($_POST['cerrarSesion'])) {
                         }
                         ?>
                         <form action="" method="post">
+                              <label  class="d-flex justify-content-left  text-footer-cuerpo" for="email">Email</label>
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -198,23 +199,23 @@ if (isset($_POST['cerrarSesion'])) {
                                 <?php
                                 if (isset($error) && $error) {
                                     ?>
-                                    <input type="text" class="form-control" placeholder="email" name="email" value="<?php echo $_POST['email'] ?>">
+                                <input type="text" class="form-control" id="email" placeholder="email" name="email" value="<?php echo $_POST['email'] ?>">
                                     <?php
                                 } else {
                                     ?>
-                                    <input type="text" class="form-control" placeholder="email" name="email">
+                                <input type="text" id="email" class="form-control" placeholder="email" name="email">
                                     <?php
                                 }
                                 ?>
                             </div>
+                            
+                              <label  class="d-flex justify-content-left  text-footer-cuerpo" for="password">Password</label>
                             <div class="input-group form-group">
+                            <br>
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="password" class="form-control" placeholder="contraseña" name="password">
-                            </div>
-                            <div class="row align-items-center remember">
-                                <input type="checkbox" name="recuerdame">Recuérdame
+                                <input type="password" id="password" class="form-control" placeholder="contraseña" name="password">
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Entrar" name='entrar' class="btn float-right login_btn">
