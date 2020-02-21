@@ -2,7 +2,7 @@ $bg-primary : #4b3621 !important;
 $bg-secundary : #e3a364 !important; 
 $bg-grey : #EAE8E8 !important;
 $bg-white : #FFFFFF !important;
-$color-footer-cuerpo : #9b9b9b !important;
+$color-footer-cuerpo : #D4D4D4 !important;
 $color-footer-title : #d6d6d6 !important;
 $color-boton : #efb810 !important;
 
@@ -200,7 +200,7 @@ footer a:hover{
 .redesSociales{
     font-size: 3rem;
     font-weight: bold;
-    color: $bg-secundary;
+    color: $bg-primary;
 }
 .card-inner{
     margin-left: 4rem;

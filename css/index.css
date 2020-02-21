@@ -75,7 +75,7 @@ nav a:hover {
 .text-footer-cuerpo {
   font-family: "Lato", sans-serif;
   font-size: 0.875rem;
-  color: #9b9b9b !important;
+  color: #D4D4D4 !important;
 }
 
 .text-secondary {
@@ -132,7 +132,7 @@ nav a:hover {
 
 footer a {
   text-decoration: none;
-  color: #9b9b9b !important;
+  color: #D4D4D4 !important;
 }
 
 footer a:hover {
@@ -195,7 +195,7 @@ footer a:hover {
 .redesSociales {
   font-size: 3rem;
   font-weight: bold;
-  color: #e3a364 !important;
+  color: #4b3621 !important;
 }
 
 .card-inner {
