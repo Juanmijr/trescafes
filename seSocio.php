@@ -79,7 +79,7 @@ if (isset($_SESSION['usuario'])) {
             <div class="d-flex justify-content-center ">
                 <div class="card1 ">
                     <div class="card-header">
-                        <h3 class="text-title">Sé Socio</h3>
+                        <h3 class="text-titleNuevo">Sé Socio</h3>
 
                     </div>
                     <div class="card-body">

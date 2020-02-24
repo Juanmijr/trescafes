@@ -62,10 +62,10 @@ require_once './clases/Producto.php';
 
                             <div class="col-sm-4 text-center">
                                 <div class="hover hover-1">
-                                    <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" src="<?php echo $value->imagenProducto; ?>">
+                                    <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" alt="imagen del producto" src="<?php echo $value->imagenProducto; ?>"/>
                                         </div>
                                         <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
-                                        <img src="img/siguiente.png"></a>
+                                        <img src="img/siguiente.png" alt="flecha siguiente"/></a>
                                     <?php
                                     if (isset($_SESSION['usuario'])) {
                                         if ($usuario->rol == 'administrador') {

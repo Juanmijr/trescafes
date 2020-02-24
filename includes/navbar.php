@@ -147,7 +147,7 @@ if (isset($_POST['cerrarSesion'])) {
                                     <?php
                                     $usuario = Usuario::buscarPorCorreo($_SESSION['usuario']);
                                     ?>
-                                    <img class="imgUsu" src="./<?php echo $usuario->imagenPerfil ?>"></img>
+                                    <img class="imgUsu" alt="imagen del usuario" src="./<?php echo $usuario->imagenPerfil ?>"></img>
                                 </button>
 
                                 <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="dropdownMenuButton">
@@ -251,7 +251,7 @@ if (isset($_POST['cerrarSesion'])) {
                     <div class="modal_content">
 
                         <div class="cookies_popup_body">
-                            <h3 class="text-title">Nosotros valoramos tu privacidad</h3>
+                            <h3 class="text-titleNuevo">Nosotros valoramos tu privacidad</h3>
                             <hr>
                             <p class="colortextocookie text-justify">En nuestro sitio web utilizamos cookies propias y terceros (Google Analytics) para mejorar tu experiencia de usuario y recoger datos estadísticos sobre el uso de nuestra web por parte de los usuarios. Las cookies se asocian únicamente al navegador que está utilizando, de modo que no se almacena ningún tipo de datos personales sobre el usuario que visita nuestra página web. Usted puede configurar su navegador para que notifique y/o rechace la instalación de las cookies, sin que ello perjudique la posibilidad del usuario de poder acceder a las distintas zonas de la web. Si navegas por nuestra web, estarás aceptando el uso de las cookies en las condiciones establecidas en esta Política de Cookies. Esta política puede ser actualizada, por lo que te invitamos a revisarla de forma regular.
                             </p>
