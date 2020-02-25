@@ -8,7 +8,7 @@
         <div class="col-sm-3">
 
             <!-- Content -->
-            <h4 class="font-weight-bold text-uppercase mb-4">Tres Cafés</h4>
+            <h1 class="font-weight-bold text-uppercase mb-4 h4">Tres Cafés</h1>
             <p class="text-footer-cuerpo">Comprometidos en capturar tú momento perfecto y concentrarlo en una taza de café.</p>
 
         </div>
@@ -19,7 +19,7 @@
         <div class="col-sm-3">
 
             <!-- Links -->
-            <h4 class="font-weight-bold text-uppercase mb-4">descubre más</h4>
+            <h1 class="font-weight-bold text-uppercase mb-4 h4">descubre más</h1>
 
             <ul class="list-unstyled text-footer-cuerpo ">
                 <li>
@@ -51,7 +51,7 @@
         <div class="col-sm-3">
 
             <!-- Contact details -->
-            <h4 class="font-weight-bold text-uppercase mb-4">DIRECCIÓN</h4>
+            <h1 class="font-weight-bold text-uppercase mb-4 h4">DIRECCIÓN</h1>
 
             <ul class="list-unstyled text-footer-cuerpo">
                 <li>
@@ -76,7 +76,7 @@
         <div class="col-sm-3">
 
             <!-- Social buttons -->
-            <h4 class="font-weight-bold text-uppercase mb-4">SÍGUENOS</h4>
+            <h1 class="font-weight-bold text-uppercase mb-4 h4">SÍGUENOS</h1>
 
             <div class="row">
 

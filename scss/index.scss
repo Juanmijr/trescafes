@@ -282,9 +282,9 @@ table a:hover{
     font-weight: 600;
     font-size: 20px;
     color: $bg-white;
-    background-color: $bg-secundary;
+    background-color: $bg-primary;
     border-radius: 6px;
-    border: 2px solid $bg-primary;
+    border: 2px solid $bg-secundary;
 }
 
 input[type=range] {
@@ -608,9 +608,10 @@ input[type="radio"]:checked ~ label {
     color: white;
 }
 
-h4{
-    font-size: 1.275rem;
-}
 h3 {
     font-size: 1.4rem;
+}
+
+.h4{
+    font-size: 1.275rem;
 }

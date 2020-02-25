@@ -1,4 +1,4 @@
-<html>
+<html lang="es">
     <head>
         <?php include ('includes/head.php'); ?>
         <title>Utensilios | Tres cafés</title>
@@ -26,7 +26,7 @@ También utilizamos jarras de leche innovadoras, que hemos también hemos diseñ
 
                 </article>
                    <aside class=" col-md-3">
-                       <img class="img-fluid" src="img/maquinaCafe.jpg"> 
+                       <img class="img-fluid" src="img/maquinaCafe.jpg" alt="imagen maquina de cafe"> 
 
                     </img>
                 </aside>

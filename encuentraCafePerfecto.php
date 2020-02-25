@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html lang="es">
     <head>
         <?php 
         include('includes/head.php');
@@ -20,8 +20,8 @@ and open the template in the editor.
         <form action="" method="post">
             <div class="container mt-5 text-secondary"> 
                 <section>
-                    <span class="text-center">¿Qué sabor te atrae más?</span><br>
-                    <select name="sabor">
+                    <label for="sabor" class="text-center text-dark">¿Qué sabor te atrae más?</label><br>
+                    <select name="sabor" id="sabor">
                         <option value="cacao">Cacao</option>
                         <option value="tostado">Tostado</option>
                         <option value="caramelo">Caramelizado</option>
@@ -29,8 +29,8 @@ and open the template in the editor.
                 </section>
 
                 <section>
-                    <span class="text-center">¿Qué sensación desearías tener?</span><br>
-                    <select name="sensacion">
+                    <label for="sensacion" class="text-center text-dark">¿Qué sensación desearías tener?</label><br>
+                    <select name="sensacion" id="sensacion">
                         <option value="suave">Suave</option>
                         <option value="aroma">Aromático</option>
                         <option value="amargo">Amargo</option>
@@ -38,8 +38,8 @@ and open the template in the editor.
                 </section>
 
                 <section> 
-                    <span class="text-center">¿Qué nivel de intensidad te gusta en el café?</span><br>
-                    <select name="intensidad">
+                    <label for="intensidad" class="text-center text-dark">¿Qué nivel de intensidad te gusta en el café?</label><br>
+                    <select name="intensidad" id="intensidad">
                         <option value="intenso">Intenso</option>
                         <option value="sutil">Sútil</option>
                         <option value="equilibrado">Equilibrado</option>
