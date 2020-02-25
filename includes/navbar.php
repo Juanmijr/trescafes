@@ -178,7 +178,10 @@ if (isset($_POST['cerrarSesion'])) {
                         </div>
 
 
+<<<<<<< HEAD
                         <button type="button" class="close" style="color: white" data-dismiss="modal" aria-label="Close">
+=======
+>>>>>>> 395a7cff1c295298224a24226ceb5e30660c9465
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
