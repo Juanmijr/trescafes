@@ -13,7 +13,7 @@ if (isset($_SESSION['usuario'])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <?php include ('includes/head.php'); ?>
         <script src="jquery/jquery-3.3.1.min.js"></script>
@@ -42,6 +42,7 @@ if (isset($_SESSION['usuario'])) {
 
 
         </script>
+        <title>Añadir Usuario | Tres Cafés</title>
     </head>
     <body>
 
@@ -70,24 +71,25 @@ if (isset($_SESSION['usuario'])) {
             <div class="d-flex justify-content-center ">
                 <div class="card1 ">
                     <div class="card-header">
-                        <h3 class="text-title">Añadir usuario</h3>
+                        <h1 class="h3 text-titleNuevo">Añadir usuario</h1>
 
                     </div>
                     <div class="card-body">
                         <form id="form1" method="POST" action="" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col">
+                                    <label for="usuario" class="d-flex justify-content-left  text-footer-cuerpo">Usuario</label>
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         </div>
                                         <input id="usuario" type="text" name="usuario" required="" title="Se permiten letras, numeros y (@.-_)" class="form-control" placeholder="usuario *" value="">
-
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
+                                    <label for="pass" class="d-flex justify-content-left  text-footer-cuerpo">Password</label>
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
@@ -99,6 +101,7 @@ if (isset($_SESSION['usuario'])) {
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+                                    <label for="pass2" class="d-flex justify-content-left  text-footer-cuerpo">Repite Password</label>
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
@@ -112,6 +115,7 @@ if (isset($_SESSION['usuario'])) {
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
+                                    <label for="apellido1" class="d-flex justify-content-left  text-footer-cuerpo">Primer Apellido</label>
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -123,6 +127,7 @@ if (isset($_SESSION['usuario'])) {
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+                                    <label for="apellido2" class="d-flex justify-content-left  text-footer-cuerpo">Segundo apellido</label>
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -136,6 +141,7 @@ if (isset($_SESSION['usuario'])) {
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
+                                    <label for="nombre" class="d-flex justify-content-left  text-footer-cuerpo">Nombre</label>
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -148,11 +154,12 @@ if (isset($_SESSION['usuario'])) {
                                     </div>   
                                 </div>
                                 <div class="col-sm-6">
+                                    <label for="emailUsuario" class="d-flex justify-content-left  text-footer-cuerpo">Email</label>
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-mail-bulk"></i></span>
                                         </div>
-                                        <input id="email" type="email" name="email" required="" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" class="form-control" placeholder="email *" value="">
+                                        <input id="emailUsuario" type="email" name="email" required="" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" class="form-control" placeholder="email *" value="">
                                         <div id="spanOculto" style="display: none" class="invalid-feedback">
                                             Correo en uso
                                         </div>
@@ -161,14 +168,16 @@ if (isset($_SESSION['usuario'])) {
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
+                                    <label for="fechaNac" class="d-flex justify-content-left  text-footer-cuerpo">Fecha de Nacimiento</label>
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
                                         </div>
-                                        <input type="text" onfocus="(this.type = 'date')" name="fechaNacimiento" required="" class="form-control" placeholder="fecha de nacimiento *" value="">
+                                        <input type="text" onfocus="(this.type = 'date')" name="fechaNacimiento" required="" class="form-control" placeholder="fecha de nacimiento *" id="fechaNac" value="">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+                                    <label for="telefono" class="d-flex justify-content-left  text-footer-cuerpo">Teléfono</label>
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-mobile"></i></span>
@@ -191,6 +200,7 @@ if (isset($_SESSION['usuario'])) {
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
+                                    <label for="inputState" class="d-flex justify-content-left  text-footer-cuerpo">País</label>
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-flag"></i></span>
@@ -437,6 +447,7 @@ if (isset($_SESSION['usuario'])) {
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+                                    <label for="codPostal" class="d-flex justify-content-left  text-footer-cuerpo">Código Postal</label>
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-flag"></i></span>

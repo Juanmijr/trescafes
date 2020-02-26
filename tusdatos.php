@@ -14,7 +14,7 @@ if (isset($_SESSION['usuario'])) {
     header('Location: index.php');
 }
 ?>
-<html>
+<html lang="es">
     <head>
         <?php include ('includes/head.php'); ?>
         <title>Tus Datos | Tres Cafés</title>
@@ -26,13 +26,13 @@ if (isset($_SESSION['usuario'])) {
                 <div class="col-sm-3">
                     <div class="text-center">
                         <?php
-                            ?><img src="<?php echo $usuario->imagenPerfil; ?>" class="img-circle img-thumbnail">
+                        ?><img src="<?php echo $usuario->imagenPerfil; ?>" class="img-circle img-thumbnail" alt="imagen de perfil del usuario">
                     </div></hr><br>
                 </div>
                 <div class="col-sm-9 text-left">
                     <div class="tab-content">
                         <hr>
-                        <h3><?php echo $usuario->nombre . " " . $usuario->apellido1 . " " . "$usuario->apellido2" ?></h3>
+                        <h1 class="h3"><?php echo $usuario->nombre . " " . $usuario->apellido1 . " " . "$usuario->apellido2" ?></h1>
                         <p class="m-0"><i class="fas fa-flag mr-2"></i><?php echo $usuario->codigoPostal . ", " . $usuario->pais ?></p>
                         <p class="m-0"><i class="fas fa-mail-bulk mr-2"></i><?php echo $usuario->email ?></p>
                         <p class="m-0"><i class="fas fa-user mr-2"></i><?php echo $usuario->nombreUsuario ?></p>
@@ -45,7 +45,7 @@ if (isset($_SESSION['usuario'])) {
             <div class="row">
                 <div class="col">
                     <section class="table-responsive">
-                        <span class='text-title'>VALORACIONES</span>
+                        <h1 class='text-title'>VALORACIONES</h1>
 
                         <?php
                         $valoraciones = Valoracion::buscarValoracionesporIDUsuario($usuario->idUsuario);

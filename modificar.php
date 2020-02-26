@@ -26,7 +26,7 @@ if (isset($_POST['guardar'])) {
     }
 }
 ?>
-<html>
+<html lang="es">
     <head>
         <?php include ('includes/head.php'); ?>
         <title>Modificar | Tres Cafés</title>
@@ -42,9 +42,9 @@ if (isset($_POST['guardar'])) {
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="text-center">
-                            <img src="<?php echo $usuarioModificar->imagenPerfil ?>" class="img-circle img-thumbnail">
+                            <img src="<?php echo $usuarioModificar->imagenPerfil ?>" class="img-circle img-thumbnail" alt="imagen del usuario a modificar">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" name="imagenUsuario" lang="es">
+                                <input type="file" id="imagenUsuario" class="custom-file-input" name="imagenUsuario" lang="es">
                                 <label class="custom-file-label" for="imagenUsuario">Elegir imagen</label>
                             </div>
                         </div></hr><br>
@@ -54,44 +54,44 @@ if (isset($_POST['guardar'])) {
                             <hr>
                             <div class="form-group">
                                 <div class="col-xs-6">
-                                    <h4>Nombre de usuario</h4>
-                                    <input type="text" class="form-control" name="nombreUsuario" value="<?php echo $usuarioModificar->nombreUsuario; ?>">
+                                    <label for="nombreUsuario" class="h4">Nombre de usuario</label>
+                                    <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" value="<?php echo $usuarioModificar->nombreUsuario; ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-6">
-                                    <h4>Contraseña</h4>
-                                    <input type="text" class="form-control" name="contrasenia" value="<?php echo $usuarioModificar->contrasenia; ?>">
+                                    <label for="contrasenia" class="h4">Contraseña</label>
+                                    <input type="text" class="form-control" id="contrasenia" name="contrasenia" value="<?php echo $usuarioModificar->contrasenia; ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-6">
-                                    <h4>Nombre</h4>
-                                    <input type="text" class="form-control" name="nombre" value="<?php echo $usuarioModificar->nombre; ?>">
+                                    <label for="nombre" class="h4">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $usuarioModificar->nombre; ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-6">
-                                    <h4>Primer apellido</h4>
-                                    <input type="text" class="form-control" name="apellido1" value="<?php echo $usuarioModificar->apellido1; ?>">
+                                    <label for="apellido1" class="h4">Primer apellido</label>
+                                    <input type="text" class="form-control" id="apellido1" name="apellido1" value="<?php echo $usuarioModificar->apellido1; ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-6">
-                                    <h4>Segundo apellido</h4>
-                                    <input type="text" class="form-control" name="apellido2" value="<?php echo $usuarioModificar->apellido2; ?>">
+                                    <label for="apellido2" class="h4">Segundo apellido</label>
+                                    <input type="text" id="apellido2" class="form-control" name="apellido2" value="<?php echo $usuarioModificar->apellido2; ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-6">
-                                    <h4>Fecha de nacimiento</h4>
-                                    <input type="date" class="form-control" name="fechaNacimiento" value="<?php echo $usuarioModificar->fechaNacimiento; ?>">
+                                    <label for="fNac" class="h4">Fecha de nacimiento</label>
+                                    <input type="date" class="form-control" id="fNac" name="fechaNacimiento" value="<?php echo $usuarioModificar->fechaNacimiento; ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-6">
-                                    <h4>País</h4>
-                                    <select id="inputState" name="pais" class="form-control">
+                                    <label for="pais" class="h4">País</label>
+                                    <select id="pais" name="pais" class="form-control">
                                         <option value="Afganistán" id="AF" <?php if ($usuarioModificar->pais == 'Afganistán') echo 'selected' ?>>Afganistán</option>
                                         <option value="Albania" id="AL" <?php if ($usuarioModificar->pais == 'Albania') echo 'selected' ?>>Albania</option>
                                         <option value="Alemania" id="DE" <?php if ($usuarioModificar->pais == 'Alemania') echo 'selected' ?>>Alemania</option>
@@ -333,26 +333,20 @@ if (isset($_POST['guardar'])) {
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-6">
-                                    <h4>Código Postal</h4>
-                                    <input type="text" class="form-control" name="codigoPostal" value="<?php echo $usuarioModificar->codigoPostal; ?>">
+                                    <label for="cp" class="h4">Código Postal</label>
+                                    <input type="text" id="cp" class="form-control" name="codigoPostal" value="<?php echo $usuarioModificar->codigoPostal; ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-6">
-                                    <h4>Nombre de usuario</h4>
-                                    <input type="text" class="form-control" name="nombreUsuario" value="<?php echo $usuarioModificar->nombreUsuario; ?>">
+                                    <label for="telf" class="h4">Telefono</label>
+                                    <input type="text" id="telf" class="form-control" name="telefono" value="<?php echo $usuarioModificar->telefono; ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-6">
-                                    <h4>Telefono</h4>
-                                    <input type="text" class="form-control" name="telefono" value="<?php echo $usuarioModificar->telefono; ?>">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-xs-6">
-                                    <h4>Rol</h4>
-                                    <select name="rol" class="form-control">
+                                    <label for="rol" class="h4">Rol</label>
+                                    <select id="rol" name="rol" class="form-control">
                                         <option value="valorador" <?php if ($usuarioModificar->rol == 'valorador') echo 'selected' ?>>Valorador</option>
                                         <option value="editor" <?php if ($usuarioModificar->rol == 'editor') echo 'selected' ?>>Editor</option>
                                         <option value="administrador" <?php if ($usuarioModificar->rol == 'administrador') echo 'selected' ?>>Administrador</option>

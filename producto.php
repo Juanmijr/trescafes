@@ -249,7 +249,7 @@ and open the template in the editor.
 
 
 
-        <div class="modal fade" id="hacerValoracion" tabindex="-1" role="dialog" aria-labelledby="hacerValoracionLabel" aria-hidden="true">
+        <div class="modal fade" id="hacerValoracion" tabindex="-1" role="dialog" aria-labelledby="hacerValoracion" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">

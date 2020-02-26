@@ -540,7 +540,7 @@ input[type=radio]:checked ~ label {
 }
 
 .valid-feedback {
-  color: gray;
+  color: #CCCCCC;
 }
 
 .imgIndexProductos {
@@ -608,6 +608,10 @@ input[type=radio]:checked ~ label {
 }
 
 h3 {
+  font-size: 1.4rem;
+}
+
+.h3 {
   font-size: 1.4rem;
 }
 

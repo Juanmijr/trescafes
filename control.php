@@ -21,7 +21,7 @@ if (isset($_POST['eliminar'])) {
     Usuario::EliminarUsuario($_POST['email']);
 }
 ?>
-<html>
+<html lang="es">
     <head>
         <?php include ('includes/head.php'); ?>
         <title>Control | Tres Cafés</title>
@@ -33,7 +33,7 @@ if (isset($_POST['eliminar'])) {
         <div class="container mt-5">
             <div class="row mb-2">
                 <div class="col-sm-3">
-                    <a class="enlacesSinEstilo links-primary" href="anadirUsuario.php">Añadir usuario</a>
+                    <a class="btn btn-primary" href="anadirUsuario.php">Añadir usuario</a>
                 </div>
             </div>
             <?php
@@ -43,13 +43,13 @@ if (isset($_POST['eliminar'])) {
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="text-center">
-                                <img src="<?php echo $usuario->imagenPerfil ?>" class="img-circle img-thumbnail">
+                                <img src="<?php echo $usuario->imagenPerfil ?>" class="img-circle img-thumbnail" alt="imagen de <?php echo $usuario->nombre?>">
                             </div></hr><br>
                         </div>
                         <div class="col-sm-9 text-left">
                             <div class="tab-content">
                                 <hr>
-                                <h3><?php echo $usuario->nombre . " " . $usuario->apellido1 . " " . "$usuario->apellido2" ?></h3>
+                                <h1 class="h3"><?php echo $usuario->nombre . " " . $usuario->apellido1 . " " . "$usuario->apellido2" ?></h1>
                                 <p class="m-0"><i class="fas fa-flag mr-2"></i><?php echo $usuario->codigoPostal . ", " . $usuario->pais ?></p>
                                 <p class="m-0"><i class="fas fa-mail-bulk mr-2"></i><?php echo $usuario->email ?></p>
                                 <p class="m-0"><i class="fas fa-user mr-2"></i><?php echo $usuario->nombreUsuario ?></p>

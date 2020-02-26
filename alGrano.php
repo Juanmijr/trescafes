@@ -1,4 +1,4 @@
-<html>
+<html lang="es">
     <head>
         <?php include ('includes/head.php'); ?>
         <title>¡Al Grano! | Tres Cafés</title>
@@ -22,7 +22,7 @@
                 <h2 class="text-title">Memorama</h2>
                 <a href="memorama.php">
                     <div class="efectoHover">
-                        <img class="img-fluid imgJuegos" src="img/memorama.png">
+                        <img class="img-fluid imgJuegos" src="img/memorama.png" alt="imagen de juego memorama">
                     </div>
                 </a>
             </div>
@@ -30,7 +30,7 @@
                 <h2 class="text-title">Tres Cafés en Raya</h2>
                 <a href="tresCafesEnRaya.php">
                     <div class="efectoHover">
-                        <img class="img-fluid imgJuegos" src="img/trescafesenraya.png">
+                        <img class="img-fluid imgJuegos" src="img/trescafesenraya.png" alt="imagen de juego tres cafes en raya">
                     </div>
                 </a>
             </div>
@@ -38,7 +38,7 @@
                 <h2 class="text-title">Arkanoid</h2>
                 <a href="arkanoid.php">
                     <div class="efectoHover">
-                        <img class="img-fluid imgJuegos" src="img/arkanoid.png">
+                        <img class="img-fluid imgJuegos" src="img/arkanoid.png" alt="imagen de juego de arkanoid">
                     </div>
                 </a>
             </div>

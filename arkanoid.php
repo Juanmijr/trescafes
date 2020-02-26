@@ -14,7 +14,7 @@
         ?>
         <div class="row">
             <div class="col">
-                <div class="my-2"><a href="alGrano.php"> <img src="img/volver.png"></a></div>
+                <div class="my-2"><a href="alGrano.php"> <img src="img/volver.png" alt="volver"></a></div>
                  <h1 class="text-title">ARKANOID BY JUANMI</h1>
                 <hr>
             </div>
@@ -23,9 +23,9 @@
         <div class="col" id="juego">
           <canvas id="canvas" width="500" height="400"></canvas>
           <div id="modal">
-              <button id="boton">
-                <img id='play' src="img/imgArkanoid/play.png">  
-              </button>
+              <a id="boton">
+                  <img id='play' src="img/imgArkanoid/play.png" alt="jugar">  
+              </a>
           </div>
       </div>
         <script src="js/juegoJuanmi.js"></script>

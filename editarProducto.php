@@ -50,12 +50,13 @@ and open the template in the editor.
                             <a href="productos.php"> <img src="img/volver.png" alt="volver al listado"></a>
                         </div>
                     </div>
+                    
                     <input type="hidden" name="ocultoID" value="<?php echo $_POST['ocultoId']; ?>">
                     <article class="row mt-5  mx-auto form-group">
                         <div class="col-sm-12">
-                            <label for="nombreProducto">Nombre del Producto</label>
+                            <label class="text-dark" for="nombreProducto">Nombre del Producto</label>
                             <p class="text-title text-uppercase"><input id="nombreProducto" type="text" class="form-control" required="" name="nombreProducto" value="<?php echo $ocultoNombre; ?>"></p>
-                            <label for="descripcion">Descripcion</label>
+                            <label for="descripcion" class="text-dark">Descripcion</label>
                             <p class="text-secondary text-justify"><textarea id="descripcion" class="form-control" required=""  name="descripcionProducto"><?php echo $ocultoDescripcion; ?></textarea></p>
                         </div>
                     </article>

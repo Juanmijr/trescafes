@@ -1,4 +1,4 @@
-<html>
+<html lang="es">
     <head>
         <?php include ('includes/head.php'); ?>
         <title>¿Dónde estamos?| Tres Cafés</title>
