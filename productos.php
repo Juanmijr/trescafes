@@ -11,7 +11,7 @@ require_once './clases/Usuario.php';
 require_once './clases/Producto.php';
 ?>
 
-<html>
+<html lang="es">
     <head>
         <?php
         include('includes/head.php');
@@ -32,7 +32,7 @@ require_once './clases/Producto.php';
                     ?>
                     <div class="row mb-2">
                         <div class="col-sm-3 mt-5">
-                            <a class="enlacesSinEstilo links-primary" href="anadirProducto.php">Añadir producto</a>
+                            <a class="btn btn-primary" href="anadirProducto.php">Añadir producto</a>
                         </div>
                     </div>
                     <?php
@@ -62,10 +62,10 @@ require_once './clases/Producto.php';
 
                             <div class="col-sm-4 text-center">
                                 <div class="hover hover-1">
-                                    <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" alt="imagen del producto" src="<?php echo $value->imagenProducto; ?>"/>
+                                    <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" alt="imagen de <?php echo $value->nombreProducto; ?>" src="<?php echo $value->imagenProducto; ?>"/>
                                         </div>
                                         <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
-                                        <img src="img/siguiente.png" alt="flecha siguiente"/></a>
+                                        <img src="img/siguiente.png" alt="enlace ir a <?php echo $value->nombreProducto; ?> "/></a>
                                     <?php
                                     if (isset($_SESSION['usuario'])) {
                                         if ($usuario->rol == 'administrador') {
@@ -108,10 +108,10 @@ require_once './clases/Producto.php';
 
                             <div class="col-sm-4 text-center">
                                 <div class="hover hover-1">
-                                    <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" src="<?php echo $value->imagenProducto; ?>">
+                                    <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" alt="imagen de <?php echo $value->nombreProducto; ?>" src="<?php echo $value->imagenProducto; ?>">
                                         </div>
                                         <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
-                                        <img src="img/siguiente.png"></a>
+                                        <img src="img/siguiente.png" alt="enlace ir a <?php echo $value->nombreProducto; ?> "></a>
                                     <?php
                                     if (isset($_SESSION['usuario'])) {
                                         if ($usuario->rol == 'administrador') {
@@ -154,10 +154,10 @@ require_once './clases/Producto.php';
 
                             <div class="col-sm-4 text-center">
                                 <div class="hover hover-1">
-                                    <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" src="<?php echo $value->imagenProducto; ?>">
+                                    <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" alt="imagen de <?php echo $value->nombreProducto; ?>" src="<?php echo $value->imagenProducto; ?>">
                                         </div>
                                         <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
-                                        <img src="img/siguiente.png"></a>
+                                        <img src="img/siguiente.png" alt="enlace ir a <?php echo $value->nombreProducto; ?> "></a>
                                     <?php
                                     if (isset($_SESSION['usuario'])) {
                                         if ($usuario->rol == 'administrador') {

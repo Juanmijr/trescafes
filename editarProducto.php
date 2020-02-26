@@ -4,11 +4,12 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html lang="es">
     <head>
         <?php
         include ('includes/head.php');
         ?>
+        <title>Editar Producto | Tres Cafés</title>
     </head>
     <body>
         <?php
@@ -46,25 +47,27 @@ and open the template in the editor.
                 <div class="col-sm-4 mt-5">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="productos.php"> <img src="img/volver.png"></a>
+                            <a href="productos.php"> <img src="img/volver.png" alt="volver al listado"></a>
                         </div>
                     </div>
                     <input type="hidden" name="ocultoID" value="<?php echo $_POST['ocultoId']; ?>">
                     <article class="row mt-5  mx-auto form-group">
                         <div class="col-sm-12">
-                            <p class="text-title text-uppercase"><input type="text" class="form-control" required="" name="nombreProducto" value="<?php echo $ocultoNombre; ?>"></p>
-                            <p class="text-secondary text-justify"><textarea class="form-control" required=""  name="descripcionProducto"><?php echo $ocultoDescripcion; ?></textarea></p>
+                            <label for="nombreProducto">Nombre del Producto</label>
+                            <p class="text-title text-uppercase"><input id="nombreProducto" type="text" class="form-control" required="" name="nombreProducto" value="<?php echo $ocultoNombre; ?>"></p>
+                            <label for="descripcion">Descripcion</label>
+                            <p class="text-secondary text-justify"><textarea id="descripcion" class="form-control" required=""  name="descripcionProducto"><?php echo $ocultoDescripcion; ?></textarea></p>
                         </div>
                     </article>
                     <div class="row custom-file">
-                        <input type="file" class="custom-file-input" name="imagenProducto" lang="es">
+                        <input type="file" class="custom-file-input" id="imagenProducto" name="imagenProducto" lang="es">
                         <input type="hidden" name="imagenOculta" value="<?php echo $ocultoImagen; ?>">
                         <label class="custom-file-label" for="imagenProducto">Elegir imagen</label>
                     </div>
                 </div>
 
                 <aside class="col-sm-8 mt-5">
-                    <img class="imgProductos img-fluid" src="<?php echo $ocultoImagen; ?>">
+                    <img class="imgProductos img-fluid" src="<?php echo $ocultoImagen; ?>" alt="imagen del producto">
                     <input type="submit"  class="btn-primary" name="btnEditar" value="Editar">
                 </aside>
 
@@ -73,8 +76,8 @@ and open the template in the editor.
             <div class="row">
                 <div class="col-12">
                     <hr>
-                    <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
-                    <div class="collapse" id="footwear">
+                    <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#infoNutricional" aria-expanded="false" aria-controls="infoNutricional">Info. Nutricional </a>
+                    <div class="collapse" id="infoNutricional">
                         <div class="row">
                             <div class="chartContainer col-12 my-5">
                                 <canvas id="doughnutChart"></canvas>

@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html lang="es">
 
 
     <head>
@@ -58,12 +58,12 @@ and open the template in the editor.
                         <div class="col-sm-4 mt-5">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <a href="productos.php"> <img src="img/volver.png"></a>
+                                    <a href="productos.php"> <img src="img/volver.png" alt="volver a listado"></a>
                                 </div>
                             </div>
                             <article class="row mt-5  mx-auto">
                                 <div class="col-sm-12">
-                                    <p class="text-title text-uppercase"><?php echo $producto->nombreProducto ?></p>
+                                    <h1 class="text-title text-uppercase"><?php echo $producto->nombreProducto ?></h1>
                                     <input type="hidden" name="ocultoNombre" value="<?php echo $producto->nombreProducto; ?>">
                                     <input type="hidden" name="ocultoId" value="<?php echo $producto->idProducto; ?>">
                                     <p class="text-secondary text-justify"><?php echo $producto->descripcion ?></p>
@@ -72,7 +72,7 @@ and open the template in the editor.
                             </article>
                         </div>
                         <aside class="col-sm-8 mt-5">
-                            <img class="imgProductos img-fluid" src="<?php echo $producto->imagenProducto ?>">
+                            <img class="imgProductos img-fluid" src="<?php echo $producto->imagenProducto ?>" alt="imagen del <?php echo $producto->nombreProducto?>">
                             <input type="hidden" name="ocultoImagen" value="<?php echo $producto->imagenProducto; ?>">
                             <?php
                             if ($usuario->rol != "valorador") {
@@ -86,8 +86,8 @@ and open the template in the editor.
                     <div class="row">
                         <div class="col-12">
                             <hr>
-                            <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
-                            <div class="collapse" id="footwear">
+                            <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#infoNutricional" aria-expanded="false" aria-controls="infoNutricional">Info. Nutricional </a>
+                            <div class="collapse" id="infoNutricional">
                                 <div class="row">
                                     <div class="chartContainer col-12 my-5">
                                         <canvas id="doughnutChart"></canvas>
@@ -123,8 +123,8 @@ and open the template in the editor.
             <div class="row">
                 <div class="col-12">
                     <hr>
-                    <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Info. Nutricional </a>
-                    <div class="collapse" id="footwear">
+                    <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#infoNutricional" aria-expanded="false" aria-controls="infoNutricional">Info. Nutricional </a>
+                    <div class="collapse" id="infoNutricional">
                         <div class="row">
                             <div class="chartContainer col-12 my-5">
                                 <canvas id="doughnutChart"></canvas>
@@ -162,7 +162,7 @@ and open the template in the editor.
         <div class="row">
             <div class="col-12">
                 <hr>
-                <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#valoraciones" aria-expanded="false" aria-controls="footwear">Valoraciones <?php echo "(" . Valoracion::contarValoraciones($producto->idProducto) . ")" ?> </a>
+                <a class="text-title enlacesSinEstilo" data-toggle="collapse" href="#valoraciones" aria-expanded="false" aria-controls="valoraciones">Valoraciones <?php echo "(" . Valoracion::contarValoraciones($producto->idProducto) . ")" ?> </a>
                 <div class="collapse" id="valoraciones">
 
                     <?php if (isset($_SESSION['usuario'])) { ?>
@@ -171,7 +171,7 @@ and open the template in the editor.
                                 <div class="col-md-12">
                                     <div class="well well-sm">
                                         <div class="text-center">
-                                            <a class="btn btn-success btn-primary" href="#reviews-anchor" id="dropdownLoginLI" data-toggle="modal" data-target="#bizcochosModal">Hacer una valoración</a>
+                                            <a class="btn btn-success btn-primary" href="#hacerValoracion"  data-toggle="modal" data-target="#hacerValoracion">Hacer una valoración</a>
                                         </div>
 
                                         <div class="row" id="post-review-box" style="display:none;">
@@ -194,7 +194,7 @@ and open the template in the editor.
                                     <div class="row">
                                         <?php $nuevaValoracion = ValoracionUsuarioProducto::nombreUsuarioporIDVALORACION($valoracion->idValoracion); ?>
                                         <div class="col-md-2">
-                                            <img src="<?php echo $nuevaValoracion->imagenPerfil?>" class="img-fluid"/>
+                                            <img src="<?php echo $nuevaValoracion->imagenPerfil?>" class="img-fluid" alt="imagen del usuario que valora"/>
                                             <p class="text-secondary text-center"><?php echo $valoracion->fecha; ?></p>
                                         </div>
                                         <div class="col-md-10">
@@ -249,17 +249,17 @@ and open the template in the editor.
 
 
 
-        <div class="modal fade" id="bizcochosModal" tabindex="-1" role="dialog" aria-labelledby="bizcochosModalLabel" aria-hidden="true">
+        <div class="modal fade" id="hacerValoracion" tabindex="-1" role="dialog" aria-labelledby="hacerValoracionLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <div class="col-md-12">
-                            <h2 class="text-title">Introduce una valoración :</h2>
+                            <h2 class="text-titleNuevo">Introduce una valoración :</h2>
 
 
 
