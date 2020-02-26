@@ -221,7 +221,7 @@ if (isset($_POST['cerrarSesion'])) {
                                 <input type="password" id="password" class="form-control" placeholder="contraseña" name="password">
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Entrar" name='entrar' class="btn float-right login_btn">
+                                <input type="submit" value="Entrar" name='entrar' class="btn btn-secundary float-right login_btn">
                             </div>
                         </form>
                     </div>
