@@ -61,11 +61,12 @@ require_once './clases/Producto.php';
                             ?>
 
                             <div class="col-sm-4 text-center">
+                                <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>">
                                 <div class="hover hover-1">
-                                    <a class="enlacesSinEstilo" href="producto.php?producto=<?php echo $value->nombreProducto; ?>"><img class="imagenTodosProductos" alt="imagen de <?php echo $value->nombreProducto; ?>" src="<?php echo $value->imagenProducto; ?>"/>
-                                        </div>
-                                        <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
-                                        <img src="img/siguiente.png" alt="enlace ir a <?php echo $value->nombreProducto; ?> "/></a>
+                                    <img class="imagenTodosProductos" alt="imagen de <?php echo $value->nombreProducto; ?>" src="<?php echo $value->imagenProducto; ?>"/>
+                                </div>
+                                    <span class="text-secondary"><?php echo $value->nombreProducto ?></span>
+                                    <img src="img/siguiente.png" alt="enlace ir a <?php echo $value->nombreProducto; ?> "/></a>
                                     <?php
                                     if (isset($_SESSION['usuario'])) {
                                         if ($usuario->rol == 'administrador') {
