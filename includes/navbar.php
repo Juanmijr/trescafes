@@ -174,7 +174,7 @@ if (isset($_POST['cerrarSesion'])) {
                     <div class="modal-header">
                         <h3>Inicia Sesión</h3>
                         <div class="d-flex justify-content-end social_icon">
-                            <span name="google"><i id="googleSignInBtn"  class="fab fa-google-plus-square"></i></span>
+                            <button class="btn btn-google" id="googleSignInBtn"><i class="fab fa-google-plus-square fa-5x"></i></button>
                         </div>
 
 

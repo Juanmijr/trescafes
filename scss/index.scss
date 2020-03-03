@@ -13,6 +13,11 @@ $color-footer-title : #d6d6d6 !important;
     background-color: $bg-secundary;
 }
 
+.btn-google:focus, .btn-google:hover{
+    background-color: $bg-primary;
+}
+
+
 .btn-secundary{
     background-color: $bg-white;
     border-color: $bg-secundary;

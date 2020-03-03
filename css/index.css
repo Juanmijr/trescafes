@@ -6,6 +6,10 @@
   background-color: #e3a364 !important;
 }
 
+.btn-google:focus, .btn-google:hover {
+  background-color: #4b3621 !important;
+}
+
 .btn-secundary {
   background-color: #FFFFFF !important;
   border-color: #e3a364 !important;
