@@ -469,7 +469,8 @@ if (isset($_SESSION['usuario'])) {
                             <div class="col-sm-12">
                                 <div class="elem-group">
 
-                                    <img src="ejemploCaptcha.php" alt="CAPTCHA" class="captcha-image"><a class="btn btn-secundary refresh-captcha ml-3"><i class="fas fa-redo"></i></a><br>
+                                    <img src="ejemploCaptcha.php" alt="CAPTCHA" class="captcha-image">
+                                    <button type="button" class="btn btn-secundary refresh-captcha ml-3"><i class="fas fa-redo"></i></button><br>
                                     <span class="valid-feedback d-block mt-3">Introduce el captcha *</span>
                                     <label for="captcha" class="text-footer-cuerpo">Captcha</label><br>
                                     <input type="text" id="captcha" required="" name="captcha" >
@@ -483,7 +484,7 @@ if (isset($_SESSION['usuario'])) {
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input id="btnEnviar" type="submit" name="enviar" value="Entrar" class="btn float-right login_btn">
+                                <input id="btnEnviar" type="submit" name="enviar" value="Entrar" class="btn btn-secundary float-right login_btn">
                             </div>
                         </form>
                     </div>

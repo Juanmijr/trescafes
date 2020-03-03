@@ -459,7 +459,7 @@ if (isset($_SESSION['usuario'])) {
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input id="btnEnviar" type="submit" name="enviar" value="Entrar" class="btn float-right login_btn">
+                                <input id="btnEnviar" type="submit" name="enviar" value="Entrar" class="btn btn-secundary float-right login_btn">
                             </div>
                         </form>
                     </div>
