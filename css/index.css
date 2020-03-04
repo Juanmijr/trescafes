@@ -6,7 +6,7 @@
   background-color: #e3a364 !important;
 }
 
-.btn-google:focus, .btn-google:hover {
+.btn-google {
   background-color: #4b3621 !important;
 }
 
@@ -14,6 +14,10 @@
   background-color: #FFFFFF !important;
   border-color: #e3a364 !important;
   color: #4b3621 !important;
+}
+
+.iconoGoogle {
+  color: #e3a364 !important;
 }
 
 .chartContainer {

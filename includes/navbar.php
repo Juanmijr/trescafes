@@ -44,10 +44,10 @@ if (isset($_POST['cerrarSesion'])) {
                     <ul class="nav navbar-nav navbar-letra">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="collapsingNavbar"
-                               data-toggle="dropdown" aria-haspopup="true"  aria-labelledby="dropdownMenuButton" aria-expanded="false">
+                               data-toggle="dropdown">
                                 CAFÉ
                             </a>
-                            <ul class="dropdown-menu"  id="dropdownMenuButton" aria-labelledby="navbarDropdownMenuLink">
+                            <ul class="dropdown-menu"  id="dropdownMenuButton">
                                 <li><a class="dropdown-item" href="calidad.php">Calidad</a></li>
                                 <li><a class="dropdown-item" href="encuentraCafePerfecto.php">Encuentra tu café perfecto</a></li>
                                 <li><a class="dropdown-item" href="utensilios.php">Utensilios</a></li>
@@ -55,10 +55,10 @@ if (isset($_POST['cerrarSesion'])) {
                             </ul>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="collapsingNavbar"
-                               data-toggle="dropdown" aria-haspopup="true"  aria-labelledby="dropdownMenuButton" aria-expanded="false">
+                               data-toggle="dropdown">
                                 PRODUCTOS
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <ul class="dropdown-menu">
                                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle">Nuestros cafés</a>
                                     <?php
                                     if ($productos = Producto::recuperarProductos()) {
@@ -174,7 +174,7 @@ if (isset($_POST['cerrarSesion'])) {
                     <div class="modal-header">
                         <h3>Inicia Sesión</h3>
                         <div class="d-flex justify-content-end social_icon">
-                            <button class="btn btn-google" id="googleSignInBtn"><i class="fab fa-google-plus-square fa-5x"></i></button>
+                            <button class="btn btn-google" id="googleSignInBtn"><i class="fab fa-google-plus-square fa-5x iconoGoogle"></i></button>
                         </div>
 
 
